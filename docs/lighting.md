@@ -60,5 +60,5 @@ Hardware 9 and 16 are hidden in the configurator. 15 Colorful waterfall is
 inferred from the shift (it has no colour option, like the app's waterfall).
 
 Second correction: hardware 14 also shows nothing, 15 is Rotating windmill
-(confirmed), 17 Blossoming (confirmed). Colorful waterfall is presumed to be 16.
+(confirmed), 16 Colorful waterfall and 17 Blossoming (confirmed by the user).
 Hidden: 9 and 14.

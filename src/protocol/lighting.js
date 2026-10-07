@@ -10,7 +10,7 @@ export const PALETTE_GROUP = 21; // 7 RGB slots per effect, group 0 unused
 // [hw code, speed adjustable, brightness adjustable, random colour, colour]
 // from KB.ini LedOpt1..19, in entry order. Names follow the official app's
 // menu, checked live by the user: hw 1-8, 10-13, 15, 17 confirmed; hw 9 and
-// 14 show nothing; hw 16 is presumed Colorful waterfall.
+// 14 show nothing; hw 16 is Colorful waterfall.
 // Choosing Self-define in the app wrote hw 21 and set LED byte 9 to 1.
 const LED_OPT = [
   [1, 0, 1, 1, 1], [2, 1, 1, 1, 1], [3, 1, 1, 0, 0], [4, 1, 1, 1, 1], [5, 1, 1, 1, 1],
