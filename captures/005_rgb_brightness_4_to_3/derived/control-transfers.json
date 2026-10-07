@@ -1,0 +1,158 @@
+{
+  "source": "traffic.pcapng",
+  "sourceSha256": "6231b4192a88c0012e45a9c33b1769462712ba8c559018f63c9621e1e821989a",
+  "scriptSha256": "d067339b65337172c32f333cc48e53d917e11fc6f77192eea37f541e3d32caeb",
+  "command": [
+    "C:\\Program Files\\Wireshark\\tshark.exe",
+    "-r",
+    "hi75-web\\captures\\005_rgb_brightness_4_to_3\\traffic.pcapng",
+    "-Y",
+    "usb.transfer_type == 2",
+    "-T",
+    "json",
+    "-x"
+  ],
+  "tsharkStderr": "",
+  "incompleteRequestFrames": [],
+  "offsetConvention": "payloadHex includes all captured report bytes including report ID; USB setup is separate",
+  "packets": [
+    {
+      "frame": 1,
+      "timeUtc": "2026-09-19T21:49:06.821425000Z",
+      "relativeSeconds": 0.0,
+      "bus": 2,
+      "deviceAddress": 5,
+      "irpId": "0x0000000000000000",
+      "stage": 0,
+      "status": "0x00000000",
+      "endpoint": "0x80",
+      "setup": {
+        "bmRequestType": 128,
+        "bRequest": 6,
+        "wValue": 256,
+        "wIndex": 0,
+        "wLength": 18,
+        "rawHex": "8006000100001200"
+      },
+      "requestFrame": 1,
+      "payloadHex": "",
+      "payloadBytes": 0,
+      "isHidReportTransfer": false
+    },
+    {
+      "frame": 2,
+      "timeUtc": "2026-09-19T21:49:06.821425000Z",
+      "relativeSeconds": 0.0,
+      "bus": 2,
+      "deviceAddress": 5,
+      "irpId": "0x0000000000000000",
+      "stage": 3,
+      "status": "0x00000000",
+      "endpoint": "0x80",
+      "setup": {
+        "bmRequestType": 128,
+        "bRequest": 6,
+        "wValue": 256,
+        "wIndex": 0,
+        "wLength": 18,
+        "rawHex": "8006000100001200"
+      },
+      "requestFrame": 1,
+      "payloadHex": "12010002000000088a250c01000501020001",
+      "payloadBytes": 18,
+      "isHidReportTransfer": false
+    },
+    {
+      "frame": 3,
+      "timeUtc": "2026-09-19T21:49:06.821425000Z",
+      "relativeSeconds": 0.0,
+      "bus": 2,
+      "deviceAddress": 5,
+      "irpId": "0x0000000000000000",
+      "stage": 0,
+      "status": "0x00000000",
+      "endpoint": "0x80",
+      "setup": {
+        "bmRequestType": 128,
+        "bRequest": 6,
+        "wValue": 512,
+        "wIndex": 0,
+        "wLength": 59,
+        "rawHex": "8006000200003b00"
+      },
+      "requestFrame": 3,
+      "payloadHex": "",
+      "payloadBytes": 0,
+      "isHidReportTransfer": false
+    },
+    {
+      "frame": 4,
+      "timeUtc": "2026-09-19T21:49:06.821425000Z",
+      "relativeSeconds": 0.0,
+      "bus": 2,
+      "deviceAddress": 5,
+      "irpId": "0x0000000000000000",
+      "stage": 3,
+      "status": "0x00000000",
+      "endpoint": "0x80",
+      "setup": {
+        "bmRequestType": 128,
+        "bRequest": 6,
+        "wValue": 512,
+        "wIndex": 0,
+        "wLength": 59,
+        "rawHex": "8006000200003b00"
+      },
+      "requestFrame": 3,
+      "payloadHex": "09023b00020100a0fa0904000001030101000921110100012243000705810308000109040100010300000009211101000122f00007058203100001",
+      "payloadBytes": 59,
+      "isHidReportTransfer": false
+    },
+    {
+      "frame": 5,
+      "timeUtc": "2026-09-19T21:49:06.821425000Z",
+      "relativeSeconds": 0.0,
+      "bus": 2,
+      "deviceAddress": 5,
+      "irpId": "0x0000000000000000",
+      "stage": 0,
+      "status": "0x00000000",
+      "endpoint": "0x00",
+      "setup": {
+        "bmRequestType": 0,
+        "bRequest": 9,
+        "wValue": 1,
+        "wIndex": 0,
+        "wLength": 0,
+        "rawHex": "0009010000000000"
+      },
+      "requestFrame": 5,
+      "payloadHex": "",
+      "payloadBytes": 0,
+      "isHidReportTransfer": false
+    },
+    {
+      "frame": 6,
+      "timeUtc": "2026-09-19T21:49:06.821425000Z",
+      "relativeSeconds": 0.0,
+      "bus": 2,
+      "deviceAddress": 5,
+      "irpId": "0x0000000000000000",
+      "stage": 3,
+      "status": "0x00000000",
+      "endpoint": "0x00",
+      "setup": {
+        "bmRequestType": 0,
+        "bRequest": 9,
+        "wValue": 1,
+        "wIndex": 0,
+        "wLength": 0,
+        "rawHex": "0009010000000000"
+      },
+      "requestFrame": 5,
+      "payloadHex": "",
+      "payloadBytes": 0,
+      "isHidReportTransfer": false
+    }
+  ]
+}

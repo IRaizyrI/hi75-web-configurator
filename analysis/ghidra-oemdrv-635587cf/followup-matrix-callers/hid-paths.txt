@@ -1,0 +1,3620 @@
+Static analysis only; target executable was not run.
+Program: OemDrv.exe
+Image base: 00400000
+Selected targets and every analyzed direct caller of the HID feature thunks.
+
+===== target 00410b00 function FUN_00410b00 @ 00410b00 =====
+Body instructions: 697
+Direct references to entry:
+  0040e1c4 DATA caller=FUN_0040e170@0040e170
+  0040e1f9 DATA caller=FUN_0040e170@0040e170
+Reference count: 2
+Decompiled C:
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void FUN_00410b00(wchar_t *param_1,int param_2)
+
+{
+  int iVar1;
+  wchar_t *pwVar2;
+  UINT UVar3;
+  undefined4 *puVar4;
+  code *pcVar5;
+  undefined4 *puVar6;
+  code *pcVar7;
+  undefined4 *puVar8;
+  uint uVar9;
+  wchar_t *local_132c;
+  undefined4 local_1328;
+  undefined2 local_1324;
+  undefined2 local_1322;
+  int local_1318;
+  UINT local_1314;
+  undefined1 local_1304 [30];
+  WCHAR local_12e6 [45];
+  wchar_t local_128c [260];
+  undefined2 local_1084;
+  wchar_t awStack_1068 [10];
+  undefined4 local_1054;
+  WCHAR local_830 [1042];
+  uint local_c;
+  
+  local_c = DAT_00640674 ^ (uint)&local_132c;
+  local_132c = param_1;
+  local_1328._0_2_ = 0;
+  _memset((void *)((int)&local_1328 + 2),0,0x2d6);
+  pcVar7 = GetPrivateProfileStringW_exref;
+  GetPrivateProfileStringW(L"OPT",L"Name",(LPCWSTR)0x0,local_12e6,0x1e,param_1);
+  if (DAT_006492bc != 0) {
+    iVar1 = __wcsnicmp(local_12e6,&DAT_006492bc,0x1e);
+    if (iVar1 != 0) goto LAB_00410d9f;
+  }
+  local_1318 = param_2;
+  if ((param_1 != (wchar_t *)0x0) && (local_128c != (wchar_t *)0x0)) {
+    _wcsncpy_s(local_128c,0x104,param_1,0xffffffff);
+    pwVar2 = _wcsrchr(local_128c,L'\\');
+    if (pwVar2 == (wchar_t *)0x0) {
+      local_1084 = 0;
+    }
+    else {
+      *pwVar2 = L'\0';
+    }
+  }
+  pcVar5 = GetPrivateProfileIntW_exref;
+  UVar3 = GetPrivateProfileIntW(L"OPT",L"VID",0,param_1);
+  local_1328._0_2_ = (short)UVar3;
+  UVar3 = GetPrivateProfileIntW(L"OPT",L"PID",0,param_1);
+  local_1328._2_2_ = (short)UVar3;
+  UVar3 = GetPrivateProfileIntW(L"OPT",L"VID_Wireless",0,param_1);
+  local_1324 = (short)UVar3;
+  UVar3 = GetPrivateProfileIntW(L"OPT",L"PID_Wireless",0,param_1);
+  local_1322 = (short)UVar3;
+  local_1314 = GetPrivateProfileIntW(L"OPT",L"Fw",0,param_1);
+  GetPrivateProfileStringW(L"OPT",L"Psd",(LPCWSTR)0x0,local_830,0x410,param_1);
+  if (local_830[0] != L'\0') {
+    FUN_00462230(local_830,6);
+    pcVar5 = GetPrivateProfileIntW_exref;
+    pcVar7 = GetPrivateProfileStringW_exref;
+  }
+  uVar9 = 0xf;
+  pwVar2 = param_1;
+  (*pcVar7)(&DAT_0060033c,L"ShortName",0,local_1304);
+  if ((((short)uVar9 == 0) || ((short)(uVar9 >> 0x10) == 0)) &&
+     (((uint)pwVar2 >> 0x10) + ((uint)pwVar2 & 0xffff) == 0)) {
+    __snwprintf_s(awStack_1068,0x104,0x103,L"Unassigned VID or PID for ini: %s",param_1);
+    MessageBoxW((HWND)0x0,awStack_1068,L"Warning",0);
+  }
+  if ((((short)pwVar2 == 0) || ((short)((uint)pwVar2 >> 0x10) == 0)) &&
+     ((uVar9 >> 0x10) + (uVar9 & 0xffff) == 0)) {
+    __snwprintf_s(awStack_1068,0x104,0x103,L"Unassigned VID or PID for ini: %s",param_1);
+    MessageBoxW((HWND)0x0,awStack_1068,L"Warning",0);
+  }
+  local_1054 = (*pcVar5)(&DAT_0060033c,L"ShowScreen",0,param_1);
+  puVar4 = _malloc(0x2d8);
+  if (puVar4 != (undefined4 *)0x0) {
+    puVar6 = &local_1328;
+    puVar8 = puVar4;
+    for (iVar1 = 0xb6; iVar1 != 0; iVar1 = iVar1 + -1) {
+      *puVar8 = *puVar6;
+      puVar6 = puVar6 + 1;
+      puVar8 = puVar8 + 1;
+    }
+    iVar1 = FUN_0044caf0(puVar4);
+    if ((iVar1 != 0) && (param_2 == 0)) {
+      FUN_0040f630();
+    }
+  }
+LAB_00410d9f:
+  __security_check_cookie(local_c ^ (uint)&local_132c);
+  return;
+}
+
+
+
+===== target 0048b180 function FUN_0048b180 @ 0048b180 =====
+Body instructions: 131
+Direct references to entry:
+  0048b2f9 UNCONDITIONAL_CALL caller=FUN_0048b2a0@0048b2a0
+  0048b41a UNCONDITIONAL_CALL caller=FUN_0048b3a0@0048b3a0
+  0048b681 UNCONDITIONAL_CALL caller=FUN_0048b5f0@0048b5f0
+  0048ba13 UNCONDITIONAL_CALL caller=FUN_0048b980@0048b980
+  0048b715 UNCONDITIONAL_CALL caller=FUN_0048b6b0@0048b6b0
+  0048b4a5 UNCONDITIONAL_CALL caller=FUN_0048b440@0048b440
+  0048b5bf UNCONDITIONAL_CALL caller=FUN_0048b530@0048b530
+  0048b841 UNCONDITIONAL_CALL caller=FUN_0048b7a0@0048b7a0
+  0048b8e9 UNCONDITIONAL_CALL caller=FUN_0048b870@0048b870
+Reference count: 9
+Decompiled C:
+
+undefined4 __fastcall
+FUN_0048b180(undefined1 param_1,size_t param_2,undefined4 param_3,void *param_4)
+
+{
+  char cVar1;
+  DWORD DVar2;
+  undefined1 *unaff_ESI;
+  int iVar3;
+  
+  *unaff_ESI = 0;
+  if (param_4 == (void *)0x0) {
+    return 0;
+  }
+  *unaff_ESI = param_1;
+  _memcpy(unaff_ESI + 1,param_4,param_2);
+  iVar3 = 3;
+  do {
+    cVar1 = HidD_SetFeature(param_3,unaff_ESI,param_2 + 1);
+    if (cVar1 != '\0') {
+      return 1;
+    }
+    iVar3 = iVar3 + -1;
+    Sleep(200);
+  } while (0 < iVar3);
+  DVar2 = GetLastError();
+  (*DAT_0064e298)(L"SendCommand Err=%d",DVar2);
+  return 0;
+}
+
+
+
+===== target 0048b210 function FUN_0048b210 @ 0048b210 =====
+Body instructions: 139
+Direct references to entry:
+  0048b342 UNCONDITIONAL_CALL caller=FUN_0048b2a0@0048b2a0
+  0048b75e UNCONDITIONAL_CALL caller=FUN_0048b6b0@0048b6b0
+  0048b4ee UNCONDITIONAL_CALL caller=FUN_0048b440@0048b440
+  0048b92e UNCONDITIONAL_CALL caller=FUN_0048b870@0048b870
+Reference count: 4
+Decompiled C:
+
+undefined4 __fastcall
+FUN_0048b210(undefined1 param_1,undefined1 *param_2,undefined4 param_3,size_t param_4)
+
+{
+  char cVar1;
+  DWORD DVar2;
+  void *unaff_EBX;
+  int iVar3;
+  
+  *param_2 = 0;
+  if (unaff_EBX == (void *)0x0) {
+    return 0;
+  }
+  *param_2 = param_1;
+  iVar3 = 3;
+  do {
+    cVar1 = HidD_GetFeature(param_3,param_2,param_4 + 1);
+    if (cVar1 != '\0') {
+      _memcpy(unaff_EBX,param_2 + 1,param_4);
+      return 1;
+    }
+    iVar3 = iVar3 + -1;
+    Sleep(200);
+  } while (0 < iVar3);
+  DVar2 = GetLastError();
+  (*DAT_0064e298)(L"GetCommand Err=%d",DVar2);
+  return 0;
+}
+
+
+
+===== target 0048ef20 function FUN_0048ef20 @ 0048ef20 =====
+Body instructions: 560
+Direct references to entry:
+  004928f0 UNCONDITIONAL_CALL caller=FUN_00492830@00492830
+  0048ff19 UNCONDITIONAL_CALL caller=FUN_0048fef0@0048fef0
+  00490141 UNCONDITIONAL_CALL caller=FUN_00490120@00490120
+  00490171 UNCONDITIONAL_CALL caller=FUN_00490150@00490150
+  0048ff6c UNCONDITIONAL_CALL caller=FUN_0048ff40@0048ff40
+  0048f18f UNCONDITIONAL_CALL caller=FUN_0048f160@0048f160
+  0048f3dc UNCONDITIONAL_CALL caller=FUN_0048f3b0@0048f3b0
+  0048f62c UNCONDITIONAL_CALL caller=FUN_0048f600@0048f600
+  0048f87f UNCONDITIONAL_CALL caller=FUN_0048f850@0048f850
+  0048fccc UNCONDITIONAL_CALL caller=FUN_0048fca0@0048fca0
+Reference count: 10
+Decompiled C:
+
+void __thiscall
+FUN_0048ef20(int param_1,int param_2,DWORD param_3,int param_4,undefined1 param_5,undefined1 param_6
+            ,uint param_7,undefined4 param_8)
+
+{
+  char cVar1;
+  DWORD DVar2;
+  uint uVar3;
+  size_t _Size;
+  int iVar4;
+  int iVar5;
+  bool bVar6;
+  wchar_t *pwVar7;
+  DWORD local_220;
+  int local_21c;
+  int local_218;
+  int local_214;
+  int local_210;
+  char local_20c;
+  undefined1 local_20b;
+  undefined1 local_20a;
+  undefined1 local_209;
+  undefined1 local_208;
+  undefined1 local_207;
+  undefined1 local_206;
+  undefined1 local_205;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_220;
+  local_210 = param_2;
+  iVar5 = 0;
+  local_220 = param_3;
+  local_21c = param_1;
+  if ((param_3 == 0) || ((int)param_7 < 1)) {
+    pwVar7 = L"CDevG5KB::AccessData Param err, hDev=%x";
+LAB_0048f12c:
+    (*DAT_0064e298)(pwVar7,param_3);
+  }
+  else if ((param_4 == 1) || (param_4 == 2)) {
+    local_214 = (int)(param_7 + ((int)param_7 >> 0x1f & 0x1ffU)) >> 9;
+    uVar3 = param_7 & 0x800001ff;
+    bVar6 = uVar3 == 0;
+    local_218 = 0;
+    if ((int)uVar3 < 0) {
+      bVar6 = (uVar3 - 1 | 0xfffffe00) == 0xffffffff;
+    }
+    if (!bVar6) {
+      local_214 = local_214 + 1;
+    }
+    if (0 < (int)param_7) {
+      do {
+        iVar4 = local_21c;
+        _Size = param_7 - iVar5;
+        if (0x1ff < (int)_Size) {
+          _Size = 0x200;
+        }
+        FUN_00405180(param_8);
+        _memset(&local_20c,0,0x208);
+        local_20c = ((*(int *)(*(int *)(local_210 + 0x10) + 0x14) != 0x18) - 1U & 0xfd) + 9;
+        local_208 = (undefined1)local_214;
+        local_20b = param_5;
+        local_207 = (undefined1)local_218;
+        local_218 = local_218 + 1;
+        local_20a = param_6;
+        local_209 = 0;
+        local_206 = (undefined1)_Size;
+        local_205 = (undefined1)(_Size >> 8);
+        if ((param_4 == 1) && (iVar4 != 0)) {
+          _memcpy(local_204,(void *)(iVar4 + iVar5),_Size);
+        }
+        iVar4 = 3;
+        do {
+          cVar1 = HidD_SetFeature(local_220,&local_20c,0x208);
+          if (cVar1 != '\0') break;
+          iVar4 = iVar4 + -1;
+          FUN_00405180(0x46);
+        } while (0 < iVar4);
+        if (iVar4 < 0) {
+          param_3 = GetLastError();
+          pwVar7 = L"CDevG5KB::AccessData err=%d";
+          goto LAB_0048f12c;
+        }
+        if (param_4 == 2) {
+          FUN_00405180(param_8);
+          cVar1 = HidD_GetFeature(local_220,&local_20c,0x208);
+          if (cVar1 == '\0') {
+            DVar2 = GetLastError();
+            (*DAT_0064e298)(L"CDevG5KB::AccessData read err=%d",DVar2);
+          }
+          _memcpy((void *)(local_21c + iVar5),local_204,_Size);
+        }
+        iVar5 = iVar5 + _Size;
+      } while (iVar5 < (int)param_7);
+    }
+  }
+  else {
+    (*DAT_0064e298)(L"CDevG5KB::AccessData nOper err");
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_220);
+  return;
+}
+
+
+
+===== target 0048f696 function FUN_0048f650 @ 0048f650 =====
+Body instructions: 502
+Direct references to entry:
+  00614fe0 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_0048f650(int param_1,int param_2,uint param_3)
+
+{
+  char cVar1;
+  DWORD DVar2;
+  uint uVar3;
+  size_t _Size;
+  int iVar4;
+  int iVar5;
+  bool bVar6;
+  wchar_t *pwVar7;
+  DWORD local_21c;
+  int local_218;
+  int local_214;
+  int local_210;
+  char local_20c [5];
+  undefined1 local_207;
+  undefined1 local_206;
+  undefined1 local_205;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_21c;
+  iVar4 = 0;
+  local_210 = param_2;
+  if (*(int *)(param_1 + 0x23c) == 0) {
+    DVar2 = *(DWORD *)(param_1 + 0xc);
+    local_21c = DVar2;
+    if ((DVar2 == 0) || ((int)param_3 < 1)) {
+      pwVar7 = L"CDevG5KB::AccessData Param err, hDev=%x";
+LAB_0048f830:
+      (*DAT_0064e298)(pwVar7,DVar2);
+      (*DAT_0064e298)(L"GetLED failed");
+    }
+    else {
+      local_218 = (int)(param_3 + ((int)param_3 >> 0x1f & 0x1ffU)) >> 9;
+      uVar3 = param_3 & 0x800001ff;
+      bVar6 = uVar3 == 0;
+      local_214 = 0;
+      if ((int)uVar3 < 0) {
+        bVar6 = (uVar3 - 1 | 0xfffffe00) == 0xffffffff;
+      }
+      if (!bVar6) {
+        local_218 = local_218 + 1;
+      }
+      if (0 < (int)param_3) {
+        do {
+          _Size = param_3 - iVar4;
+          if (0x1ff < (int)_Size) {
+            _Size = 0x200;
+          }
+          FUN_00405180(0x14);
+          _memset(local_20c,0,0x208);
+          local_207 = (undefined1)local_214;
+          local_214 = local_214 + 1;
+          local_20c[0] = ((*(int *)(*(int *)(param_1 + 0x10) + 0x14) != 0x18) - 1U & 0xfd) + 9;
+          local_20c[1] = 0x84;
+          local_20c[2] = 0;
+          local_20c[3] = 0;
+          local_20c[4] = (undefined1)local_218;
+          local_206 = (undefined1)_Size;
+          local_205 = (undefined1)(_Size >> 8);
+          iVar5 = 3;
+          do {
+            cVar1 = HidD_SetFeature(local_21c,local_20c,0x208);
+            if (cVar1 != '\0') break;
+            iVar5 = iVar5 + -1;
+            FUN_00405180(0x46);
+          } while (0 < iVar5);
+          if (iVar5 < 0) {
+            DVar2 = GetLastError();
+            pwVar7 = L"CDevG5KB::AccessData err=%d";
+            goto LAB_0048f830;
+          }
+          FUN_00405180(0x14);
+          cVar1 = HidD_GetFeature(local_21c,local_20c,0x208);
+          if (cVar1 == '\0') {
+            DVar2 = GetLastError();
+            (*DAT_0064e298)(L"CDevG5KB::AccessData read err=%d",DVar2);
+          }
+          _memcpy((void *)(local_210 + iVar4),local_204,_Size);
+          iVar4 = iVar4 + _Size;
+        } while (iVar4 < (int)param_3);
+      }
+    }
+  }
+  else {
+    (**(code **)(**(int **)(param_1 + 0x23c) + 0x6c))(param_2,param_3);
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_21c);
+  return;
+}
+
+
+
+===== target 0048ff90 function FUN_0048ff90 @ 0048ff90 =====
+Body instructions: 384
+Direct references to entry:
+  0048ecbe UNCONDITIONAL_CALL caller=FUN_0048eb70@0048eb70
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_0048ff90(int param_1,int param_2)
+
+{
+  char cVar1;
+  DWORD DVar2;
+  size_t _Size;
+  int iVar3;
+  int iVar4;
+  int unaff_EDI;
+  wchar_t *pwVar5;
+  int local_218;
+  int local_214;
+  int local_210;
+  char local_20c [6];
+  undefined1 local_206;
+  undefined1 local_205;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_218;
+  iVar3 = 0;
+  local_218 = param_2;
+  local_210 = param_1;
+  if (param_2 == 0) {
+    DVar2 = 0;
+    pwVar5 = L"CDevG5KB::AccessData Param err, hDev=%x";
+LAB_00490105:
+    (*DAT_0064e298)(pwVar5,DVar2);
+    (*DAT_0064e298)(L"GetPassword failed");
+  }
+  else {
+    local_214 = 0;
+    do {
+      _Size = 6 - iVar3;
+      if (0x1ff < (int)_Size) {
+        _Size = 0x200;
+      }
+      FUN_00405180(0x14);
+      _memset(local_20c,0,0x208);
+      local_20c[0] = ((*(int *)(*(int *)(unaff_EDI + 0x10) + 0x14) != 0x18) - 1U & 0xfd) + 9;
+      local_20c[5] = (char)local_214;
+      local_214 = local_214 + 1;
+      local_20c[1] = 0x82;
+      local_20c[2] = 1;
+      local_20c[3] = 0;
+      local_20c[4] = 1;
+      local_206 = (undefined1)_Size;
+      local_205 = (undefined1)(_Size >> 8);
+      iVar4 = 3;
+      do {
+        cVar1 = HidD_SetFeature(local_218,local_20c,0x208);
+        if (cVar1 != '\0') break;
+        iVar4 = iVar4 + -1;
+        FUN_00405180(0x46);
+      } while (0 < iVar4);
+      if (iVar4 < 0) {
+        DVar2 = GetLastError();
+        pwVar5 = L"CDevG5KB::AccessData err=%d";
+        goto LAB_00490105;
+      }
+      FUN_00405180(0x14);
+      cVar1 = HidD_GetFeature(local_218,local_20c,0x208);
+      if (cVar1 == '\0') {
+        DVar2 = GetLastError();
+        (*DAT_0064e298)(L"CDevG5KB::AccessData read err=%d",DVar2);
+      }
+      _memcpy((void *)(local_210 + iVar3),local_204,_Size);
+      iVar3 = iVar3 + _Size;
+    } while (iVar3 < 6);
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_218);
+  return;
+}
+
+
+
+===== target 005bd73c function HidD_SetFeature @ 005bd73c =====
+Body instructions: 6
+Direct references to entry:
+  0049457f UNCONDITIONAL_CALL caller=FUN_004944a0@004944a0
+  00494a0f UNCONDITIONAL_CALL caller=FUN_00494920@00494920
+  0048b1c7 UNCONDITIONAL_CALL caller=FUN_0048b180@0048b180
+  0049005f UNCONDITIONAL_CALL caller=FUN_0048ff90@0048ff90
+  0048f08f UNCONDITIONAL_CALL caller=FUN_0048ef20@0048ef20
+  0048baba UNCONDITIONAL_CALL caller=FUN_0048ba40@0048ba40
+  00492691 UNCONDITIONAL_CALL caller=FUN_00492490@00492490
+  0048f2f2 UNCONDITIONAL_CALL caller=FUN_0048f1a0@0048f1a0
+  0048f54f UNCONDITIONAL_CALL caller=FUN_0048f400@0048f400
+  0048f79f UNCONDITIONAL_CALL caller=FUN_0048f650@0048f650
+  0048fa02 UNCONDITIONAL_CALL caller=FUN_0048f8b0@0048f8b0
+  0048fe3f UNCONDITIONAL_CALL caller=FUN_0048fcf0@0048fcf0
+  0048fbef UNCONDITIONAL_CALL caller=FUN_0048fac0@0048fac0
+  004947bf UNCONDITIONAL_CALL caller=FUN_004946e0@004946e0
+  004934d0 UNCONDITIONAL_CALL caller=FUN_00493360@00493360
+  004937ff UNCONDITIONAL_CALL caller=FUN_00493690@00493690
+  00493ae0 UNCONDITIONAL_CALL caller=FUN_004939a0@004939a0
+  00493de0 UNCONDITIONAL_CALL caller=FUN_00493c80@00493c80
+  0049408f UNCONDITIONAL_CALL caller=FUN_00493f90@00493f90
+  00494341 UNCONDITIONAL_CALL caller=FUN_00494200@00494200
+Reference count: 20
+Decompiled C:
+
+void HidD_SetFeature(void)
+
+{
+                    /* WARNING: Could not recover jumptable at 0x005bd73c. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  HidD_SetFeature();
+  return;
+}
+
+
+
+===== target 005bd742 function HidD_GetFeature @ 005bd742 =====
+Body instructions: 6
+Direct references to entry:
+  00494641 UNCONDITIONAL_CALL caller=FUN_004944a0@004944a0
+  00494ad1 UNCONDITIONAL_CALL caller=FUN_00494920@00494920
+  0048b24c UNCONDITIONAL_CALL caller=FUN_0048b210@0048b210
+  00490094 UNCONDITIONAL_CALL caller=FUN_0048ff90@0048ff90
+  0048f0cf UNCONDITIONAL_CALL caller=FUN_0048ef20@0048ef20
+  0048f327 UNCONDITIONAL_CALL caller=FUN_0048f1a0@0048f1a0
+  0048f584 UNCONDITIONAL_CALL caller=FUN_0048f400@0048f400
+  0048f7d4 UNCONDITIONAL_CALL caller=FUN_0048f650@0048f650
+  0048fa37 UNCONDITIONAL_CALL caller=FUN_0048f8b0@0048f8b0
+  0048fe74 UNCONDITIONAL_CALL caller=FUN_0048fcf0@0048fcf0
+  0048fc24 UNCONDITIONAL_CALL caller=FUN_0048fac0@0048fac0
+  00494881 UNCONDITIONAL_CALL caller=FUN_004946e0@004946e0
+  004935bc UNCONDITIONAL_CALL caller=FUN_00493360@00493360
+  004938c1 UNCONDITIONAL_CALL caller=FUN_00493690@00493690
+  00493ba2 UNCONDITIONAL_CALL caller=FUN_004939a0@004939a0
+  00493ea2 UNCONDITIONAL_CALL caller=FUN_00493c80@00493c80
+  00494151 UNCONDITIONAL_CALL caller=FUN_00493f90@00493f90
+  00494409 UNCONDITIONAL_CALL caller=FUN_00494200@00494200
+Reference count: 18
+Decompiled C:
+
+void HidD_GetFeature(void)
+
+{
+                    /* WARNING: Could not recover jumptable at 0x005bd742. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  HidD_GetFeature();
+  return;
+}
+
+
+
+===== target 004a3f86 function AtlIAccessibleInvokeHelper @ 004a3dd2 =====
+Body instructions: 1406
+Direct references to entry:
+  004a56af UNCONDITIONAL_CALL caller=Invoke@004a5678
+Reference count: 1
+Decompiled C:
+
+/* Library Function - Single Match
+    long __stdcall ATL::AtlIAccessibleInvokeHelper(struct IAccessible *,long,struct _GUID const
+   &,unsigned long,unsigned short,struct tagDISPPARAMS *,struct tagVARIANT *,struct tagEXCEPINFO
+   *,unsigned int *)
+   
+   Library: Visual Studio 2008 Release */
+
+long ATL::AtlIAccessibleInvokeHelper
+               (IAccessible *param_1,long param_2,_GUID *param_3,ulong param_4,ushort param_5,
+               tagDISPPARAMS *param_6,tagVARIANT *param_7,tagEXCEPINFO *param_8,uint *param_9)
+
+{
+  undefined4 uVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  undefined4 uVar5;
+  undefined4 uVar6;
+  undefined4 uVar7;
+  undefined4 uVar8;
+  undefined4 uVar9;
+  undefined4 uVar10;
+  undefined4 uVar11;
+  undefined4 uVar12;
+  undefined4 uVar13;
+  undefined4 uVar14;
+  undefined4 uVar15;
+  undefined4 uVar16;
+  undefined4 uVar17;
+  undefined4 uVar18;
+  undefined4 uVar19;
+  undefined4 uVar20;
+  undefined4 uVar21;
+  undefined4 uVar22;
+  undefined4 uVar23;
+  undefined4 uVar24;
+  undefined4 uVar25;
+  undefined4 uVar26;
+  ushort uVar27;
+  IAccessible *pIVar28;
+  VARIANTARG **ppVVar29;
+  IAccessible *pIVar30;
+  tagDISPPARAMS *ptVar31;
+  VARIANTARG *pVVar32;
+  _union_2685 *p_Var33;
+  int iVar34;
+  int *piVar35;
+  undefined2 in_stack_00000016;
+  VARTYPE VVar36;
+  _union_2683 *local_48 [4];
+  undefined4 *local_38;
+  undefined4 local_34;
+  undefined4 uStack_30;
+  LONG LStack_2c;
+  IRecordInfo *pIStack_28;
+  _union_2683 local_24;
+  _union_2683 local_14;
+  
+  ptVar31 = param_6;
+  pIVar30 = param_1;
+  iVar34 = 0;
+  local_24.n2.vt = 0;
+  if (param_1 == (IAccessible *)0x0) {
+    return -0x7ff8ffa9;
+  }
+  if (param_6 == (tagDISPPARAMS *)0x0) {
+    return -0x7ffdfff8;
+  }
+  pIVar28 = (IAccessible *)param_6->cArgs;
+  if ((IAccessible *)0x5 < pIVar28) {
+    return -0x7ffdfff2;
+  }
+  param_1 = (IAccessible *)0x0;
+  if (param_6->cNamedArgs != 0) {
+    param_6 = (tagDISPPARAMS *)param_6->rgdispidNamedArgs;
+    do {
+      ppVVar29 = &param_6->rgvarg;
+      if (pIVar28 <= (IAccessible *)*ppVVar29) {
+        return -0x7ffdfff2;
+      }
+      param_6 = (tagDISPPARAMS *)&param_6->rgdispidNamedArgs;
+      param_1 = param_1 + 1;
+      local_48[(int)*ppVVar29] = (_union_2683 *)((int)&ptVar31->rgvarg->n1 + iVar34);
+      iVar34 = iVar34 + 0x10;
+    } while (param_1 < (IAccessible *)ptVar31->cNamedArgs);
+  }
+  if (param_1 < pIVar28) {
+    pVVar32 = ptVar31->rgvarg + (int)param_1;
+    iVar34 = (int)pIVar28 - (int)param_1;
+    piVar35 = (int *)(&stack0xffffffb4 + ((int)pIVar28 - (int)param_1) * 4);
+    do {
+      *piVar35 = (int)pVVar32;
+      pVVar32 = pVVar32 + 1;
+      piVar35 = piVar35 + -1;
+      iVar34 = iVar34 + -1;
+    } while (iVar34 != 0);
+  }
+  iVar34 = -0x7ffdfffd;
+  if (param_9 == (uint *)0x0) {
+    param_9 = (uint *)&param_5;
+  }
+  if (param_7 == (tagVARIANT *)0x0) {
+    param_7 = (tagVARIANT *)&local_24;
+  }
+  VariantInit((VARIANTARG *)&local_14.n2);
+  switch(param_2) {
+  case -0x139a:
+    if (ptVar31->cArgs == 1) {
+      uVar1._0_2_ = *(VARTYPE *)local_48[0];
+      uVar1._2_2_ = *(WORD *)((int)local_48[0] + 2);
+      uVar2._0_2_ = *(WORD *)((int)local_48[0] + 4);
+      uVar2._2_2_ = *(WORD *)((int)local_48[0] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 100))
+                         (pIVar30,uVar1,uVar2,(local_48[0]->n2).n3.lVal,
+                          (local_48[0]->n2).n3.brecVal.pRecInfo);
+      goto switchD_004a3eac_default;
+    }
+    break;
+  case -0x1399:
+    if (ptVar31->cArgs == 2) {
+      if ((local_48[0]->n2).vt != 3) {
+        iVar34 = VariantChangeType((VARIANTARG *)&local_14.n2,(VARIANTARG *)&local_48[0]->n2,0,3);
+        if (iVar34 < 0) goto LAB_004a40d8;
+        local_48[0] = &local_14;
+      }
+      _param_5 = (local_48[0]->n2).n3.lVal;
+      if ((local_48[1]->n2).vt != 3) {
+        iVar34 = VariantChangeType((VARIANTARG *)&local_14.n2,(VARIANTARG *)&local_48[1]->n2,0,3);
+        if (iVar34 < 0) {
+LAB_004a42bf:
+          *param_9 = 1;
+          goto switchD_004a3eac_default;
+        }
+        local_48[1] = &local_14;
+      }
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x60))
+                         (pIVar30,_param_5,(local_48[1]->n2).n3.lVal,param_7);
+      goto switchD_004a3eac_default;
+    }
+    break;
+  case -0x1398:
+    if (ptVar31->cArgs == 2) {
+      if ((local_48[0]->n2).vt != 3) {
+        iVar34 = VariantChangeType((VARIANTARG *)&local_14.n2,(VARIANTARG *)&local_48[0]->n2,0,3);
+        if (iVar34 < 0) goto LAB_004a40d8;
+        local_48[0] = &local_14;
+      }
+      uVar3._0_2_ = *(VARTYPE *)local_48[1];
+      uVar3._2_2_ = *(WORD *)((int)local_48[1] + 2);
+      uVar4._0_2_ = *(WORD *)((int)local_48[1] + 4);
+      uVar4._2_2_ = *(WORD *)((int)local_48[1] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x5c))
+                         (pIVar30,(local_48[0]->n2).n3.lVal,uVar3,uVar4,(local_48[1]->n2).n3.lVal,
+                          (local_48[1]->n2).n3.brecVal.pRecInfo,param_7);
+      goto switchD_004a3eac_default;
+    }
+    break;
+  case -0x1397:
+    if (ptVar31->cArgs == 5) {
+      while ((uVar27 = (local_48[0]->n2).vt, (uVar27 & 0x4000) != 0 && ((uVar27 & 0xf) != 0))) {
+        if ((uVar27 & 0xc) == 0) {
+          local_14._0_4_ = (local_48[0]->n2).n3.lVal;
+        }
+        else {
+          VariantClear((VARIANTARG *)(local_48[0]->n2).n3.punkVal);
+          *(local_48[0]->n2).n3.bstrVal = L'\x03';
+          local_14._0_4_ = &((local_48[0]->n2).n3.parray)->cLocks;
+        }
+      }
+      *param_9 = 0;
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x58))
+                         (pIVar30,local_14._0_4_,local_14.decVal.Hi32,local_14._8_4_,local_14._12_4_
+                          ,*local_38,local_38[1],local_38[2],local_38[3]);
+      goto switchD_004a3eac_default;
+    }
+    break;
+  case -0x1396:
+    if (ptVar31->cArgs == 2) {
+      if ((local_48[0]->n2).vt != 3) {
+        iVar34 = VariantChangeType((VARIANTARG *)&local_14.n2,(VARIANTARG *)&local_48[0]->n2,0,3);
+        if (iVar34 < 0) goto LAB_004a40d8;
+        local_48[0] = &local_14;
+      }
+      uVar5._0_2_ = *(VARTYPE *)local_48[1];
+      uVar5._2_2_ = *(WORD *)((int)local_48[1] + 2);
+      uVar6._0_2_ = *(WORD *)((int)local_48[1] + 4);
+      uVar6._2_2_ = *(WORD *)((int)local_48[1] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x54))
+                         (pIVar30,(local_48[0]->n2).n3.lVal,uVar5,uVar6,(local_48[1]->n2).n3.lVal,
+                          (local_48[1]->n2).n3.brecVal.pRecInfo);
+      goto switchD_004a3eac_default;
+    }
+    break;
+  case -0x1395:
+    if (ptVar31->cArgs == 1) {
+      uVar7._0_2_ = *(VARTYPE *)local_48[0];
+      uVar7._2_2_ = *(WORD *)((int)local_48[0] + 2);
+      uVar8._0_2_ = *(WORD *)((int)local_48[0] + 4);
+      uVar8._2_2_ = *(WORD *)((int)local_48[0] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x50))
+                         (pIVar30,uVar7,uVar8,(local_48[0]->n2).n3.lVal,
+                          (local_48[0]->n2).n3.brecVal.pRecInfo,
+                          (undefined1 *)((int)&param_7->n1 + 8));
+LAB_004a4066:
+      if (iVar34 < 0) goto switchD_004a3eac_default;
+      VVar36 = 8;
+      goto LAB_004a4336;
+    }
+    break;
+  case -0x1394:
+    iVar34 = (**(code **)(*(int *)pIVar30 + 0x4c))(pIVar30,param_7);
+    goto switchD_004a3eac_default;
+  case -0x1393:
+    iVar34 = (**(code **)(*(int *)pIVar30 + 0x48))(pIVar30,param_7);
+    goto switchD_004a3eac_default;
+  case -0x1392:
+    if (ptVar31->cArgs == 1) {
+      uVar9._0_2_ = *(VARTYPE *)local_48[0];
+      uVar9._2_2_ = *(WORD *)((int)local_48[0] + 2);
+      uVar10._0_2_ = *(WORD *)((int)local_48[0] + 4);
+      uVar10._2_2_ = *(WORD *)((int)local_48[0] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x44))
+                         (pIVar30,uVar9,uVar10,(local_48[0]->n2).n3.lVal,
+                          (local_48[0]->n2).n3.brecVal.pRecInfo,
+                          (undefined1 *)((int)&param_7->n1 + 8));
+      goto LAB_004a4066;
+    }
+    break;
+  case -0x1391:
+    if (ptVar31->cArgs == 2) {
+      uVar27 = (local_48[0]->n2).vt;
+      if (((uVar27 & 0x4000) != 0) && ((uVar27 & 0xc) == 0)) {
+        iVar34 = -0x7ffdfffb;
+LAB_004a40d8:
+        *param_9 = 0;
+        goto switchD_004a3eac_default;
+      }
+      if (uVar27 == 0x400c) {
+        VariantClear((VARIANTARG *)(local_48[0]->n2).n3.punkVal);
+        *(local_48[0]->n2).n3.bstrVal = L'\b';
+        p_Var33 = (_union_2685 *)&((local_48[0]->n2).n3.parray)->cLocks;
+      }
+      else if (uVar27 == 0x4008) {
+        p_Var33 = (_union_2685 *)(local_48[0]->n2).n3.lVal;
+      }
+      else {
+        VariantClear((VARIANTARG *)&local_48[0]->n2);
+        p_Var33 = &(local_48[0]->n2).n3;
+        (local_48[0]->n2).vt = 8;
+      }
+      uVar11._0_2_ = *(VARTYPE *)local_48[1];
+      uVar11._2_2_ = *(WORD *)((int)local_48[1] + 2);
+      uVar12._0_2_ = *(WORD *)((int)local_48[1] + 4);
+      uVar12._2_2_ = *(WORD *)((int)local_48[1] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x40))
+                         (pIVar30,p_Var33,uVar11,uVar12,(local_48[1]->n2).n3.lVal,
+                          (local_48[1]->n2).n3.brecVal.pRecInfo,
+                          (undefined1 *)((int)&param_7->n1 + 8));
+      goto LAB_004a413f;
+    }
+    break;
+  case -0x1390:
+    if (ptVar31->cArgs == 1) {
+      uVar13._0_2_ = *(VARTYPE *)local_48[0];
+      uVar13._2_2_ = *(WORD *)((int)local_48[0] + 2);
+      uVar14._0_2_ = *(WORD *)((int)local_48[0] + 4);
+      uVar14._2_2_ = *(WORD *)((int)local_48[0] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x3c))
+                         (pIVar30,uVar13,uVar14,(local_48[0]->n2).n3.lVal,
+                          (local_48[0]->n2).n3.brecVal.pRecInfo,
+                          (undefined1 *)((int)&param_7->n1 + 8));
+      goto LAB_004a4066;
+    }
+    break;
+  case -0x138f:
+    if (ptVar31->cArgs == 1) {
+      uVar15._0_2_ = *(VARTYPE *)local_48[0];
+      uVar15._2_2_ = *(WORD *)((int)local_48[0] + 2);
+      uVar16._0_2_ = *(WORD *)((int)local_48[0] + 4);
+      uVar16._2_2_ = *(WORD *)((int)local_48[0] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x38))
+                         (pIVar30,uVar15,uVar16,(local_48[0]->n2).n3.lVal,
+                          (local_48[0]->n2).n3.brecVal.pRecInfo,param_7);
+      goto switchD_004a3eac_default;
+    }
+    break;
+  case -0x138e:
+    if (ptVar31->cArgs == 1) {
+      uVar17._0_2_ = *(VARTYPE *)local_48[0];
+      uVar17._2_2_ = *(WORD *)((int)local_48[0] + 2);
+      uVar18._0_2_ = *(WORD *)((int)local_48[0] + 4);
+      uVar18._2_2_ = *(WORD *)((int)local_48[0] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x34))
+                         (pIVar30,uVar17,uVar18,(local_48[0]->n2).n3.lVal,
+                          (local_48[0]->n2).n3.brecVal.pRecInfo,param_7);
+      goto switchD_004a3eac_default;
+    }
+    break;
+  case -0x138d:
+    if (ptVar31->cArgs == 1) {
+      uVar19._0_2_ = *(VARTYPE *)local_48[0];
+      uVar19._2_2_ = *(WORD *)((int)local_48[0] + 2);
+      uVar20._0_2_ = *(WORD *)((int)local_48[0] + 4);
+      uVar20._2_2_ = *(WORD *)((int)local_48[0] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x30))
+                         (pIVar30,uVar19,uVar20,(local_48[0]->n2).n3.lVal,
+                          (local_48[0]->n2).n3.brecVal.pRecInfo,
+                          (undefined1 *)((int)&param_7->n1 + 8));
+      goto LAB_004a4066;
+    }
+    break;
+  case -0x138c:
+    if ((_param_5 & 2) == 0) {
+      if ((_param_5 & 4) == 0) goto switchD_004a3eac_caseD_ffffec75;
+      if (ptVar31->cArgs == 2) {
+        local_34._0_2_ = *(VARTYPE *)local_48[0];
+        local_34._2_2_ = *(WORD *)((int)local_48[0] + 2);
+        uStack_30._0_2_ = *(WORD *)((int)local_48[0] + 4);
+        uStack_30._2_2_ = *(WORD *)((int)local_48[0] + 6);
+        LStack_2c = (local_48[0]->n2).n3.lVal;
+        pIStack_28 = (local_48[0]->n2).n3.brecVal.pRecInfo;
+        if ((local_48[1]->n2).vt != 8) {
+          iVar34 = VariantChangeType((VARIANTARG *)&local_14.n2,(VARIANTARG *)&local_48[1]->n2,0,3);
+          if (iVar34 < 0) goto LAB_004a42bf;
+          local_48[1] = &local_14;
+        }
+        iVar34 = (**(code **)(*(int *)pIVar30 + 0x6c))
+                           (pIVar30,local_34,uStack_30,LStack_2c,pIStack_28,
+                            (local_48[1]->n2).n3.lVal);
+        goto switchD_004a3eac_default;
+      }
+    }
+    else if (ptVar31->cArgs == 1) {
+      uVar21._0_2_ = *(VARTYPE *)local_48[0];
+      uVar21._2_2_ = *(WORD *)((int)local_48[0] + 2);
+      uVar22._0_2_ = *(WORD *)((int)local_48[0] + 4);
+      uVar22._2_2_ = *(WORD *)((int)local_48[0] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x2c))
+                         (pIVar30,uVar21,uVar22,(local_48[0]->n2).n3.lVal,
+                          (local_48[0]->n2).n3.brecVal.pRecInfo,
+                          (undefined1 *)((int)&param_7->n1 + 8));
+      goto LAB_004a4066;
+    }
+    break;
+  case -0x138b:
+switchD_004a3eac_caseD_ffffec75:
+    if ((_param_5 & 2) == 0) {
+      if ((_param_5 & 4) == 0) goto switchD_004a3eac_caseD_ffffec76;
+      if (ptVar31->cArgs == 2) {
+        local_34._0_2_ = *(VARTYPE *)local_48[0];
+        local_34._2_2_ = *(WORD *)((int)local_48[0] + 2);
+        uStack_30._0_2_ = *(WORD *)((int)local_48[0] + 4);
+        uStack_30._2_2_ = *(WORD *)((int)local_48[0] + 6);
+        LStack_2c = (local_48[0]->n2).n3.lVal;
+        pIStack_28 = (local_48[0]->n2).n3.brecVal.pRecInfo;
+        if ((local_48[1]->n2).vt != 8) {
+          iVar34 = VariantChangeType((VARIANTARG *)&local_14.n2,(VARIANTARG *)&local_48[1]->n2,0,3);
+          if (iVar34 < 0) goto LAB_004a42bf;
+          local_48[1] = &local_14;
+        }
+        iVar34 = (**(code **)(*(int *)pIVar30 + 0x68))
+                           (pIVar30,local_34,uStack_30,LStack_2c,pIStack_28,
+                            (local_48[1]->n2).n3.lVal);
+        goto switchD_004a3eac_default;
+      }
+    }
+    else if (ptVar31->cArgs == 1) {
+      uVar23._0_2_ = *(VARTYPE *)local_48[0];
+      uVar23._2_2_ = *(WORD *)((int)local_48[0] + 2);
+      uVar24._0_2_ = *(WORD *)((int)local_48[0] + 4);
+      uVar24._2_2_ = *(WORD *)((int)local_48[0] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x28))
+                         (pIVar30,uVar23,uVar24,(local_48[0]->n2).n3.lVal,
+                          (local_48[0]->n2).n3.brecVal.pRecInfo,
+                          (undefined1 *)((int)&param_7->n1 + 8));
+      goto LAB_004a4066;
+    }
+    break;
+  case -0x138a:
+switchD_004a3eac_caseD_ffffec76:
+    if (ptVar31->cArgs == 1) {
+      uVar25._0_2_ = *(VARTYPE *)local_48[0];
+      uVar25._2_2_ = *(WORD *)((int)local_48[0] + 2);
+      uVar26._0_2_ = *(WORD *)((int)local_48[0] + 4);
+      uVar26._2_2_ = *(WORD *)((int)local_48[0] + 6);
+      iVar34 = (**(code **)(*(int *)pIVar30 + 0x24))
+                         (pIVar30,uVar25,uVar26,(local_48[0]->n2).n3.lVal,
+                          (local_48[0]->n2).n3.brecVal.pRecInfo,
+                          (undefined1 *)((int)&param_7->n1 + 8));
+      goto LAB_004a432e;
+    }
+    break;
+  case -0x1389:
+    iVar34 = (**(code **)(*(int *)pIVar30 + 0x20))(pIVar30,(undefined1 *)((int)&param_7->n1 + 8));
+LAB_004a413f:
+    if (iVar34 < 0) goto switchD_004a3eac_default;
+    VVar36 = 3;
+    goto LAB_004a4336;
+  case -5000:
+    iVar34 = (**(code **)(*(int *)pIVar30 + 0x1c))(pIVar30,(undefined1 *)((int)&param_7->n1 + 8));
+LAB_004a432e:
+    if (iVar34 < 0) goto switchD_004a3eac_default;
+    VVar36 = 9;
+LAB_004a4336:
+    (param_7->n1).n2.vt = VVar36;
+  default:
+    goto switchD_004a3eac_default;
+  }
+  iVar34 = -0x7ffdfff2;
+switchD_004a3eac_default:
+  VariantClear((VARIANTARG *)&local_14.n2);
+  return iVar34;
+}
+
+
+
+===== target 004a4ae5 function accNavigate @ 004a4ac6 =====
+Body instructions: 40
+Direct references to entry:
+  005d5a88 DATA caller=unknown
+  005d6238 DATA caller=unknown
+  005d6628 DATA caller=unknown
+  005d69f8 DATA caller=unknown
+  005d6e18 DATA caller=unknown
+  005d70d0 DATA caller=unknown
+  005d7420 DATA caller=unknown
+  005d7710 DATA caller=unknown
+  005d79d0 DATA caller=unknown
+  005d7b18 DATA caller=unknown
+  005d8800 DATA caller=unknown
+  005d9210 DATA caller=unknown
+  005d9780 DATA caller=unknown
+  005da1d8 DATA caller=unknown
+  005dbdb0 DATA caller=unknown
+  005dc9f8 DATA caller=unknown
+  005dcf60 DATA caller=unknown
+  005dd370 DATA caller=unknown
+  005dd700 DATA caller=unknown
+  005e1128 DATA caller=unknown
+  005e1760 DATA caller=unknown
+  005e19b0 DATA caller=unknown
+  005e1d68 DATA caller=unknown
+  005e1fd8 DATA caller=unknown
+  005e21f8 DATA caller=unknown
+  005e2488 DATA caller=unknown
+  005e3068 DATA caller=unknown
+  005e3540 DATA caller=unknown
+  005e3950 DATA caller=unknown
+  005e3c18 DATA caller=unknown
+  005e3db8 DATA caller=unknown
+  005e42a8 DATA caller=unknown
+  005e45e0 DATA caller=unknown
+  005e4bf0 DATA caller=unknown
+  005e4d78 DATA caller=unknown
+  005e5370 DATA caller=unknown
+  005e5d68 DATA caller=unknown
+  005e5fa0 DATA caller=unknown
+  005e6448 DATA caller=unknown
+  005e6600 DATA caller=unknown
+  005e6a60 DATA caller=unknown
+  005e6ed8 DATA caller=unknown
+  005e72c0 DATA caller=unknown
+  005e75c8 DATA caller=unknown
+  005e7900 DATA caller=unknown
+  005e7e50 DATA caller=unknown
+  005e87c8 DATA caller=unknown
+  005e89f8 DATA caller=unknown
+  005e8dc8 DATA caller=unknown
+  005e9248 DATA caller=unknown
+  005e9750 DATA caller=unknown
+  005e9a98 DATA caller=unknown
+  005e9eb8 DATA caller=unknown
+  005eaff8 DATA caller=unknown
+  005eb328 DATA caller=unknown
+  005eb5c8 DATA caller=unknown
+  005ebab0 DATA caller=unknown
+  005ec438 DATA caller=unknown
+  005ec820 DATA caller=unknown
+  005eca48 DATA caller=unknown
+  005ecec0 DATA caller=unknown
+  005ed0a8 DATA caller=unknown
+  005ed240 DATA caller=unknown
+  005edd20 DATA caller=unknown
+  005ee158 DATA caller=unknown
+  005ee6a8 DATA caller=unknown
+  005ee830 DATA caller=unknown
+  005eec40 DATA caller=unknown
+  005eef10 DATA caller=unknown
+  005ef438 DATA caller=unknown
+  005ef988 DATA caller=unknown
+  005f1190 DATA caller=unknown
+  005f1448 DATA caller=unknown
+  005f1778 DATA caller=unknown
+  005f19e8 DATA caller=unknown
+  005f1d70 DATA caller=unknown
+  005f2258 DATA caller=unknown
+  005f2488 DATA caller=unknown
+  005f25f8 DATA caller=unknown
+  005f2990 DATA caller=unknown
+  005f2d48 DATA caller=unknown
+  005f2e88 DATA caller=unknown
+  005f3128 DATA caller=unknown
+  005f3448 DATA caller=unknown
+  005f38a8 DATA caller=unknown
+  005f3a38 DATA caller=unknown
+  005f3cf8 DATA caller=unknown
+  005f3ef0 DATA caller=unknown
+  005f4310 DATA caller=unknown
+  005f46a0 DATA caller=unknown
+  005f4958 DATA caller=unknown
+  005f4b98 DATA caller=unknown
+  005f4d48 DATA caller=unknown
+  005f4fc0 DATA caller=unknown
+  005f51d0 DATA caller=unknown
+  005f55c0 DATA caller=unknown
+  005f5a60 DATA caller=unknown
+  005f5cc0 DATA caller=unknown
+  005f5f88 DATA caller=unknown
+  005f60e8 DATA caller=unknown
+  005f64c8 DATA caller=unknown
+  005f6760 DATA caller=unknown
+  005f68e0 DATA caller=unknown
+  005f70d8 DATA caller=unknown
+  005f7860 DATA caller=unknown
+  005f83c8 DATA caller=unknown
+  005f85b0 DATA caller=unknown
+  005f8718 DATA caller=unknown
+  005f8890 DATA caller=unknown
+  005f8ad0 DATA caller=unknown
+  005f8c80 DATA caller=unknown
+  005f9010 DATA caller=unknown
+  005f9290 DATA caller=unknown
+  005f93f8 DATA caller=unknown
+  005f96c8 DATA caller=unknown
+  005f99b0 DATA caller=unknown
+  005f9c78 DATA caller=unknown
+  005f9ed8 DATA caller=unknown
+  005fdef8 DATA caller=unknown
+  005fe250 DATA caller=unknown
+  005fe5a8 DATA caller=unknown
+  005d64a8 DATA caller=unknown
+  005d6f78 DATA caller=unknown
+  005fe868 DATA caller=unknown
+  005fea20 DATA caller=unknown
+  005fede8 DATA caller=unknown
+  005ff098 DATA caller=unknown
+  005ff3a8 DATA caller=unknown
+  006001d0 DATA caller=unknown
+  00601f30 DATA caller=unknown
+  006021e0 DATA caller=unknown
+  00603240 DATA caller=unknown
+  00603438 DATA caller=unknown
+  00603758 DATA caller=unknown
+  00603cc8 DATA caller=unknown
+  00603f28 DATA caller=unknown
+  00604268 DATA caller=unknown
+  005d6ca8 DATA caller=unknown
+  00604540 DATA caller=unknown
+  006049b8 DATA caller=unknown
+  00604fb8 DATA caller=unknown
+  00609178 DATA caller=unknown
+  006094d0 DATA caller=unknown
+  00609760 DATA caller=unknown
+  00609a70 DATA caller=unknown
+  00609c50 DATA caller=unknown
+  00609e00 DATA caller=unknown
+  0060a000 DATA caller=unknown
+  0060ab50 DATA caller=unknown
+  0060bdf8 DATA caller=unknown
+  0060c010 DATA caller=unknown
+  005d6b50 DATA caller=unknown
+  0060c258 DATA caller=unknown
+  0060cce0 DATA caller=unknown
+  0060d038 DATA caller=unknown
+  0060d828 DATA caller=unknown
+  0060db00 DATA caller=unknown
+  0060dd18 DATA caller=unknown
+  0060e540 DATA caller=unknown
+  0060e3b8 DATA caller=unknown
+  0060e8a8 DATA caller=unknown
+  0060ed10 DATA caller=unknown
+  0060f020 DATA caller=unknown
+  0060f6b0 DATA caller=unknown
+  0060fad0 DATA caller=unknown
+  005d7870 DATA caller=unknown
+  0060ff48 DATA caller=unknown
+  0060fe00 DATA caller=unknown
+  00610380 DATA caller=unknown
+  006105c0 DATA caller=unknown
+  006118b0 DATA caller=unknown
+  00616108 DATA caller=unknown
+  006162a8 DATA caller=unknown
+  00616430 DATA caller=unknown
+  00616688 DATA caller=unknown
+  00616930 DATA caller=unknown
+  00616c50 DATA caller=unknown
+  00616f00 DATA caller=unknown
+  006100e0 DATA caller=unknown
+Reference count: 179
+Decompiled C:
+
+/* Library Function - Single Match
+    public: virtual long __thiscall CWnd::accNavigate(long,struct tagVARIANT,struct tagVARIANT *)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+long __thiscall CWnd::accNavigate(CWnd *this,long param_1,tagVARIANT param_2,tagVARIANT *param_3)
+
+{
+  long lVar1;
+  
+  lVar1 = (**(code **)(**(int **)(this + 0x28) + 0x5c))(*(int **)(this + 0x28),param_1);
+  return lVar1;
+}
+
+
+
+===== target 004a5169 function CreateEx @ 004a5128 =====
+Body instructions: 75
+Direct references to entry:
+  00534598 UNCONDITIONAL_CALL caller=FUN_0053443d@0053443d
+  00509f8e UNCONDITIONAL_CALL caller=FUN_00509f24@00509f24
+  00518647 UNCONDITIONAL_CALL caller=FUN_00518562@00518562
+  0053a1b3 UNCONDITIONAL_CALL caller=FUN_0053a0b1@0053a0b1
+  005d5a0c DATA caller=unknown
+  005d61bc DATA caller=unknown
+  005d65ac DATA caller=unknown
+  005d697c DATA caller=unknown
+  005d6d9c DATA caller=unknown
+  005d7054 DATA caller=unknown
+  005d73a4 DATA caller=unknown
+  005d7694 DATA caller=unknown
+  005d7954 DATA caller=unknown
+  005d7a9c DATA caller=unknown
+  005d8784 DATA caller=unknown
+  005d9194 DATA caller=unknown
+  005d9704 DATA caller=unknown
+  005da15c DATA caller=unknown
+  005dbd34 DATA caller=unknown
+  005dc97c DATA caller=unknown
+  005dcee4 DATA caller=unknown
+  005dd2f4 DATA caller=unknown
+  005dd684 DATA caller=unknown
+  005e10ac DATA caller=unknown
+  005e16e4 DATA caller=unknown
+  005e1934 DATA caller=unknown
+  005e1cec DATA caller=unknown
+  005e1f5c DATA caller=unknown
+  005e217c DATA caller=unknown
+  005e240c DATA caller=unknown
+  005e2fec DATA caller=unknown
+  005e34c4 DATA caller=unknown
+  005e38d4 DATA caller=unknown
+  005e3b9c DATA caller=unknown
+  005e3d3c DATA caller=unknown
+  005e422c DATA caller=unknown
+  005e4564 DATA caller=unknown
+  005e4b74 DATA caller=unknown
+  005e4cfc DATA caller=unknown
+  005e52f4 DATA caller=unknown
+  005e5cec DATA caller=unknown
+  005e5f24 DATA caller=unknown
+  005e63cc DATA caller=unknown
+  005e6584 DATA caller=unknown
+  005e69e4 DATA caller=unknown
+  005e6e5c DATA caller=unknown
+  005e7244 DATA caller=unknown
+  005e754c DATA caller=unknown
+  005e7884 DATA caller=unknown
+  005e7dd4 DATA caller=unknown
+  005e874c DATA caller=unknown
+  005e897c DATA caller=unknown
+  005e8d4c DATA caller=unknown
+  005e91cc DATA caller=unknown
+  005e96d4 DATA caller=unknown
+  005e9a1c DATA caller=unknown
+  005e9e3c DATA caller=unknown
+  005eaf7c DATA caller=unknown
+  005eb2ac DATA caller=unknown
+  005eb54c DATA caller=unknown
+  005eba34 DATA caller=unknown
+  005ec3bc DATA caller=unknown
+  005ec7a4 DATA caller=unknown
+  005ec9cc DATA caller=unknown
+  005ece44 DATA caller=unknown
+  005ed02c DATA caller=unknown
+  005ed1c4 DATA caller=unknown
+  005edca4 DATA caller=unknown
+  005ee0dc DATA caller=unknown
+  005ee62c DATA caller=unknown
+  005ee7b4 DATA caller=unknown
+  005eebc4 DATA caller=unknown
+  005eee94 DATA caller=unknown
+  005ef3bc DATA caller=unknown
+  005ef90c DATA caller=unknown
+  005f1114 DATA caller=unknown
+  005f13cc DATA caller=unknown
+  005f16fc DATA caller=unknown
+  005f196c DATA caller=unknown
+  005f1cf4 DATA caller=unknown
+  005f21dc DATA caller=unknown
+  005f240c DATA caller=unknown
+  005f257c DATA caller=unknown
+  005f2914 DATA caller=unknown
+  005f2ccc DATA caller=unknown
+  005f2e0c DATA caller=unknown
+  005f30ac DATA caller=unknown
+  005f33cc DATA caller=unknown
+  005f382c DATA caller=unknown
+  005f39bc DATA caller=unknown
+  005f3c7c DATA caller=unknown
+  005f3e74 DATA caller=unknown
+  005f4294 DATA caller=unknown
+  005f4624 DATA caller=unknown
+  005f48dc DATA caller=unknown
+  005f4b1c DATA caller=unknown
+  0059a0ac UNCONDITIONAL_CALL caller=FUN_0059a02f@0059a02f
+  005f4ccc DATA caller=unknown
+  005f4f44 DATA caller=unknown
+  005f5154 DATA caller=unknown
+  005f5544 DATA caller=unknown
+  005f59e4 DATA caller=unknown
+  005f5c44 DATA caller=unknown
+  005f5f0c DATA caller=unknown
+  005f606c DATA caller=unknown
+  005f644c DATA caller=unknown
+  005920c4 UNCONDITIONAL_CALL caller=FUN_00592044@00592044
+  005f66e4 DATA caller=unknown
+  005f6864 DATA caller=unknown
+  005f705c DATA caller=unknown
+  005f77e4 DATA caller=unknown
+  005f834c DATA caller=unknown
+  005f8534 DATA caller=unknown
+  005f869c DATA caller=unknown
+  005f8814 DATA caller=unknown
+  005f8a54 DATA caller=unknown
+  005f8c04 DATA caller=unknown
+  005f8f94 DATA caller=unknown
+  005f9214 DATA caller=unknown
+  005f937c DATA caller=unknown
+  005f964c DATA caller=unknown
+  005f9934 DATA caller=unknown
+  005f9bfc DATA caller=unknown
+  005f9e5c DATA caller=unknown
+  005fde7c DATA caller=unknown
+  005fe1d4 DATA caller=unknown
+  005fe52c DATA caller=unknown
+  005d642c DATA caller=unknown
+  005d6efc DATA caller=unknown
+  005fe7ec DATA caller=unknown
+  005fe9a4 DATA caller=unknown
+  005fed6c DATA caller=unknown
+  005ff01c DATA caller=unknown
+  005ff32c DATA caller=unknown
+  00600154 DATA caller=unknown
+  00601eb4 DATA caller=unknown
+  00602164 DATA caller=unknown
+  006031c4 DATA caller=unknown
+  006033bc DATA caller=unknown
+  006036dc DATA caller=unknown
+  00603c4c DATA caller=unknown
+  00603eac DATA caller=unknown
+  006041ec DATA caller=unknown
+  005d6c2c DATA caller=unknown
+  006044c4 DATA caller=unknown
+  0060493c DATA caller=unknown
+  00604f3c DATA caller=unknown
+  006090fc DATA caller=unknown
+  00609454 DATA caller=unknown
+  006096e4 DATA caller=unknown
+  006099f4 DATA caller=unknown
+  00609bd4 DATA caller=unknown
+  00609d84 DATA caller=unknown
+  00609f84 DATA caller=unknown
+  0060aad4 DATA caller=unknown
+  0060bd7c DATA caller=unknown
+  0060bf94 DATA caller=unknown
+  005d6ad4 DATA caller=unknown
+  0060c1dc DATA caller=unknown
+  0060cc64 DATA caller=unknown
+  0060cfbc DATA caller=unknown
+  0060d7ac DATA caller=unknown
+  0060da84 DATA caller=unknown
+  0060dc9c DATA caller=unknown
+  0060e4c4 DATA caller=unknown
+  0060e33c DATA caller=unknown
+  0060e82c DATA caller=unknown
+  0060ec94 DATA caller=unknown
+  0060efa4 DATA caller=unknown
+  0060f634 DATA caller=unknown
+  0060fa54 DATA caller=unknown
+  005d77f4 DATA caller=unknown
+  0060fecc DATA caller=unknown
+  0060fd84 DATA caller=unknown
+  00610064 DATA caller=unknown
+  00610304 DATA caller=unknown
+  00610544 DATA caller=unknown
+  00611834 DATA caller=unknown
+  0061608c DATA caller=unknown
+  0061622c DATA caller=unknown
+  006163b4 DATA caller=unknown
+  0061660c DATA caller=unknown
+  006168b4 DATA caller=unknown
+  00616bd4 DATA caller=unknown
+  00616e84 DATA caller=unknown
+Reference count: 185
+Decompiled C:
+
+/* Library Function - Multiple Matches With Same Base Name
+    public: virtual int __thiscall CWnd::CreateEx(unsigned long,char const *,char const *,unsigned
+   long,struct tagRECT const &,class CWnd *,unsigned int,void *)
+    public: virtual int __thiscall CWnd::CreateEx(unsigned long,wchar_t const *,wchar_t const
+   *,unsigned long,struct tagRECT const &,class CWnd *,unsigned int,void *)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+void __thiscall
+CreateEx(int *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5,
+        int *param_6,int param_7,undefined4 param_8,undefined4 param_9)
+
+{
+  undefined4 uVar1;
+  
+  if (param_7 == 0) {
+    uVar1 = 0;
+  }
+  else {
+    uVar1 = *(undefined4 *)(param_7 + 0x20);
+  }
+  (**(code **)(*param_1 + 0x5c))
+            (param_2,param_3,param_4,param_5,*param_6,param_6[1],param_6[2] - *param_6,
+             param_6[3] - param_6[1],uVar1,param_8,param_9);
+  return;
+}
+
+
+
+===== target 004a51b9 function Create @ 004a5173 =====
+Body instructions: 80
+Direct references to entry:
+  00405f51 UNCONDITIONAL_CALL caller=FUN_00405d40@00405d40
+  0040a172 UNCONDITIONAL_CALL caller=FUN_00409c40@00409c40
+  0042e82b UNCONDITIONAL_CALL caller=FUN_0042e0a0@0042e0a0
+  0042eae9 UNCONDITIONAL_CALL caller=FUN_0042e0a0@0042e0a0
+  00432f31 UNCONDITIONAL_CALL caller=FUN_00432770@00432770
+  004331ee UNCONDITIONAL_CALL caller=FUN_00432770@00432770
+  004352bd UNCONDITIONAL_CALL caller=FUN_00434c70@00434c70
+  00435549 UNCONDITIONAL_CALL caller=FUN_00434c70@00434c70
+  00449363 UNCONDITIONAL_CALL caller=FUN_00449310@00449310
+  0044a206 UNCONDITIONAL_CALL caller=FUN_00449cf0@00449cf0
+  0044a46a UNCONDITIONAL_CALL caller=FUN_00449cf0@00449cf0
+  0044adad UNCONDITIONAL_CALL caller=FUN_0044ad40@0044ad40
+  0045d149 UNCONDITIONAL_CALL caller=FUN_0045c830@0045c830
+  0045d315 UNCONDITIONAL_CALL caller=FUN_0045c830@0045c830
+  004733af UNCONDITIONAL_CALL caller=FUN_00472b60@00472b60
+  004735f2 UNCONDITIONAL_CALL caller=FUN_00472b60@00472b60
+  00473810 UNCONDITIONAL_CALL caller=FUN_00472b60@00472b60
+  0052e41a UNCONDITIONAL_CALL caller=Create@0052e3cd
+  00523e8f UNCONDITIONAL_CALL caller=FUN_00523db3@00523db3
+  0055dd6b UNCONDITIONAL_CALL caller=LoadFrame@0055dd36
+  0056a3c8 UNCONDITIONAL_CALL caller=Create@0056a3a9
+  005d5a08 DATA caller=unknown
+  005d61b8 DATA caller=unknown
+  005d65a8 DATA caller=unknown
+  005d6978 DATA caller=unknown
+  005d6d98 DATA caller=unknown
+  005d7050 DATA caller=unknown
+  005d73a0 DATA caller=unknown
+  005d7690 DATA caller=unknown
+  005d7950 DATA caller=unknown
+  005d7a98 DATA caller=unknown
+  005d8780 DATA caller=unknown
+  005d9190 DATA caller=unknown
+  005d9700 DATA caller=unknown
+  005da158 DATA caller=unknown
+  005dbd30 DATA caller=unknown
+  005dc978 DATA caller=unknown
+  005dcee0 DATA caller=unknown
+  005dd2f0 DATA caller=unknown
+  005dd680 DATA caller=unknown
+  005e10a8 DATA caller=unknown
+  005e16e0 DATA caller=unknown
+  005e1930 DATA caller=unknown
+  005e1ce8 DATA caller=unknown
+  005e1f58 DATA caller=unknown
+  005e2178 DATA caller=unknown
+  005e2408 DATA caller=unknown
+  005e2fe8 DATA caller=unknown
+  005e34c0 DATA caller=unknown
+  005e38d0 DATA caller=unknown
+  005e3b98 DATA caller=unknown
+  005e3d38 DATA caller=unknown
+  005e4228 DATA caller=unknown
+  005e4560 DATA caller=unknown
+  005e4b70 DATA caller=unknown
+  005e4cf8 DATA caller=unknown
+  005e52f0 DATA caller=unknown
+  005e5ce8 DATA caller=unknown
+  005e5f20 DATA caller=unknown
+  005e63c8 DATA caller=unknown
+  005e6580 DATA caller=unknown
+  005e69e0 DATA caller=unknown
+  005e6e58 DATA caller=unknown
+  005e7240 DATA caller=unknown
+  005e7548 DATA caller=unknown
+  005e7880 DATA caller=unknown
+  005e7dd0 DATA caller=unknown
+  005e8748 DATA caller=unknown
+  005e8978 DATA caller=unknown
+  005e8d48 DATA caller=unknown
+  005e91c8 DATA caller=unknown
+  005e96d0 DATA caller=unknown
+  005e9a18 DATA caller=unknown
+  005e9e38 DATA caller=unknown
+  005eaf78 DATA caller=unknown
+  005eb2a8 DATA caller=unknown
+  005eb548 DATA caller=unknown
+  005eba30 DATA caller=unknown
+  005ec3b8 DATA caller=unknown
+  005ec7a0 DATA caller=unknown
+  005ec9c8 DATA caller=unknown
+  005ece40 DATA caller=unknown
+  005ed028 DATA caller=unknown
+  005ed1c0 DATA caller=unknown
+  005edca0 DATA caller=unknown
+  005ee0d8 DATA caller=unknown
+  005ee628 DATA caller=unknown
+  005ee7b0 DATA caller=unknown
+  005eebc0 DATA caller=unknown
+  005eee90 DATA caller=unknown
+  005ef3b8 DATA caller=unknown
+  005ef908 DATA caller=unknown
+  005f1110 DATA caller=unknown
+  005f13c8 DATA caller=unknown
+  005f16f8 DATA caller=unknown
+  005f1968 DATA caller=unknown
+  005f1cf0 DATA caller=unknown
+  005f21d8 DATA caller=unknown
+  005f2408 DATA caller=unknown
+  005f2578 DATA caller=unknown
+  005f2910 DATA caller=unknown
+  005f2cc8 DATA caller=unknown
+  005f2e08 DATA caller=unknown
+  005f30a8 DATA caller=unknown
+  005f33c8 DATA caller=unknown
+  005f3828 DATA caller=unknown
+  005f39b8 DATA caller=unknown
+  005f3c78 DATA caller=unknown
+  005f3e70 DATA caller=unknown
+  005f4290 DATA caller=unknown
+  005f4620 DATA caller=unknown
+  005f48d8 DATA caller=unknown
+  005f4b18 DATA caller=unknown
+  005f4cc8 DATA caller=unknown
+  005f4f40 DATA caller=unknown
+  005f5150 DATA caller=unknown
+  005f5540 DATA caller=unknown
+  005f59e0 DATA caller=unknown
+  005f5c40 DATA caller=unknown
+  005f5f08 DATA caller=unknown
+  005f6068 DATA caller=unknown
+  005f6448 DATA caller=unknown
+  005f66e0 DATA caller=unknown
+  005f6860 DATA caller=unknown
+  005f7058 DATA caller=unknown
+  005f77e0 DATA caller=unknown
+  005f8348 DATA caller=unknown
+  005f8530 DATA caller=unknown
+  005f8698 DATA caller=unknown
+  005f8810 DATA caller=unknown
+  005f8a50 DATA caller=unknown
+  005f8c00 DATA caller=unknown
+  005f8f90 DATA caller=unknown
+  005f9210 DATA caller=unknown
+  005f9378 DATA caller=unknown
+  005f9648 DATA caller=unknown
+  005f9930 DATA caller=unknown
+  005f9bf8 DATA caller=unknown
+  005f9e58 DATA caller=unknown
+  005fde78 DATA caller=unknown
+  005fe1d0 DATA caller=unknown
+  005fe528 DATA caller=unknown
+  005d6428 DATA caller=unknown
+  005d6ef8 DATA caller=unknown
+  005fe7e8 DATA caller=unknown
+  005fe9a0 DATA caller=unknown
+  005fed68 DATA caller=unknown
+  005ff018 DATA caller=unknown
+  005ff328 DATA caller=unknown
+  00600150 DATA caller=unknown
+  00601eb0 DATA caller=unknown
+  00602160 DATA caller=unknown
+  006031c0 DATA caller=unknown
+  006033b8 DATA caller=unknown
+  006036d8 DATA caller=unknown
+  00603c48 DATA caller=unknown
+  00603ea8 DATA caller=unknown
+  006041e8 DATA caller=unknown
+  005d6c28 DATA caller=unknown
+  006044c0 DATA caller=unknown
+  00604938 DATA caller=unknown
+  00604f38 DATA caller=unknown
+  006090f8 DATA caller=unknown
+  00609450 DATA caller=unknown
+  006096e0 DATA caller=unknown
+  006099f0 DATA caller=unknown
+  00609bd0 DATA caller=unknown
+  00609d80 DATA caller=unknown
+  00609f80 DATA caller=unknown
+  0060aad0 DATA caller=unknown
+  0060bd78 DATA caller=unknown
+  0060bf90 DATA caller=unknown
+  005d6ad0 DATA caller=unknown
+  0060c1d8 DATA caller=unknown
+  0060cc60 DATA caller=unknown
+  0060cfb8 DATA caller=unknown
+  0060d7a8 DATA caller=unknown
+  0060da80 DATA caller=unknown
+  0060dc98 DATA caller=unknown
+  0060e4c0 DATA caller=unknown
+  0060e338 DATA caller=unknown
+  0060e828 DATA caller=unknown
+  0060ec90 DATA caller=unknown
+  0060efa0 DATA caller=unknown
+  0060f630 DATA caller=unknown
+  0060fa50 DATA caller=unknown
+  005d77f0 DATA caller=unknown
+  0060fec8 DATA caller=unknown
+  0060fd80 DATA caller=unknown
+  00610060 DATA caller=unknown
+  00610300 DATA caller=unknown
+  00610540 DATA caller=unknown
+  00611830 DATA caller=unknown
+  00616088 DATA caller=unknown
+  00616228 DATA caller=unknown
+  006163b0 DATA caller=unknown
+  00616608 DATA caller=unknown
+  006168b0 DATA caller=unknown
+  00616bd0 DATA caller=unknown
+  00616e80 DATA caller=unknown
+Reference count: 200
+Decompiled C:
+
+/* Library Function - Multiple Matches With Same Base Name
+    public: virtual int __thiscall CWnd::Create(char const *,char const *,unsigned long,struct
+   tagRECT const &,class CWnd *,unsigned int,struct CCreateContext *)
+    public: virtual int __thiscall CWnd::Create(wchar_t const *,wchar_t const *,unsigned long,struct
+   tagRECT const &,class CWnd *,unsigned int,struct CCreateContext *)
+   
+   Library: Visual Studio 2008 Release */
+
+void __thiscall
+Create(int *param_1,undefined4 param_2,undefined4 param_3,uint param_4,int *param_5,int param_6,
+      undefined4 param_7,undefined4 param_8)
+
+{
+  undefined4 uVar1;
+  
+  if (param_6 == 0) {
+    uVar1 = 0;
+  }
+  else {
+    uVar1 = *(undefined4 *)(param_6 + 0x20);
+  }
+  (**(code **)(*param_1 + 0x5c))
+            (0,param_2,param_3,param_4 | 0x40000000,*param_5,param_5[1],param_5[2] - *param_5,
+             param_5[3] - param_5[1],uVar1,param_7,param_8);
+  return;
+}
+
+
+
+===== target 004a5562 function ScrollWindow @ 004a54c0 =====
+Body instructions: 172
+Direct references to entry:
+  0045c524 UNCONDITIONAL_CALL caller=FUN_0045c3f0@0045c3f0
+  0045c799 UNCONDITIONAL_CALL caller=FUN_0045c750@0045c750
+  00582dec UNCONDITIONAL_CALL caller=ScrollToDevicePosition@00582da4
+  0058302d UNCONDITIONAL_CALL caller=OnScrollBy@00582f60
+Reference count: 4
+Decompiled C:
+
+/* Library Function - Single Match
+    public: void __thiscall CWnd::ScrollWindow(int,int,struct tagRECT const *,struct tagRECT const
+   *)
+   
+   Library: Visual Studio 2008 Release */
+
+void __thiscall
+CWnd::ScrollWindow(CWnd *this,int param_1,int param_2,tagRECT *param_3,tagRECT *param_4)
+
+{
+  BOOL BVar1;
+  HWND hWnd;
+  UINT uCmd;
+  tagRECT local_14;
+  
+  BVar1 = IsWindowVisible(*(HWND *)(this + 0x20));
+  if (((BVar1 == 0) && (param_3 == (tagRECT *)0x0)) && (param_4 == (tagRECT *)0x0)) {
+    uCmd = 5;
+    hWnd = *(HWND *)(this + 0x20);
+    while (hWnd = ::GetWindow(hWnd,uCmd), hWnd != (HWND)0x0) {
+      GetWindowRect(hWnd,&local_14);
+      ScreenToClient(this,&local_14);
+      ::SetWindowPos(hWnd,(HWND)0x0,local_14.left + param_1,local_14.top + param_2,0,0,0x15);
+      uCmd = 2;
+    }
+  }
+  else {
+    ::ScrollWindow(*(HWND *)(this + 0x20),param_1,param_2,param_3,param_4);
+  }
+  if ((*(int *)(this + 0x4c) != 0) && (param_3 == (tagRECT *)0x0)) {
+    (**(code **)(**(int **)(this + 0x4c) + 0x5c))(param_1,param_2);
+  }
+  return;
+}
+
+
+
+===== target 004a73b9 function accNavigate @ 004a737f =====
+Body instructions: 67
+Direct references to entry:
+  005d5c00 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+/* Library Function - Single Match
+    public: virtual long __stdcall ATL::IAccessibleProxyImpl<class
+   ATL::CAccessibleProxy>::accNavigate(long,struct tagVARIANT,struct tagVARIANT *)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+long ATL::IAccessibleProxyImpl<ATL::CAccessibleProxy>::accNavigate
+               (long param_1,tagVARIANT param_2,tagVARIANT *param_3)
+
+{
+  int *piVar1;
+  long lVar2;
+  
+  piVar1 = *(int **)(param_1 + 8);
+  if (piVar1 == (int *)0x0) {
+    lVar2 = -0x7ffefef8;
+  }
+  else if (param_3 == (tagVARIANT *)0x0) {
+    lVar2 = -0x7fffbffd;
+  }
+  else {
+    lVar2 = (**(code **)(*piVar1 + 0x5c))(piVar1);
+  }
+  return lVar2;
+}
+
+
+
+===== target 004b2857 function Run @ 004b27ff =====
+Body instructions: 148
+Direct references to entry:
+  005d85c0 DATA caller=unknown
+  004afff6 UNCONDITIONAL_CALL caller=Run@004affd8
+Reference count: 2
+Decompiled C:
+
+/* Library Function - Single Match
+    public: virtual int __thiscall CWinThread::Run(void)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+int __thiscall CWinThread::Run(CWinThread *this)
+
+{
+  bool bVar1;
+  _AFX_THREAD_STATE *p_Var2;
+  BOOL BVar3;
+  int iVar4;
+  int local_c;
+  
+  p_Var2 = AfxGetThreadState();
+  bVar1 = true;
+  local_c = 0;
+  do {
+    if (bVar1) {
+      do {
+        BVar3 = PeekMessageW((LPMSG)(p_Var2 + 0x30),(HWND)0x0,0,0,0);
+        if (BVar3 != 0) break;
+        iVar4 = (**(code **)(*(int *)this + 0x60))(local_c);
+        local_c = local_c + 1;
+        if (iVar4 == 0) {
+          bVar1 = false;
+        }
+      } while (bVar1);
+    }
+    do {
+      iVar4 = (**(code **)(*(int *)this + 0x5c))();
+      if (iVar4 == 0) {
+        iVar4 = (**(code **)(*(int *)this + 0x68))();
+        return iVar4;
+      }
+      iVar4 = (**(code **)(*(int *)this + 100))((LPMSG)(p_Var2 + 0x30));
+      if (iVar4 != 0) {
+        bVar1 = true;
+        local_c = 0;
+      }
+      BVar3 = PeekMessageW((LPMSG)(p_Var2 + 0x30),(HWND)0x0,0,0,0);
+    } while (BVar3 != 0);
+  } while( true );
+}
+
+
+
+===== target 004c6bb9 function FUN_004c6b8c @ 004c6b8c =====
+Body instructions: 62
+Direct references to entry:
+  005da488 DATA caller=unknown
+  005e2738 DATA caller=unknown
+  005e37f0 DATA caller=unknown
+  005e4890 DATA caller=unknown
+  005e68b0 DATA caller=unknown
+  005ebd60 DATA caller=unknown
+  005edfd0 DATA caller=unknown
+  005eeae0 DATA caller=unknown
+  005ef6e8 DATA caller=unknown
+  005f41a0 DATA caller=unknown
+  005f7388 DATA caller=unknown
+Reference count: 11
+Decompiled C:
+
+void __fastcall FUN_004c6b8c(int param_1)
+
+{
+  void **ppvVar1;
+  __POSITION *local_8;
+  
+  local_8 = *(__POSITION **)(param_1 + 0xb08);
+  if (local_8 != (__POSITION *)0x0) {
+    do {
+      ppvVar1 = CPtrList::GetNext((CPtrList *)(param_1 + 0xb04),&local_8);
+      if (*ppvVar1 == (int *)0x0) {
+                    /* WARNING: Subroutine does not return */
+        FUN_004a1e2a();
+      }
+      (**(code **)(*(int *)*ppvVar1 + 0x5c))();
+    } while (local_8 != (__POSITION *)0x0);
+  }
+  return;
+}
+
+
+
+===== target 004944a0 function FUN_004944a0 @ 004944a0 =====
+Body instructions: 572
+Direct references to entry:
+  0040c260 UNCONDITIONAL_CALL caller=FUN_0040c080@0040c080
+  00492ed3 UNCONDITIONAL_CALL caller=FUN_00492db0@00492db0
+Reference count: 2
+Decompiled C:
+
+void __thiscall FUN_004944a0(int param_1,int param_2,int param_3)
+
+{
+  DWORD DVar1;
+  int iVar2;
+  char cVar3;
+  size_t _Size;
+  int iVar4;
+  wchar_t *pwVar5;
+  int local_424;
+  int local_420;
+  int local_41c;
+  int local_418;
+  char local_414 [522];
+  byte local_20a;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_424;
+  local_420 = param_3;
+  local_418 = param_1;
+  if (param_3 == 0) {
+LAB_004946ca:
+    (*DAT_0064e298)(L"GetPassword failed");
+  }
+  else {
+    local_41c = 0;
+    local_424 = 0;
+    do {
+      iVar4 = local_424;
+      _Size = 0x200;
+      if ((int)(6U - local_424) < 0x200) {
+        _Size = 6U - local_424;
+      }
+      FUN_00405180(0x14);
+      _memset(local_414,0,0x208);
+      local_414[5] = (char)local_41c;
+      local_41c = local_41c + 1;
+      local_414[7] = (char)(_Size >> 8);
+      cVar3 = '\0';
+      local_414[0] = '\t';
+      local_414[2] = 5;
+      local_414[3] = 1;
+      local_414[4] = 1;
+      local_414[6] = (char)_Size;
+      iVar2 = 2;
+      local_414[1] = '\0';
+      do {
+        cVar3 = cVar3 + local_414[iVar2];
+        local_414[1] = local_414[1] + local_414[iVar2 + 1];
+        iVar2 = iVar2 + 2;
+      } while (iVar2 < 0x208);
+      local_414[1] = local_414[1] + cVar3;
+      iVar2 = 3;
+      do {
+        cVar3 = HidD_SetFeature(local_420,local_414,0x208);
+        if (cVar3 == '\0') {
+          DVar1 = GetLastError();
+          (*DAT_0064e298)(L"AccessData: SetFeature nErr=%d, nCmdID=%x",DVar1,5);
+          if ((DVar1 == 0x48f) || (DVar1 == 6)) goto LAB_004946ca;
+          (*DAT_0064e298)(L"AccessData: retry SetFeature now");
+          iVar4 = local_424;
+        }
+        else {
+          DVar1 = WaitForSingleObject(*(HANDLE *)(param_2 + 0x294),0x1e);
+          if ((DVar1 != 0) || (*(char *)(param_2 + 0x29f) != '\x05')) {
+            FUN_00405180(0x14);
+            _memset(local_414 + 0x208,0,0x208);
+            local_414[0x208] = 9;
+            cVar3 = HidD_GetFeature(local_420,local_414 + 0x208,0x208);
+            if (cVar3 == '\0') {
+              DVar1 = GetLastError();
+              local_20a = 5;
+              pwVar5 = L"AccessData: GetFeature nErr=%d, nCmdID=%x";
+            }
+            else {
+              if (local_414[2] == local_20a) {
+                _memcpy((void *)(local_418 + iVar4),local_204,_Size);
+                break;
+              }
+              DVar1 = (DWORD)(byte)local_414[2];
+              pwVar5 = L"AccessData: GetFeature Failed, cmd id unmatch, Buffer[2]=%x, bBuf[2]=%x";
+            }
+            (*DAT_0064e298)(pwVar5,DVar1,local_20a);
+            goto LAB_004946ca;
+          }
+          (*DAT_0064e298)(L"AccessData CRC err for nCmdID=%x, retry now",5);
+        }
+        iVar2 = iVar2 + -1;
+        Sleep(0x3c);
+      } while (0 < iVar2);
+      if (iVar2 < 0) goto LAB_004946ca;
+      local_424 = iVar4 + _Size;
+    } while (local_424 < 6);
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_424);
+  return;
+}
+
+
+
+===== target 00494920 function FUN_00494920 @ 00494920 =====
+Body instructions: 615
+Direct references to entry:
+  0040c198 UNCONDITIONAL_CALL caller=FUN_0040c080@0040c080
+  00615984 DATA caller=unknown
+Reference count: 2
+Decompiled C:
+
+void __thiscall FUN_00494920(int param_1,undefined1 *param_2)
+
+{
+  DWORD DVar1;
+  int iVar2;
+  char cVar3;
+  size_t _Size;
+  int iVar4;
+  wchar_t *pwVar5;
+  int local_424;
+  undefined1 *local_420;
+  int local_41c;
+  int local_418;
+  char local_414 [522];
+  byte local_20a;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_424;
+  local_420 = param_2;
+  if (*(int *)(param_1 + 0x234) != 1) {
+    local_41c = *(int *)(param_1 + 0xc);
+    if (local_41c == 0) {
+LAB_00494b75:
+      (*DAT_0064e298)(L"GetOnline failed");
+    }
+    else {
+      local_418 = 0;
+      local_424 = 0;
+      do {
+        iVar4 = local_424;
+        _Size = 0x200;
+        if ((int)(1U - local_424) < 0x200) {
+          _Size = 1U - local_424;
+        }
+        FUN_00405180(0x14);
+        _memset(local_414,0,0x208);
+        local_414[5] = (char)local_418;
+        local_418 = local_418 + 1;
+        local_414[7] = (char)(_Size >> 8);
+        cVar3 = '\0';
+        local_414[0] = '\t';
+        local_414[2] = 7;
+        local_414[3] = 0;
+        local_414[4] = 1;
+        local_414[6] = (char)_Size;
+        iVar2 = 2;
+        local_414[1] = '\0';
+        do {
+          cVar3 = cVar3 + local_414[iVar2];
+          local_414[1] = local_414[1] + local_414[iVar2 + 1];
+          iVar2 = iVar2 + 2;
+        } while (iVar2 < 0x208);
+        local_414[1] = local_414[1] + cVar3;
+        iVar2 = 3;
+        do {
+          cVar3 = HidD_SetFeature(local_41c,local_414,0x208);
+          if (cVar3 == '\0') {
+            DVar1 = GetLastError();
+            (*DAT_0064e298)(L"AccessData: SetFeature nErr=%d, nCmdID=%x",DVar1,7);
+            if ((DVar1 == 0x48f) || (DVar1 == 6)) goto LAB_00494b75;
+            (*DAT_0064e298)(L"AccessData: retry SetFeature now");
+            iVar4 = local_424;
+          }
+          else {
+            DVar1 = WaitForSingleObject(*(HANDLE *)(param_1 + 0x294),0x1e);
+            if ((DVar1 != 0) || (*(char *)(param_1 + 0x29f) != '\a')) {
+              FUN_00405180(0x14);
+              _memset(local_414 + 0x208,0,0x208);
+              local_414[0x208] = 9;
+              cVar3 = HidD_GetFeature(local_41c,local_414 + 0x208,0x208);
+              if (cVar3 == '\0') {
+                DVar1 = GetLastError();
+                local_20a = 7;
+                pwVar5 = L"AccessData: GetFeature nErr=%d, nCmdID=%x";
+              }
+              else {
+                if (local_414[2] == local_20a) {
+                  _memcpy(local_420 + iVar4,local_204,_Size);
+                  break;
+                }
+                DVar1 = (DWORD)(byte)local_414[2];
+                pwVar5 = L"AccessData: GetFeature Failed, cmd id unmatch, Buffer[2]=%x, bBuf[2]=%x";
+              }
+              (*DAT_0064e298)(pwVar5,DVar1,local_20a);
+              goto LAB_00494b75;
+            }
+            (*DAT_0064e298)(L"AccessData CRC err for nCmdID=%x, retry now",7);
+          }
+          iVar2 = iVar2 + -1;
+          Sleep(0x3c);
+        } while (0 < iVar2);
+        if (iVar2 < 0) goto LAB_00494b75;
+        local_424 = iVar4 + _Size;
+      } while (local_424 < 1);
+      (*DAT_0064e298)(L"GetOnline = %d",*local_420);
+    }
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_424);
+  return;
+}
+
+
+
+===== target 0048ba40 function FUN_0048ba40 @ 0048ba40 =====
+Body instructions: 187
+Direct references to entry:
+  0061350c DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_0048ba40(int param_1,void *param_2,size_t param_3)
+
+{
+  int iVar1;
+  char cVar2;
+  DWORD DVar3;
+  undefined1 local_204;
+  undefined1 local_203;
+  undefined1 local_202;
+  undefined1 local_201;
+  undefined1 local_200 [508];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_204;
+  if (((param_2 != (void *)0x0) && ((int)param_3 < 0x17b)) &&
+     (iVar1 = *(int *)(param_1 + 0x298), iVar1 != 0)) {
+    local_204 = 8;
+    local_203 = 10;
+    local_202 = 0x7a;
+    local_201 = 1;
+    _memset(local_200,0,0x1fc);
+    _memcpy(local_200,param_2,param_3);
+    cVar2 = HidD_SetFeature(iVar1,&local_204,0x17e);
+    if (cVar2 == '\0') {
+      DVar3 = GetLastError();
+      (*DAT_0064e298)(L"SendMusicData Err=0x%x",DVar3);
+    }
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_204);
+  return;
+}
+
+
+
+===== target 00492490 function FUN_00492490 @ 00492490 =====
+Body instructions: 886
+Direct references to entry:
+  00492828 UNCONDITIONAL_CALL caller=FUN_00492810@00492810
+Reference count: 1
+Decompiled C:
+
+void __fastcall
+FUN_00492490(int *param_1,code *param_2,int param_3,undefined4 param_4,int param_5,uint param_6,
+            undefined1 param_7)
+
+{
+  char cVar1;
+  uint uVar2;
+  DWORD DVar3;
+  uint uVar4;
+  size_t _Size;
+  int iVar5;
+  int iVar6;
+  int iVar7;
+  wchar_t *pwVar8;
+  int iStack_248;
+  DWORD DStack_244;
+  int iStack_240;
+  int iStack_23c;
+  int *local_238;
+  int iStack_234;
+  int iStack_230;
+  int local_22c;
+  uint uStack_228;
+  code *local_224;
+  int iStack_220;
+  int local_21c;
+  uint uStack_218;
+  undefined4 uStack_214;
+  uint uStack_210;
+  char acStack_20c [4];
+  char cStack_208;
+  undefined1 uStack_207;
+  undefined1 uStack_206;
+  undefined1 uStack_205;
+  undefined1 auStack_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&iStack_248;
+  local_22c = param_3;
+  local_21c = param_5;
+  local_238 = param_1;
+  local_224 = param_2;
+  if ((param_5 == 0) || ((int)param_6 < 1)) {
+    (*DAT_0064e298)(L"CDevG5KB::AccessData_Page Param err");
+  }
+  else {
+    FUN_00487740();
+    param_1[0x93] = 0;
+    param_1[0x94] = 0;
+    param_1[0x95] = 0;
+    if ((HANDLE)param_1[0x96] != (HANDLE)0x0) {
+      ResetEvent((HANDLE)param_1[0x96]);
+    }
+    (**(code **)(param_1[0x97] + 0x14))();
+    iStack_230 = (int)(param_6 + ((int)param_6 >> 0x1f & 0x1ffU)) >> 9;
+    uStack_218 = param_6 & 0x800001ff;
+    if ((int)uStack_218 < 0) {
+      uStack_218 = (uStack_218 - 1 | 0xfffffe00) + 1;
+    }
+    if (uStack_218 != 0) {
+      iStack_230 = iStack_230 + 1;
+    }
+    iVar5 = 0;
+    iStack_248 = 0;
+    DStack_244 = 0;
+    if (0 < iStack_230) {
+LAB_0049256b:
+      uVar2 = 0x200;
+      if ((uStack_218 != 0) && (DStack_244 == iStack_230 - 1U)) {
+        uVar2 = uStack_218;
+      }
+      uVar4 = uVar2 & 0x800001ff;
+      if ((int)uVar4 < 0) {
+        uVar4 = (uVar4 - 1 | 0xfffffe00) + 1;
+      }
+      iStack_220 = (int)(uVar2 + ((int)uVar2 >> 0x1f & 0x1ffU)) >> 9;
+      uStack_228 = uVar4;
+      do {
+        iVar7 = 0;
+        iStack_234 = iStack_220;
+        if (uVar4 != 0) {
+          iStack_234 = iStack_220 + 1;
+        }
+        iStack_240 = 0;
+        iStack_23c = 0;
+        if (0 < iStack_234) {
+          do {
+            _Size = 0x200;
+            if ((uStack_228 != 0) && (iVar7 == iStack_234 + -1)) {
+              _Size = uStack_228;
+            }
+            _memset(acStack_20c,0,0x208);
+            acStack_20c[0] = ((*(int *)(local_238[4] + 0x14) != 0x18) - 1U & 0xfd) + 9;
+            acStack_20c[3] = param_7;
+            cStack_208 = (char)iStack_248;
+            acStack_20c[1] = 0xc;
+            acStack_20c[2] = 0;
+            uStack_207 = 0;
+            uStack_206 = (undefined1)_Size;
+            uStack_205 = (undefined1)(_Size >> 8);
+            _memcpy(auStack_204,(void *)(local_21c + iVar5),_Size);
+            if (DAT_0064e294 != 0) {
+              FUN_00407910(acStack_20c,0x20,0,L"Send: ");
+            }
+            if (local_22c != 0) {
+              iVar6 = 3;
+              do {
+                cVar1 = HidD_SetFeature(local_22c,acStack_20c,0x208);
+                if (cVar1 != '\0') break;
+                iVar6 = iVar6 + -1;
+                FUN_00405180(100);
+              } while (0 < iVar6);
+              param_2 = local_224;
+              if (iVar6 < 0) {
+                DVar3 = GetLastError();
+                pwVar8 = L"CDevG5KB::AccessData_Page err=%d";
+                goto LAB_004927b7;
+              }
+            }
+            iStack_240 = iStack_240 + _Size;
+            iStack_23c = iStack_23c + 1;
+            iStack_248 = iStack_248 + 1;
+            iVar5 = iVar5 + _Size;
+            if (param_2 != (code *)0x0) {
+              (*param_2)(param_4,param_6,iVar5);
+            }
+            (*DAT_0064e298)(L"CDevG5KB::AccessData_Page send package %d ok, dataUnit=%d",iStack_248,
+                            DStack_244);
+            iVar7 = iVar7 + 1;
+            uVar4 = uStack_228;
+          } while (iVar7 < iStack_234);
+        }
+        uStack_214 = 0;
+        uStack_210 = 0;
+        iVar7 = FUN_0048e900();
+        if (iVar7 != 0) {
+          pwVar8 = L"CDevG5KB::AccessData_Page timeout, k=%d";
+          DVar3 = DStack_244;
+LAB_004927b7:
+          (*DAT_0064e298)(pwVar8,DVar3);
+          break;
+        }
+        if ((uStack_214._3_1_ != '\0') && ((char)uStack_210 == cStack_208)) goto LAB_0049277f;
+        (*DAT_0064e298)(L"CDevG5KB::AccessData_Page send this page, Buffer=%x %x %x %x %x",
+                        uStack_214 & 0xff,uStack_214 >> 8 & 0xff,uStack_214 >> 0x10 & 0xff,
+                        uStack_214._3_1_,uStack_210 & 0xff);
+        iVar5 = iVar5 - iStack_240;
+        iStack_248 = iStack_248 - iStack_23c;
+        Sleep(0x19);
+      } while( true );
+    }
+  }
+LAB_004927c3:
+  __security_check_cookie(local_4 ^ (uint)&iStack_248);
+  return;
+LAB_0049277f:
+  iVar7 = (**(code **)(*local_238 + 0x90))();
+  if (iVar7 != 0) {
+    (*DAT_0064e298)(L"CDevG5KB::AccessData_Page cancel by user");
+    goto LAB_004927c3;
+  }
+  DStack_244 = DStack_244 + 1;
+  if (iStack_230 <= (int)DStack_244) goto LAB_004927c3;
+  goto LAB_0049256b;
+}
+
+
+
+===== target 0048f1a0 function FUN_0048f1a0 @ 0048f1a0 =====
+Body instructions: 513
+Direct references to entry:
+  00614fd0 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_0048f1a0(int param_1,undefined4 param_2,int param_3,uint param_4)
+
+{
+  char cVar1;
+  DWORD DVar2;
+  uint uVar3;
+  size_t _Size;
+  int iVar4;
+  int iVar5;
+  bool bVar6;
+  int local_21c;
+  int local_218;
+  int local_214;
+  int local_210;
+  char local_20c [3];
+  undefined1 local_209;
+  undefined1 local_208;
+  undefined1 local_207;
+  undefined1 local_206;
+  undefined1 local_205;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_21c;
+  iVar4 = 0;
+  local_210 = param_3;
+  if (*(int *)(param_1 + 0x23c) == 0) {
+    local_21c = *(int *)(param_1 + 0xc);
+    if ((local_21c == 0) || ((int)param_4 < 1)) {
+      (*DAT_0064e298)(L"CDevG5KB::AccessData Param err, hDev=%x",local_21c);
+    }
+    else {
+      local_218 = (int)(param_4 + ((int)param_4 >> 0x1f & 0x1ffU)) >> 9;
+      uVar3 = param_4 & 0x800001ff;
+      bVar6 = uVar3 == 0;
+      local_214 = 0;
+      if ((int)uVar3 < 0) {
+        bVar6 = (uVar3 - 1 | 0xfffffe00) == 0xffffffff;
+      }
+      if (!bVar6) {
+        local_218 = local_218 + 1;
+      }
+      if (0 < (int)param_4) {
+        do {
+          _Size = param_4 - iVar4;
+          if (0x1ff < (int)_Size) {
+            _Size = 0x200;
+          }
+          FUN_00405180(0x14);
+          _memset(local_20c,0,0x208);
+          local_20c[0] = ((*(int *)(*(int *)(param_1 + 0x10) + 0x14) != 0x18) - 1U & 0xfd) + 9;
+          local_208 = (undefined1)local_218;
+          local_207 = (undefined1)local_214;
+          local_214 = local_214 + 1;
+          local_20c[1] = 0x83;
+          local_20c[2] = (undefined1)param_2;
+          local_209 = 0;
+          local_206 = (undefined1)_Size;
+          local_205 = (undefined1)(_Size >> 8);
+          iVar5 = 3;
+          do {
+            cVar1 = HidD_SetFeature(local_21c,local_20c,0x208);
+            if (cVar1 != '\0') break;
+            iVar5 = iVar5 + -1;
+            FUN_00405180(0x46);
+          } while (0 < iVar5);
+          if (iVar5 < 0) {
+            DVar2 = GetLastError();
+            (*DAT_0064e298)(L"CDevG5KB::AccessData err=%d",DVar2);
+            break;
+          }
+          FUN_00405180(0x14);
+          cVar1 = HidD_GetFeature(local_21c,local_20c,0x208);
+          if (cVar1 == '\0') {
+            DVar2 = GetLastError();
+            (*DAT_0064e298)(L"CDevG5KB::AccessData read err=%d",DVar2);
+          }
+          _memcpy((void *)(local_210 + iVar4),local_204,_Size);
+          iVar4 = iVar4 + _Size;
+        } while (iVar4 < (int)param_4);
+      }
+    }
+  }
+  else {
+    (**(code **)(**(int **)(param_1 + 0x23c) + 0x5c))(param_2,param_3,param_4);
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_21c);
+  return;
+}
+
+
+
+===== target 0048f400 function FUN_0048f400 @ 0048f400 =====
+Body instructions: 502
+Direct references to entry:
+  00614fd8 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_0048f400(int param_1,int param_2,uint param_3)
+
+{
+  char cVar1;
+  DWORD DVar2;
+  uint uVar3;
+  size_t _Size;
+  int iVar4;
+  int iVar5;
+  bool bVar6;
+  wchar_t *pwVar7;
+  DWORD local_21c;
+  int local_218;
+  int local_214;
+  int local_210;
+  char local_20c [5];
+  undefined1 local_207;
+  undefined1 local_206;
+  undefined1 local_205;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_21c;
+  iVar4 = 0;
+  local_210 = param_2;
+  if (*(int *)(param_1 + 0x23c) == 0) {
+    DVar2 = *(DWORD *)(param_1 + 0xc);
+    local_21c = DVar2;
+    if ((DVar2 == 0) || ((int)param_3 < 1)) {
+      pwVar7 = L"CDevG5KB::AccessData Param err, hDev=%x";
+LAB_0048f5e0:
+      (*DAT_0064e298)(pwVar7,DVar2);
+      (*DAT_0064e298)(L"GetMacro failed");
+    }
+    else {
+      local_218 = (int)(param_3 + ((int)param_3 >> 0x1f & 0x1ffU)) >> 9;
+      uVar3 = param_3 & 0x800001ff;
+      bVar6 = uVar3 == 0;
+      local_214 = 0;
+      if ((int)uVar3 < 0) {
+        bVar6 = (uVar3 - 1 | 0xfffffe00) == 0xffffffff;
+      }
+      if (!bVar6) {
+        local_218 = local_218 + 1;
+      }
+      if (0 < (int)param_3) {
+        do {
+          _Size = param_3 - iVar4;
+          if (0x1ff < (int)_Size) {
+            _Size = 0x200;
+          }
+          FUN_00405180(0x14);
+          _memset(local_20c,0,0x208);
+          local_207 = (undefined1)local_214;
+          local_214 = local_214 + 1;
+          local_20c[0] = ((*(int *)(*(int *)(param_1 + 0x10) + 0x14) != 0x18) - 1U & 0xfd) + 9;
+          local_20c[1] = 0x85;
+          local_20c[2] = 0;
+          local_20c[3] = 0;
+          local_20c[4] = (undefined1)local_218;
+          local_206 = (undefined1)_Size;
+          local_205 = (undefined1)(_Size >> 8);
+          iVar5 = 3;
+          do {
+            cVar1 = HidD_SetFeature(local_21c,local_20c,0x208);
+            if (cVar1 != '\0') break;
+            iVar5 = iVar5 + -1;
+            FUN_00405180(0x46);
+          } while (0 < iVar5);
+          if (iVar5 < 0) {
+            DVar2 = GetLastError();
+            pwVar7 = L"CDevG5KB::AccessData err=%d";
+            goto LAB_0048f5e0;
+          }
+          FUN_00405180(0x14);
+          cVar1 = HidD_GetFeature(local_21c,local_20c,0x208);
+          if (cVar1 == '\0') {
+            DVar2 = GetLastError();
+            (*DAT_0064e298)(L"CDevG5KB::AccessData read err=%d",DVar2);
+          }
+          _memcpy((void *)(local_210 + iVar4),local_204,_Size);
+          iVar4 = iVar4 + _Size;
+        } while (iVar4 < (int)param_3);
+      }
+    }
+  }
+  else {
+    (**(code **)(**(int **)(param_1 + 0x23c) + 100))(param_2,param_3);
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_21c);
+  return;
+}
+
+
+
+Target 0048f650 belongs to function already exported: 0048f650
+
+===== target 0048f8b0 function FUN_0048f8b0 @ 0048f8b0 =====
+Body instructions: 513
+Direct references to entry:
+  00614fe8 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_0048f8b0(int param_1,undefined4 param_2,int param_3,uint param_4)
+
+{
+  char cVar1;
+  DWORD DVar2;
+  uint uVar3;
+  size_t _Size;
+  int iVar4;
+  int iVar5;
+  bool bVar6;
+  wchar_t *pwVar7;
+  DWORD local_21c;
+  int local_218;
+  int local_214;
+  int local_210;
+  char local_20c [3];
+  undefined1 local_209;
+  undefined1 local_208;
+  undefined1 local_207;
+  undefined1 local_206;
+  undefined1 local_205;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_21c;
+  iVar4 = 0;
+  local_210 = param_3;
+  if (*(int *)(param_1 + 0x23c) == 0) {
+    DVar2 = *(DWORD *)(param_1 + 0xc);
+    local_21c = DVar2;
+    if ((DVar2 == 0) || ((int)param_4 < 1)) {
+      pwVar7 = L"CDevG5KB::AccessData Param err, hDev=%x";
+LAB_0048fa93:
+      (*DAT_0064e298)(pwVar7,DVar2);
+      (*DAT_0064e298)(L"GetGame failed");
+    }
+    else {
+      local_218 = (int)(param_4 + ((int)param_4 >> 0x1f & 0x1ffU)) >> 9;
+      uVar3 = param_4 & 0x800001ff;
+      bVar6 = uVar3 == 0;
+      local_214 = 0;
+      if ((int)uVar3 < 0) {
+        bVar6 = (uVar3 - 1 | 0xfffffe00) == 0xffffffff;
+      }
+      if (!bVar6) {
+        local_218 = local_218 + 1;
+      }
+      if (0 < (int)param_4) {
+        do {
+          _Size = param_4 - iVar4;
+          if (0x1ff < (int)_Size) {
+            _Size = 0x200;
+          }
+          FUN_00405180(0x14);
+          _memset(local_20c,0,0x208);
+          local_20c[0] = ((*(int *)(*(int *)(param_1 + 0x10) + 0x14) != 0x18) - 1U & 0xfd) + 9;
+          local_208 = (undefined1)local_218;
+          local_207 = (undefined1)local_214;
+          local_214 = local_214 + 1;
+          local_20c[1] = 0x86;
+          local_20c[2] = (undefined1)param_2;
+          local_209 = 0;
+          local_206 = (undefined1)_Size;
+          local_205 = (undefined1)(_Size >> 8);
+          iVar5 = 3;
+          do {
+            cVar1 = HidD_SetFeature(local_21c,local_20c,0x208);
+            if (cVar1 != '\0') break;
+            iVar5 = iVar5 + -1;
+            FUN_00405180(0x46);
+          } while (0 < iVar5);
+          if (iVar5 < 0) {
+            DVar2 = GetLastError();
+            pwVar7 = L"CDevG5KB::AccessData err=%d";
+            goto LAB_0048fa93;
+          }
+          FUN_00405180(0x14);
+          cVar1 = HidD_GetFeature(local_21c,local_20c,0x208);
+          if (cVar1 == '\0') {
+            DVar2 = GetLastError();
+            (*DAT_0064e298)(L"CDevG5KB::AccessData read err=%d",DVar2);
+          }
+          _memcpy((void *)(local_210 + iVar4),local_204,_Size);
+          iVar4 = iVar4 + _Size;
+        } while (iVar4 < (int)param_4);
+      }
+    }
+  }
+  else {
+    (**(code **)(**(int **)(param_1 + 0x23c) + 0x74))(param_2,param_3,param_4);
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_21c);
+  return;
+}
+
+
+
+===== target 0048fcf0 function FUN_0048fcf0 @ 0048fcf0 =====
+Body instructions: 502
+Direct references to entry:
+  00614ff0 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_0048fcf0(int param_1,int param_2,uint param_3)
+
+{
+  char cVar1;
+  DWORD DVar2;
+  uint uVar3;
+  size_t _Size;
+  int iVar4;
+  int iVar5;
+  bool bVar6;
+  wchar_t *pwVar7;
+  DWORD local_21c;
+  int local_218;
+  int local_214;
+  int local_210;
+  char local_20c [5];
+  undefined1 local_207;
+  undefined1 local_206;
+  undefined1 local_205;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_21c;
+  iVar4 = 0;
+  local_210 = param_2;
+  if (*(int *)(param_1 + 0x23c) == 0) {
+    DVar2 = *(DWORD *)(param_1 + 0xc);
+    local_21c = DVar2;
+    if ((DVar2 == 0) || ((int)param_3 < 1)) {
+      pwVar7 = L"CDevG5KB::AccessData Param err, hDev=%x";
+LAB_0048fed0:
+      (*DAT_0064e298)(pwVar7,DVar2);
+      (*DAT_0064e298)(L"GetLedRgbTab failed");
+    }
+    else {
+      local_218 = (int)(param_3 + ((int)param_3 >> 0x1f & 0x1ffU)) >> 9;
+      uVar3 = param_3 & 0x800001ff;
+      bVar6 = uVar3 == 0;
+      local_214 = 0;
+      if ((int)uVar3 < 0) {
+        bVar6 = (uVar3 - 1 | 0xfffffe00) == 0xffffffff;
+      }
+      if (!bVar6) {
+        local_218 = local_218 + 1;
+      }
+      if (0 < (int)param_3) {
+        do {
+          _Size = param_3 - iVar4;
+          if (0x1ff < (int)_Size) {
+            _Size = 0x200;
+          }
+          FUN_00405180(0x14);
+          _memset(local_20c,0,0x208);
+          local_207 = (undefined1)local_214;
+          local_214 = local_214 + 1;
+          local_20c[0] = ((*(int *)(*(int *)(param_1 + 0x10) + 0x14) != 0x18) - 1U & 0xfd) + 9;
+          local_20c[1] = 0x8a;
+          local_20c[2] = 0;
+          local_20c[3] = 0;
+          local_20c[4] = (undefined1)local_218;
+          local_206 = (undefined1)_Size;
+          local_205 = (undefined1)(_Size >> 8);
+          iVar5 = 3;
+          do {
+            cVar1 = HidD_SetFeature(local_21c,local_20c,0x208);
+            if (cVar1 != '\0') break;
+            iVar5 = iVar5 + -1;
+            FUN_00405180(0x46);
+          } while (0 < iVar5);
+          if (iVar5 < 0) {
+            DVar2 = GetLastError();
+            pwVar7 = L"CDevG5KB::AccessData err=%d";
+            goto LAB_0048fed0;
+          }
+          FUN_00405180(0x14);
+          cVar1 = HidD_GetFeature(local_21c,local_20c,0x208);
+          if (cVar1 == '\0') {
+            DVar2 = GetLastError();
+            (*DAT_0064e298)(L"CDevG5KB::AccessData read err=%d",DVar2);
+          }
+          _memcpy((void *)(local_210 + iVar4),local_204,_Size);
+          iVar4 = iVar4 + _Size;
+        } while (iVar4 < (int)param_3);
+      }
+    }
+  }
+  else {
+    (**(code **)(**(int **)(param_1 + 0x23c) + 0x7c))(param_2,param_3);
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_21c);
+  return;
+}
+
+
+
+===== target 0048fac0 function FUN_0048fac0 @ 0048fac0 =====
+Body instructions: 466
+Direct references to entry:
+  00490198 UNCONDITIONAL_CALL caller=FUN_00490180@00490180
+Reference count: 1
+Decompiled C:
+
+void FUN_0048fac0(int param_1,uint param_2)
+
+{
+  char cVar1;
+  DWORD DVar2;
+  uint uVar3;
+  size_t _Size;
+  int iVar4;
+  int iVar5;
+  int unaff_EDI;
+  bool bVar6;
+  wchar_t *pwVar7;
+  DWORD local_21c;
+  int local_218;
+  int local_214;
+  int local_210;
+  char local_20c [5];
+  undefined1 local_207;
+  undefined1 local_206;
+  undefined1 local_205;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_21c;
+  local_210 = param_1;
+  DVar2 = *(DWORD *)(unaff_EDI + 0xc);
+  iVar4 = 0;
+  local_21c = DVar2;
+  if ((DVar2 == 0) || ((int)param_2 < 1)) {
+    pwVar7 = L"CDevG5KB::AccessData Param err, hDev=%x";
+LAB_0048fc80:
+    (*DAT_0064e298)(pwVar7,DVar2);
+    (*DAT_0064e298)(L"GetRealData failed");
+  }
+  else {
+    local_218 = (int)(param_2 + ((int)param_2 >> 0x1f & 0x1ffU)) >> 9;
+    uVar3 = param_2 & 0x800001ff;
+    bVar6 = uVar3 == 0;
+    local_214 = 0;
+    if ((int)uVar3 < 0) {
+      bVar6 = (uVar3 - 1 | 0xfffffe00) == 0xffffffff;
+    }
+    if (!bVar6) {
+      local_218 = local_218 + 1;
+    }
+    if (0 < (int)param_2) {
+      do {
+        _Size = param_2 - iVar4;
+        if (0x1ff < (int)_Size) {
+          _Size = 0x200;
+        }
+        FUN_00405180(0x14);
+        _memset(local_20c,0,0x208);
+        local_207 = (undefined1)local_214;
+        local_214 = local_214 + 1;
+        local_20c[0] = ((*(int *)(*(int *)(unaff_EDI + 0x10) + 0x14) != 0x18) - 1U & 0xfd) + 9;
+        local_20c[1] = 0x88;
+        local_20c[2] = 0;
+        local_20c[3] = 0;
+        local_20c[4] = (undefined1)local_218;
+        local_206 = (undefined1)_Size;
+        local_205 = (undefined1)(_Size >> 8);
+        iVar5 = 3;
+        do {
+          cVar1 = HidD_SetFeature(local_21c,local_20c,0x208);
+          if (cVar1 != '\0') break;
+          iVar5 = iVar5 + -1;
+          FUN_00405180(0x46);
+        } while (0 < iVar5);
+        if (iVar5 < 0) {
+          DVar2 = GetLastError();
+          pwVar7 = L"CDevG5KB::AccessData err=%d";
+          goto LAB_0048fc80;
+        }
+        FUN_00405180(0x14);
+        cVar1 = HidD_GetFeature(local_21c,local_20c,0x208);
+        if (cVar1 == '\0') {
+          DVar2 = GetLastError();
+          (*DAT_0064e298)(L"CDevG5KB::AccessData read err=%d",DVar2);
+        }
+        _memcpy((void *)(local_210 + iVar4),local_204,_Size);
+        iVar4 = iVar4 + _Size;
+      } while (iVar4 < (int)param_2);
+    }
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_21c);
+  return;
+}
+
+
+
+===== target 004946e0 function FUN_004946e0 @ 004946e0 =====
+Body instructions: 573
+Direct references to entry:
+  00615974 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_004946e0(int param_1,int param_2)
+
+{
+  DWORD DVar1;
+  int iVar2;
+  char cVar3;
+  size_t _Size;
+  int iVar4;
+  wchar_t *pwVar5;
+  int local_424;
+  int local_420;
+  int local_41c;
+  int local_418;
+  char local_414 [522];
+  byte local_20a;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_424;
+  local_418 = param_2;
+  local_420 = *(int *)(param_1 + 0xc);
+  if (local_420 == 0) {
+LAB_0049490b:
+    (*DAT_0064e298)(L"GetPower failed");
+  }
+  else {
+    local_41c = 0;
+    local_424 = 0;
+    do {
+      iVar4 = local_424;
+      _Size = 0x200;
+      if ((int)(1U - local_424) < 0x200) {
+        _Size = 1U - local_424;
+      }
+      FUN_00405180(0x14);
+      _memset(local_414,0,0x208);
+      local_414[5] = (char)local_41c;
+      local_41c = local_41c + 1;
+      local_414[7] = (char)(_Size >> 8);
+      cVar3 = '\0';
+      local_414[0] = '\t';
+      local_414[2] = 9;
+      local_414[3] = 1;
+      local_414[4] = 1;
+      local_414[6] = (char)_Size;
+      iVar2 = 2;
+      local_414[1] = '\0';
+      do {
+        cVar3 = cVar3 + local_414[iVar2];
+        local_414[1] = local_414[1] + local_414[iVar2 + 1];
+        iVar2 = iVar2 + 2;
+      } while (iVar2 < 0x208);
+      local_414[1] = local_414[1] + cVar3;
+      iVar2 = 3;
+      do {
+        cVar3 = HidD_SetFeature(local_420,local_414,0x208);
+        if (cVar3 == '\0') {
+          DVar1 = GetLastError();
+          (*DAT_0064e298)(L"AccessData: SetFeature nErr=%d, nCmdID=%x",DVar1,9);
+          if ((DVar1 == 0x48f) || (DVar1 == 6)) goto LAB_0049490b;
+          (*DAT_0064e298)(L"AccessData: retry SetFeature now");
+          iVar4 = local_424;
+        }
+        else {
+          DVar1 = WaitForSingleObject(*(HANDLE *)(param_1 + 0x294),0x1e);
+          if ((DVar1 != 0) || (*(char *)(param_1 + 0x29f) != '\t')) {
+            FUN_00405180(0x14);
+            _memset(local_414 + 0x208,0,0x208);
+            local_414[0x208] = 9;
+            cVar3 = HidD_GetFeature(local_420,local_414 + 0x208,0x208);
+            if (cVar3 == '\0') {
+              DVar1 = GetLastError();
+              local_20a = 9;
+              pwVar5 = L"AccessData: GetFeature nErr=%d, nCmdID=%x";
+            }
+            else {
+              if (local_414[2] == local_20a) {
+                _memcpy((void *)(iVar4 + local_418),local_204,_Size);
+                break;
+              }
+              DVar1 = (DWORD)(byte)local_414[2];
+              pwVar5 = L"AccessData: GetFeature Failed, cmd id unmatch, Buffer[2]=%x, bBuf[2]=%x";
+            }
+            (*DAT_0064e298)(pwVar5,DVar1,local_20a);
+            goto LAB_0049490b;
+          }
+          (*DAT_0064e298)(L"AccessData CRC err for nCmdID=%x, retry now",9);
+        }
+        iVar2 = iVar2 + -1;
+        Sleep(0x3c);
+      } while (0 < iVar2);
+      if (iVar2 < 0) goto LAB_0049490b;
+      local_424 = iVar4 + _Size;
+    } while (local_424 < 1);
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_424);
+  return;
+}
+
+
+
+===== target 00493360 function FUN_00493360 @ 00493360 =====
+Body instructions: 750
+Direct references to entry:
+  00494cec UNCONDITIONAL_CALL caller=FUN_00494cd0@00494cd0
+  0049367f UNCONDITIONAL_CALL caller=FUN_00493650@00493650
+  0049397c UNCONDITIONAL_CALL caller=FUN_00493950@00493950
+  00493c5c UNCONDITIONAL_CALL caller=FUN_00493c30@00493c30
+  00493f5c UNCONDITIONAL_CALL caller=FUN_00493f30@00493f30
+Reference count: 5
+Decompiled C:
+
+void __thiscall
+FUN_00493360(int param_1,int param_2,int param_3,int param_4,uint param_5,undefined1 param_6,
+            uint param_7,undefined4 param_8)
+
+{
+  DWORD DVar1;
+  int iVar2;
+  char cVar3;
+  uint uVar4;
+  size_t _Size;
+  int iVar5;
+  bool bVar6;
+  wchar_t *pwVar7;
+  int local_428;
+  int local_424;
+  int local_420;
+  int local_41c;
+  int local_418;
+  char local_414 [522];
+  byte local_20a;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_428;
+  local_41c = param_2;
+  iVar5 = 0;
+  local_428 = param_3;
+  local_420 = param_1;
+  if (((param_3 != 0) && (0 < (int)param_7)) && ((param_4 == 1 || (param_4 == 2)))) {
+    local_424 = (int)(param_7 + ((int)param_7 >> 0x1f & 0x1ffU)) >> 9;
+    uVar4 = param_7 & 0x800001ff;
+    bVar6 = uVar4 == 0;
+    local_418 = 0;
+    if ((int)uVar4 < 0) {
+      bVar6 = (uVar4 - 1 | 0xfffffe00) == 0xffffffff;
+    }
+    if (!bVar6) {
+      local_424 = local_424 + 1;
+    }
+    if (0 < (int)param_7) {
+      do {
+        _Size = 0x200;
+        if ((int)(param_7 - iVar5) < 0x200) {
+          _Size = param_7 - iVar5;
+        }
+        FUN_00405180(param_8);
+        _memset(local_414,0,0x208);
+        local_414[3] = param_6;
+        local_414[2] = (byte)param_5;
+        local_414[5] = (char)local_418;
+        local_418 = local_418 + 1;
+        local_414[0] = '\t';
+        local_414[1] = 0;
+        local_414[4] = (undefined1)local_424;
+        local_414[6] = (char)_Size;
+        local_414[7] = (char)(_Size >> 8);
+        if ((param_4 == 1) && (local_420 != 0)) {
+          _memcpy(local_414 + 8,(void *)(local_420 + iVar5),_Size);
+        }
+        cVar3 = '\0';
+        iVar2 = 2;
+        local_414[1] = '\0';
+        do {
+          cVar3 = cVar3 + local_414[iVar2];
+          local_414[1] = local_414[1] + local_414[iVar2 + 1];
+          iVar2 = iVar2 + 2;
+        } while (iVar2 < 0x208);
+        local_414[1] = local_414[1] + cVar3;
+        iVar2 = 3;
+        do {
+          cVar3 = HidD_SetFeature(local_428,local_414,0x208);
+          if (cVar3 == '\0') {
+            DVar1 = GetLastError();
+            (*DAT_0064e298)(L"AccessData: SetFeature nErr=%d, nCmdID=%x",DVar1,param_5);
+            if ((DVar1 == 0x48f) || (DVar1 == 6)) goto LAB_0049361b;
+            (*DAT_0064e298)(L"AccessData: retry SetFeature now");
+          }
+          else {
+            DVar1 = WaitForSingleObject(*(HANDLE *)(local_41c + 0x294),0x1e);
+            if ((DVar1 != 0) || ((byte)param_5 != *(byte *)(local_41c + 0x29f))) {
+              if (param_4 != 2) break;
+              FUN_00405180(param_8);
+              _memset(local_414 + 0x208,0,0x208);
+              local_414[0x208] = 9;
+              cVar3 = HidD_GetFeature(local_428,local_414 + 0x208,0x208);
+              if (cVar3 == '\0') {
+                DVar1 = GetLastError();
+                pwVar7 = L"AccessData: GetFeature nErr=%d, nCmdID=%x";
+              }
+              else {
+                if (local_414[2] == local_20a) {
+                  _memcpy((void *)(local_420 + iVar5),local_204,_Size);
+                  break;
+                }
+                param_5 = (uint)local_20a;
+                DVar1 = (DWORD)(byte)local_414[2];
+                pwVar7 = L"AccessData: GetFeature Failed, cmd id unmatch, Buffer[2]=%x, bBuf[2]=%x";
+              }
+              (*DAT_0064e298)(pwVar7,DVar1,param_5);
+              goto LAB_0049361b;
+            }
+            (*DAT_0064e298)(L"AccessData CRC err for nCmdID=%x, retry now",param_5);
+          }
+          iVar2 = iVar2 + -1;
+          Sleep(0x3c);
+        } while (0 < iVar2);
+      } while ((-1 < iVar2) && (iVar5 = iVar5 + _Size, iVar5 < (int)param_7));
+    }
+  }
+LAB_0049361b:
+  __security_check_cookie(local_4 ^ (uint)&local_428);
+  return;
+}
+
+
+
+===== target 00493690 function FUN_00493690 @ 00493690 =====
+Body instructions: 697
+Direct references to entry:
+  006159b0 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_00493690(int param_1,undefined4 param_2,int param_3,uint param_4)
+
+{
+  DWORD DVar1;
+  int iVar2;
+  char cVar3;
+  uint uVar4;
+  size_t _Size;
+  int iVar5;
+  bool bVar6;
+  int local_428;
+  int local_424;
+  int local_420;
+  int local_41c;
+  int local_418;
+  char local_414 [522];
+  char local_20a;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_428;
+  local_418 = param_3;
+  if (*(int *)(param_1 + 0x23c) == 0) {
+    local_420 = *(int *)(param_1 + 0xc);
+    if ((local_420 != 0) && (0 < (int)param_4)) {
+      local_424 = (int)(param_4 + ((int)param_4 >> 0x1f & 0x1ffU)) >> 9;
+      uVar4 = param_4 & 0x800001ff;
+      bVar6 = uVar4 == 0;
+      local_41c = 0;
+      local_428 = 0;
+      if ((int)uVar4 < 0) {
+        bVar6 = (uVar4 - 1 | 0xfffffe00) == 0xffffffff;
+      }
+      if (!bVar6) {
+        local_424 = local_424 + 1;
+      }
+      if (0 < (int)param_4) {
+        do {
+          iVar5 = local_428;
+          _Size = 0x200;
+          if ((int)(param_4 - local_428) < 0x200) {
+            _Size = param_4 - local_428;
+          }
+          FUN_00405180(0x14);
+          _memset(local_414,0,0x208);
+          local_414[5] = (char)local_41c;
+          local_41c = local_41c + 1;
+          local_414[4] = (undefined1)local_424;
+          local_414[3] = (undefined1)param_2;
+          local_414[7] = (char)(_Size >> 8);
+          cVar3 = '\0';
+          local_414[0] = '\t';
+          local_414[2] = 'A';
+          local_414[6] = (char)_Size;
+          local_414[1] = '\0';
+          iVar2 = 2;
+          do {
+            cVar3 = cVar3 + local_414[iVar2];
+            local_414[1] = local_414[1] + local_414[iVar2 + 1];
+            iVar2 = iVar2 + 2;
+          } while (iVar2 < 0x208);
+          local_414[1] = local_414[1] + cVar3;
+          iVar2 = 3;
+          do {
+            cVar3 = HidD_SetFeature(local_420,local_414,0x208);
+            if (cVar3 == '\0') {
+              DVar1 = GetLastError();
+              (*DAT_0064e298)(L"AccessData: SetFeature nErr=%d, nCmdID=%x",DVar1,0x41);
+              if ((DVar1 == 0x48f) || (DVar1 == 6)) goto LAB_0049373b;
+              (*DAT_0064e298)(L"AccessData: retry SetFeature now");
+              iVar5 = local_428;
+            }
+            else {
+              DVar1 = WaitForSingleObject(*(HANDLE *)(param_1 + 0x294),0x1e);
+              if ((DVar1 != 0) || (*(char *)(param_1 + 0x29f) != 'A')) {
+                FUN_00405180(0x14);
+                _memset(local_414 + 0x208,0,0x208);
+                local_414[0x208] = 9;
+                cVar3 = HidD_GetFeature(local_420,local_414 + 0x208,0x208);
+                if (cVar3 == '\0') {
+                  DVar1 = GetLastError();
+                  (*DAT_0064e298)(L"AccessData: GetFeature nErr=%d, nCmdID=%x",DVar1,0x41);
+                  goto LAB_0049373b;
+                }
+                if (local_414[2] != local_20a) {
+                  (*DAT_0064e298)(L"AccessData: GetFeature Failed, cmd id unmatch, Buffer[2]=%x, bBuf[2]=%x"
+                                  ,local_414[2],local_20a);
+                  goto LAB_0049373b;
+                }
+                _memcpy((void *)(iVar5 + local_418),local_204,_Size);
+                break;
+              }
+              (*DAT_0064e298)(L"AccessData CRC err for nCmdID=%x, retry now",0x41);
+            }
+            iVar2 = iVar2 + -1;
+            Sleep(0x3c);
+          } while (0 < iVar2);
+        } while ((-1 < iVar2) && (local_428 = iVar5 + _Size, local_428 < (int)param_4));
+      }
+    }
+  }
+  else {
+    (**(code **)(**(int **)(param_1 + 0x23c) + 0x5c))(param_2,param_3,param_4);
+  }
+LAB_0049373b:
+  __security_check_cookie(local_4 ^ (uint)&local_428);
+  return;
+}
+
+
+
+===== target 004939a0 function FUN_004939a0 @ 004939a0 =====
+Body instructions: 646
+Direct references to entry:
+  006159b8 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_004939a0(int param_1,int param_2,uint param_3)
+
+{
+  DWORD DVar1;
+  int iVar2;
+  char cVar3;
+  uint uVar4;
+  size_t _Size;
+  int iVar5;
+  bool bVar6;
+  wchar_t *pwVar7;
+  int local_428;
+  int local_424;
+  int local_420;
+  int local_41c;
+  int local_418;
+  char local_414 [522];
+  byte local_20a;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_428;
+  local_418 = param_2;
+  local_420 = *(int *)(param_1 + 0xc);
+  if ((local_420 == 0) || ((int)param_3 < 1)) {
+LAB_00493c15:
+    (*DAT_0064e298)(L"GetMacro failed");
+  }
+  else {
+    local_424 = (int)(param_3 + ((int)param_3 >> 0x1f & 0x1ffU)) >> 9;
+    uVar4 = param_3 & 0x800001ff;
+    bVar6 = uVar4 == 0;
+    local_41c = 0;
+    local_428 = 0;
+    if ((int)uVar4 < 0) {
+      bVar6 = (uVar4 - 1 | 0xfffffe00) == 0xffffffff;
+    }
+    if (!bVar6) {
+      local_424 = local_424 + 1;
+    }
+    if (0 < (int)param_3) {
+      do {
+        iVar5 = local_428;
+        _Size = 0x200;
+        if ((int)(param_3 - local_428) < 0x200) {
+          _Size = param_3 - local_428;
+        }
+        FUN_00405180(0x14);
+        _memset(local_414,0,0x208);
+        local_414[5] = (char)local_41c;
+        local_41c = local_41c + 1;
+        local_414[7] = (char)(_Size >> 8);
+        local_414[4] = (undefined1)local_424;
+        cVar3 = '\0';
+        local_414[0] = '\t';
+        local_414[2] = 0x43;
+        local_414[3] = 0;
+        local_414[6] = (char)_Size;
+        iVar2 = 2;
+        local_414[1] = '\0';
+        do {
+          cVar3 = cVar3 + local_414[iVar2];
+          local_414[1] = local_414[1] + local_414[iVar2 + 1];
+          iVar2 = iVar2 + 2;
+        } while (iVar2 < 0x208);
+        local_414[1] = local_414[1] + cVar3;
+        iVar2 = 3;
+        do {
+          cVar3 = HidD_SetFeature(local_420,local_414,0x208);
+          if (cVar3 == '\0') {
+            DVar1 = GetLastError();
+            (*DAT_0064e298)(L"AccessData: SetFeature nErr=%d, nCmdID=%x",DVar1,0x43);
+            if ((DVar1 == 0x48f) || (DVar1 == 6)) goto LAB_00493c15;
+            (*DAT_0064e298)(L"AccessData: retry SetFeature now");
+            iVar5 = local_428;
+          }
+          else {
+            DVar1 = WaitForSingleObject(*(HANDLE *)(param_1 + 0x294),0x1e);
+            if ((DVar1 != 0) || (*(char *)(param_1 + 0x29f) != 'C')) {
+              FUN_00405180(0x14);
+              _memset(local_414 + 0x208,0,0x208);
+              local_414[0x208] = 9;
+              cVar3 = HidD_GetFeature(local_420,local_414 + 0x208,0x208);
+              if (cVar3 == '\0') {
+                DVar1 = GetLastError();
+                local_20a = 0x43;
+                pwVar7 = L"AccessData: GetFeature nErr=%d, nCmdID=%x";
+              }
+              else {
+                if (local_414[2] == local_20a) {
+                  _memcpy((void *)(iVar5 + local_418),local_204,_Size);
+                  break;
+                }
+                DVar1 = (DWORD)(byte)local_414[2];
+                pwVar7 = L"AccessData: GetFeature Failed, cmd id unmatch, Buffer[2]=%x, bBuf[2]=%x";
+              }
+              (*DAT_0064e298)(pwVar7,DVar1,local_20a);
+              goto LAB_00493c15;
+            }
+            (*DAT_0064e298)(L"AccessData CRC err for nCmdID=%x, retry now",0x43);
+          }
+          iVar2 = iVar2 + -1;
+          Sleep(0x3c);
+        } while (0 < iVar2);
+        if (iVar2 < 0) goto LAB_00493c15;
+        local_428 = iVar5 + _Size;
+      } while (local_428 < (int)param_3);
+    }
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_428);
+  return;
+}
+
+
+
+===== target 00493c80 function FUN_00493c80 @ 00493c80 =====
+Body instructions: 678
+Direct references to entry:
+  006159c0 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_00493c80(int param_1,int param_2,uint param_3)
+
+{
+  DWORD DVar1;
+  int iVar2;
+  char cVar3;
+  uint uVar4;
+  size_t _Size;
+  int iVar5;
+  bool bVar6;
+  wchar_t *pwVar7;
+  int local_428;
+  int local_424;
+  int local_420;
+  int local_41c;
+  int local_418;
+  char local_414 [522];
+  byte local_20a;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_428;
+  local_418 = param_2;
+  if (*(int *)(param_1 + 0x23c) == 0) {
+    local_420 = *(int *)(param_1 + 0xc);
+    if ((local_420 == 0) || ((int)param_3 < 1)) {
+LAB_00493f15:
+      (*DAT_0064e298)(L"GetLED failed");
+    }
+    else {
+      local_424 = (int)(param_3 + ((int)param_3 >> 0x1f & 0x1ffU)) >> 9;
+      uVar4 = param_3 & 0x800001ff;
+      bVar6 = uVar4 == 0;
+      local_41c = 0;
+      local_428 = 0;
+      if ((int)uVar4 < 0) {
+        bVar6 = (uVar4 - 1 | 0xfffffe00) == 0xffffffff;
+      }
+      if (!bVar6) {
+        local_424 = local_424 + 1;
+      }
+      if (0 < (int)param_3) {
+        do {
+          iVar5 = local_428;
+          _Size = 0x200;
+          if ((int)(param_3 - local_428) < 0x200) {
+            _Size = param_3 - local_428;
+          }
+          FUN_00405180(0x14);
+          _memset(local_414,0,0x208);
+          local_414[5] = (char)local_41c;
+          local_41c = local_41c + 1;
+          local_414[7] = (char)(_Size >> 8);
+          local_414[4] = (undefined1)local_424;
+          cVar3 = '\0';
+          local_414[0] = '\t';
+          local_414[2] = 0x44;
+          local_414[3] = 0;
+          local_414[6] = (char)_Size;
+          iVar2 = 2;
+          local_414[1] = '\0';
+          do {
+            cVar3 = cVar3 + local_414[iVar2];
+            local_414[1] = local_414[1] + local_414[iVar2 + 1];
+            iVar2 = iVar2 + 2;
+          } while (iVar2 < 0x208);
+          local_414[1] = local_414[1] + cVar3;
+          iVar2 = 3;
+          do {
+            cVar3 = HidD_SetFeature(local_420,local_414,0x208);
+            if (cVar3 == '\0') {
+              DVar1 = GetLastError();
+              (*DAT_0064e298)(L"AccessData: SetFeature nErr=%d, nCmdID=%x",DVar1,0x44);
+              if ((DVar1 == 0x48f) || (DVar1 == 6)) goto LAB_00493f15;
+              (*DAT_0064e298)(L"AccessData: retry SetFeature now");
+              iVar5 = local_428;
+            }
+            else {
+              DVar1 = WaitForSingleObject(*(HANDLE *)(param_1 + 0x294),0x1e);
+              if ((DVar1 != 0) || (*(char *)(param_1 + 0x29f) != 'D')) {
+                FUN_00405180(0x14);
+                _memset(local_414 + 0x208,0,0x208);
+                local_414[0x208] = 9;
+                cVar3 = HidD_GetFeature(local_420,local_414 + 0x208,0x208);
+                if (cVar3 == '\0') {
+                  DVar1 = GetLastError();
+                  local_20a = 0x44;
+                  pwVar7 = L"AccessData: GetFeature nErr=%d, nCmdID=%x";
+                }
+                else {
+                  if (local_414[2] == local_20a) {
+                    _memcpy((void *)(iVar5 + local_418),local_204,_Size);
+                    break;
+                  }
+                  DVar1 = (DWORD)(byte)local_414[2];
+                  pwVar7 = 
+                  L"AccessData: GetFeature Failed, cmd id unmatch, Buffer[2]=%x, bBuf[2]=%x";
+                }
+                (*DAT_0064e298)(pwVar7,DVar1,local_20a);
+                goto LAB_00493f15;
+              }
+              (*DAT_0064e298)(L"AccessData CRC err for nCmdID=%x, retry now",0x44);
+            }
+            iVar2 = iVar2 + -1;
+            Sleep(0x3c);
+          } while (0 < iVar2);
+          if (iVar2 < 0) goto LAB_00493f15;
+          local_428 = iVar5 + _Size;
+        } while (local_428 < (int)param_3);
+      }
+    }
+  }
+  else {
+    (**(code **)(**(int **)(param_1 + 0x23c) + 0x6c))(param_2,param_3);
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_428);
+  return;
+}
+
+
+
+===== target 00493f90 function FUN_00493f90 @ 00493f90 =====
+Body instructions: 612
+Direct references to entry:
+  006159d8 DATA caller=unknown
+Reference count: 1
+Decompiled C:
+
+void __thiscall FUN_00493f90(int param_1,undefined1 *param_2)
+
+{
+  DWORD DVar1;
+  uint uVar2;
+  int iVar3;
+  char cVar4;
+  size_t _Size;
+  int iVar5;
+  wchar_t *pwVar6;
+  undefined1 auStack_428 [3];
+  undefined1 local_425;
+  int local_424;
+  int local_420;
+  int local_41c;
+  undefined1 *local_418;
+  char local_414 [522];
+  byte local_20a;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)auStack_428;
+  local_418 = param_2;
+  if (*(int *)(param_1 + 0x23c) == 0) {
+    local_420 = *(int *)(param_1 + 0xc);
+    local_425 = 0;
+    if (local_420 == 0) {
+LAB_004941e2:
+      (*DAT_0064e298)(L"GetOnBoard failed");
+    }
+    else {
+      local_41c = 0;
+      local_424 = 0;
+      do {
+        iVar5 = local_424;
+        _Size = 0x200;
+        if ((int)(1U - local_424) < 0x200) {
+          _Size = 1U - local_424;
+        }
+        FUN_00405180(0x32);
+        _memset(local_414,0,0x208);
+        local_414[5] = (char)local_41c;
+        local_41c = local_41c + 1;
+        local_414[7] = (char)(_Size >> 8);
+        cVar4 = '\0';
+        local_414[0] = '\t';
+        local_414[2] = 0x4a;
+        local_414[3] = 0;
+        local_414[4] = 1;
+        local_414[6] = (char)_Size;
+        local_414[1] = '\0';
+        iVar3 = 2;
+        do {
+          cVar4 = cVar4 + local_414[iVar3];
+          local_414[1] = local_414[1] + local_414[iVar3 + 1];
+          iVar3 = iVar3 + 2;
+        } while (iVar3 < 0x208);
+        local_414[1] = local_414[1] + cVar4;
+        iVar3 = 3;
+        do {
+          cVar4 = HidD_SetFeature(local_420,local_414,0x208);
+          if (cVar4 == '\0') {
+            DVar1 = GetLastError();
+            (*DAT_0064e298)(L"AccessData: SetFeature nErr=%d, nCmdID=%x",DVar1,0x4a);
+            if ((DVar1 == 0x48f) || (DVar1 == 6)) goto LAB_004941e2;
+            (*DAT_0064e298)(L"AccessData: retry SetFeature now");
+            iVar5 = local_424;
+          }
+          else {
+            DVar1 = WaitForSingleObject(*(HANDLE *)(param_1 + 0x294),0x1e);
+            if ((DVar1 != 0) || (*(char *)(param_1 + 0x29f) != 'J')) {
+              FUN_00405180(0x32);
+              _memset(local_414 + 0x208,0,0x208);
+              local_414[0x208] = 9;
+              cVar4 = HidD_GetFeature(local_420,local_414 + 0x208,0x208);
+              if (cVar4 == '\0') {
+                uVar2 = GetLastError();
+                local_20a = 0x4a;
+                pwVar6 = L"AccessData: GetFeature nErr=%d, nCmdID=%x";
+              }
+              else {
+                if (local_414[2] == local_20a) {
+                  _memcpy(&local_425 + iVar5,local_204,_Size);
+                  break;
+                }
+                uVar2 = (uint)(byte)local_414[2];
+                pwVar6 = L"AccessData: GetFeature Failed, cmd id unmatch, Buffer[2]=%x, bBuf[2]=%x";
+              }
+              (*DAT_0064e298)(pwVar6,uVar2,local_20a);
+              goto LAB_004941e2;
+            }
+            (*DAT_0064e298)(L"AccessData CRC err for nCmdID=%x, retry now",0x4a);
+          }
+          iVar3 = iVar3 + -1;
+          Sleep(0x3c);
+        } while (0 < iVar3);
+        if (iVar3 < 0) goto LAB_004941e2;
+        local_424 = iVar5 + _Size;
+      } while (local_424 < 1);
+      *local_418 = local_425;
+    }
+  }
+  else {
+    (**(code **)(**(int **)(param_1 + 0x23c) + 0x84))(param_2);
+  }
+  __security_check_cookie(local_4 ^ (uint)auStack_428);
+  return;
+}
+
+
+
+===== target 00494200 function FUN_00494200 @ 00494200 =====
+Body instructions: 660
+Direct references to entry:
+  00494d26 UNCONDITIONAL_CALL caller=FUN_00494d10@00494d10
+Reference count: 1
+Decompiled C:
+
+void FUN_00494200(int param_1,int param_2,uint param_3)
+
+{
+  DWORD DVar1;
+  int iVar2;
+  char cVar3;
+  uint uVar4;
+  size_t _Size;
+  int iVar5;
+  bool bVar6;
+  wchar_t *pwVar7;
+  int local_428;
+  int local_424;
+  int local_420;
+  int local_41c;
+  int local_418;
+  char local_414 [522];
+  byte local_20a;
+  undefined1 local_204 [512];
+  uint local_4;
+  
+  local_4 = DAT_00640674 ^ (uint)&local_428;
+  local_418 = param_2;
+  local_420 = *(int *)(param_1 + 0xc);
+  if ((local_420 == 0) || ((int)param_3 < 1)) {
+LAB_0049447f:
+    (*DAT_0064e298)(L"GetRealData failed");
+  }
+  else {
+    local_424 = (int)(param_3 + ((int)param_3 >> 0x1f & 0x1ffU)) >> 9;
+    uVar4 = param_3 & 0x800001ff;
+    bVar6 = uVar4 == 0;
+    local_41c = 0;
+    local_428 = 0;
+    if ((int)uVar4 < 0) {
+      bVar6 = (uVar4 - 1 | 0xfffffe00) == 0xffffffff;
+    }
+    if (!bVar6) {
+      local_424 = local_424 + 1;
+    }
+    if (0 < (int)param_3) {
+      do {
+        iVar5 = local_428;
+        _Size = 0x200;
+        if ((int)(param_3 - local_428) < 0x200) {
+          _Size = param_3 - local_428;
+        }
+        FUN_00405180(0x14);
+        _memset(local_414,0,0x208);
+        local_414[5] = (char)local_41c;
+        local_41c = local_41c + 1;
+        local_414[7] = (char)(_Size >> 8);
+        local_414[4] = (undefined1)local_424;
+        cVar3 = '\0';
+        local_414[0] = '\t';
+        local_414[2] = 0x88;
+        local_414[3] = 0;
+        local_414[6] = (char)_Size;
+        iVar2 = 2;
+        local_414[1] = '\0';
+        do {
+          cVar3 = cVar3 + local_414[iVar2];
+          local_414[1] = local_414[1] + local_414[iVar2 + 1];
+          iVar2 = iVar2 + 2;
+        } while (iVar2 < 0x208);
+        local_414[1] = local_414[1] + cVar3;
+        iVar2 = 3;
+        do {
+          cVar3 = HidD_SetFeature(local_420,local_414,0x208);
+          if (cVar3 == '\0') {
+            DVar1 = GetLastError();
+            (*DAT_0064e298)(L"AccessData: SetFeature nErr=%d, nCmdID=%x",DVar1,0x88);
+            if ((DVar1 == 0x48f) || (DVar1 == 6)) goto LAB_0049447f;
+            (*DAT_0064e298)(L"AccessData: retry SetFeature now");
+            iVar5 = local_428;
+          }
+          else {
+            DVar1 = WaitForSingleObject(*(HANDLE *)(param_1 + 0x294),0x1e);
+            if ((DVar1 != 0) || (*(char *)(param_1 + 0x29f) != -0x78)) {
+              FUN_00405180(0x14);
+              _memset(local_414 + 0x208,0,0x208);
+              local_414[0x208] = 9;
+              cVar3 = HidD_GetFeature(local_420,local_414 + 0x208,0x208);
+              if (cVar3 == '\0') {
+                DVar1 = GetLastError();
+                local_20a = 0x88;
+                pwVar7 = L"AccessData: GetFeature nErr=%d, nCmdID=%x";
+              }
+              else {
+                if (local_414[2] == local_20a) {
+                  _memcpy((void *)(iVar5 + local_418),local_204,_Size);
+                  break;
+                }
+                DVar1 = (DWORD)(byte)local_414[2];
+                pwVar7 = L"AccessData: GetFeature Failed, cmd id unmatch, Buffer[2]=%x, bBuf[2]=%x";
+              }
+              (*DAT_0064e298)(pwVar7,DVar1,local_20a);
+              goto LAB_0049447f;
+            }
+            (*DAT_0064e298)(L"AccessData CRC err for nCmdID=%x, retry now",0x88);
+          }
+          iVar2 = iVar2 + -1;
+          Sleep(0x3c);
+        } while (0 < iVar2);
+        if (iVar2 < 0) goto LAB_0049447f;
+        local_428 = iVar5 + _Size;
+      } while (local_428 < (int)param_3);
+    }
+  }
+  __security_check_cookie(local_4 ^ (uint)&local_428);
+  return;
+}
+
+

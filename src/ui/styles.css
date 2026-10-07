@@ -1,0 +1,29 @@
+:root { color-scheme: dark; font: 16px/1.5 system-ui, sans-serif; background: #11161c; color: #e9edf1; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 900px; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: .2rem 0; line-height: 1.1; }
+h2 { margin-top: 2.8rem; }
+.eyebrow { color: #8bd5bf; text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; font-weight: 700; }
+.notice { padding: 1rem 1.25rem; border: 1px solid #587b77; border-radius: .7rem; background: #17312f; }
+.controls { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.hint { color: #b7c6d2; font-size: .9rem; }
+button { border: 0; border-radius: .5rem; padding: .75rem 1rem; color: #101820; background: #8bd5bf; font: inherit; font-weight: 650; cursor: pointer; }
+button:nth-child(n+2) { background: #d2dce5; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+li { padding: .75rem; margin-bottom: .5rem; background: #1d2630; border-radius: .5rem; }
+li p { margin: .25rem 0 0; color: #c3ccd5; }
+pre { overflow: auto; max-height: 35rem; padding: 1rem; border-radius: .5rem; background: #0c1116; border: 1px solid #34414e; font-size: .8rem; }
+.tabs { display: flex; gap: .5rem; margin: 1rem 0; }
+.tabs button { background: #d2dce5; padding: .4rem .8rem; }
+.tabs button[aria-selected="true"] { background: #8bd5bf; }
+.keyboard { position: relative; width: 100%; aspect-ratio: 680 / 290; background: #0c1116; border: 1px solid #34414e; border-radius: .7rem; }
+.key { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2px; border-radius: 4px; background: #1d2630; border: 1px solid #34414e; font-size: clamp(6px, 1vw, 11px); line-height: 1.1; overflow: hidden; }
+.key.changed { background: #2b4a44; border-color: #8bd5bf; }
+.key.empty { color: #5b6773; }
+.key { cursor: pointer; }
+.key.selected { outline: 2px solid #8bd5bf; background: #2b4a44; }
+.file { display: inline-flex; align-items: center; gap: .5rem; color: #b7c6d2; }
+h3 { margin-top: 2rem; }
+.controls label { display: inline-flex; align-items: center; gap: .4rem; color: #b7c6d2; }
+select, input { font: inherit; padding: .35rem; border-radius: .4rem; border: 1px solid #34414e; background: #0c1116; color: #e9edf1; }

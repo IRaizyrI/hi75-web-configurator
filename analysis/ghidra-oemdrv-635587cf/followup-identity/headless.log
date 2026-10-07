@@ -1,0 +1,44 @@
+2026-09-22 22:14:05 INFO  (LoggingInitialization) Using log config file: jar:file:/C:/Users/Raizyr/Desktop/projects/KeyboardRE/local-tools/ghidra/ghidra_12.1.3_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-09-22 22:14:05 INFO  (LoggingInitialization) Using log file: C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-oemdrv-635587cf\followup-identity\headless.log  
+2026-09-22 22:14:05 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-09-22 22:14:05 INFO  (Preferences) Loading user preferences: C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\appdata-fresh\ghidra\ghidra_12.1.3_PUBLIC\preferences  
+2026-09-22 22:14:05 INFO  (ClassSearcher) Searching for classes...  
+2026-09-22 22:14:06 INFO  (ClassSearcher) Class search complete (1060 ms)  
+2026-09-22 22:14:06 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-09-22 22:14:06 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-09-22 22:14:06 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-09-22 22:14:06 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-09-22 22:14:12 INFO  (AnalyzeHeadless) Headless startup complete (7782 ms)  
+2026-09-22 22:14:12 INFO  (ClassSearcher) Class searcher loaded 59 extension points (20 false positives)  
+2026-09-22 22:14:12 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\SwiftDemangler\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\BSim\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-oemdrv-635587cf\compiled-scripts-v2
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts  
+2026-09-22 22:14:12 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-09-22 22:14:12 INFO  (HeadlessAnalyzer) Opening existing project: C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-projects\Hi75App  
+2026-09-22 22:14:12 INFO  (HeadlessProject) Opening project: C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-projects\Hi75App  
+2026-09-22 22:14:22 INFO  (HeadlessAnalyzer) REPORT: Processing project file: /OemDrv.exe  
+2026-09-22 22:14:22 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportHidPaths.class 'C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-oemdrv-635587cf\followup-identity' '0048eb70'   
+2026-09-22 22:14:22 INFO  (HeadlessAnalyzer) SCRIPT: ExportHidPaths.class  
+2026-09-22 22:14:24 INFO  (GhidraScript) ExportHidPaths.class> Wrote C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-oemdrv-635587cf\followup-identity\hid-paths.txt  
+2026-09-22 22:14:24 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for processed file: /OemDrv.exe  

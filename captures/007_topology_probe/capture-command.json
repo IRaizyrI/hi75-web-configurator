@@ -1,0 +1,24 @@
+{
+  "executable": "C:\\Program Files\\Wireshark\\tshark.exe",
+  "arguments": [
+    "-i",
+    "\\\\.\\USBPcap2",
+    "-o",
+    "extcap.____usbpcap2.capturefromalldevices:false",
+    "-o",
+    "extcap.____usbpcap2.capturefromnewdevices:false",
+    "-o",
+    "extcap.____usbpcap2.devices:5",
+    "-o",
+    "extcap.____usbpcap2.injectdescriptors:true",
+    "-a",
+    "duration:8",
+    "-w",
+    "C:\\Users\\Raizyr\\Desktop\\projects\\KeyboardRE\\hi75-web\\captures\\007_topology_probe\\traffic.pcapng"
+  ],
+  "requestedAtUtc": "2026-09-22T19:38:55.5591343Z",
+  "finishedAtUtc": "2026-09-22T19:39:26.2266133Z",
+  "exitCode": 1,
+  "descriptorInjection": true,
+  "topologyMustBeReverifiedAfterReconnect": true
+}

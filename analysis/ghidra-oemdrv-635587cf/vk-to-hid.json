@@ -1,0 +1,471 @@
+{
+  "source": "LEOBOG ONE\\OemDrv.exe",
+  "sourceSha256": "635587cf6334346ab9932479d309cfe5f395c45d77c698b0143d28bf5b661ee0",
+  "evidenceFunction": "0x004786A0",
+  "tableVirtualAddress": "0x0060B7C0",
+  "entryCount": 115,
+  "entryLayout": "two bytes: HID code, then Windows virtual-key code",
+  "confidence": "static application lookup; mapping to this Hi75 not captured",
+  "entries": [
+    {
+      "virtualKey": 226,
+      "hidCode": 100
+    },
+    {
+      "virtualKey": 27,
+      "hidCode": 41
+    },
+    {
+      "virtualKey": 112,
+      "hidCode": 58
+    },
+    {
+      "virtualKey": 113,
+      "hidCode": 59
+    },
+    {
+      "virtualKey": 114,
+      "hidCode": 60
+    },
+    {
+      "virtualKey": 115,
+      "hidCode": 61
+    },
+    {
+      "virtualKey": 116,
+      "hidCode": 62
+    },
+    {
+      "virtualKey": 117,
+      "hidCode": 63
+    },
+    {
+      "virtualKey": 118,
+      "hidCode": 64
+    },
+    {
+      "virtualKey": 119,
+      "hidCode": 65
+    },
+    {
+      "virtualKey": 120,
+      "hidCode": 66
+    },
+    {
+      "virtualKey": 121,
+      "hidCode": 67
+    },
+    {
+      "virtualKey": 122,
+      "hidCode": 68
+    },
+    {
+      "virtualKey": 123,
+      "hidCode": 69
+    },
+    {
+      "virtualKey": 124,
+      "hidCode": 104
+    },
+    {
+      "virtualKey": 65,
+      "hidCode": 4
+    },
+    {
+      "virtualKey": 66,
+      "hidCode": 5
+    },
+    {
+      "virtualKey": 67,
+      "hidCode": 6
+    },
+    {
+      "virtualKey": 68,
+      "hidCode": 7
+    },
+    {
+      "virtualKey": 69,
+      "hidCode": 8
+    },
+    {
+      "virtualKey": 70,
+      "hidCode": 9
+    },
+    {
+      "virtualKey": 71,
+      "hidCode": 10
+    },
+    {
+      "virtualKey": 72,
+      "hidCode": 11
+    },
+    {
+      "virtualKey": 73,
+      "hidCode": 12
+    },
+    {
+      "virtualKey": 74,
+      "hidCode": 13
+    },
+    {
+      "virtualKey": 75,
+      "hidCode": 14
+    },
+    {
+      "virtualKey": 76,
+      "hidCode": 15
+    },
+    {
+      "virtualKey": 77,
+      "hidCode": 16
+    },
+    {
+      "virtualKey": 78,
+      "hidCode": 17
+    },
+    {
+      "virtualKey": 79,
+      "hidCode": 18
+    },
+    {
+      "virtualKey": 80,
+      "hidCode": 19
+    },
+    {
+      "virtualKey": 81,
+      "hidCode": 20
+    },
+    {
+      "virtualKey": 82,
+      "hidCode": 21
+    },
+    {
+      "virtualKey": 83,
+      "hidCode": 22
+    },
+    {
+      "virtualKey": 84,
+      "hidCode": 23
+    },
+    {
+      "virtualKey": 85,
+      "hidCode": 24
+    },
+    {
+      "virtualKey": 86,
+      "hidCode": 25
+    },
+    {
+      "virtualKey": 87,
+      "hidCode": 26
+    },
+    {
+      "virtualKey": 88,
+      "hidCode": 27
+    },
+    {
+      "virtualKey": 89,
+      "hidCode": 28
+    },
+    {
+      "virtualKey": 90,
+      "hidCode": 29
+    },
+    {
+      "virtualKey": 49,
+      "hidCode": 30
+    },
+    {
+      "virtualKey": 50,
+      "hidCode": 31
+    },
+    {
+      "virtualKey": 51,
+      "hidCode": 32
+    },
+    {
+      "virtualKey": 52,
+      "hidCode": 33
+    },
+    {
+      "virtualKey": 53,
+      "hidCode": 34
+    },
+    {
+      "virtualKey": 54,
+      "hidCode": 35
+    },
+    {
+      "virtualKey": 55,
+      "hidCode": 36
+    },
+    {
+      "virtualKey": 56,
+      "hidCode": 37
+    },
+    {
+      "virtualKey": 57,
+      "hidCode": 38
+    },
+    {
+      "virtualKey": 48,
+      "hidCode": 39
+    },
+    {
+      "virtualKey": 9,
+      "hidCode": 43
+    },
+    {
+      "virtualKey": 20,
+      "hidCode": 57
+    },
+    {
+      "virtualKey": 13,
+      "hidCode": 40
+    },
+    {
+      "virtualKey": 8,
+      "hidCode": 42
+    },
+    {
+      "virtualKey": 32,
+      "hidCode": 44
+    },
+    {
+      "virtualKey": 219,
+      "hidCode": 47
+    },
+    {
+      "virtualKey": 221,
+      "hidCode": 48
+    },
+    {
+      "virtualKey": 220,
+      "hidCode": 49
+    },
+    {
+      "virtualKey": 186,
+      "hidCode": 51
+    },
+    {
+      "virtualKey": 222,
+      "hidCode": 52
+    },
+    {
+      "virtualKey": 188,
+      "hidCode": 54
+    },
+    {
+      "virtualKey": 190,
+      "hidCode": 55
+    },
+    {
+      "virtualKey": 191,
+      "hidCode": 56
+    },
+    {
+      "virtualKey": 192,
+      "hidCode": 53
+    },
+    {
+      "virtualKey": 187,
+      "hidCode": 46
+    },
+    {
+      "virtualKey": 189,
+      "hidCode": 45
+    },
+    {
+      "virtualKey": 44,
+      "hidCode": 70
+    },
+    {
+      "virtualKey": 145,
+      "hidCode": 71
+    },
+    {
+      "virtualKey": 19,
+      "hidCode": 72
+    },
+    {
+      "virtualKey": 45,
+      "hidCode": 73
+    },
+    {
+      "virtualKey": 36,
+      "hidCode": 74
+    },
+    {
+      "virtualKey": 33,
+      "hidCode": 75
+    },
+    {
+      "virtualKey": 46,
+      "hidCode": 76
+    },
+    {
+      "virtualKey": 35,
+      "hidCode": 77
+    },
+    {
+      "virtualKey": 34,
+      "hidCode": 78
+    },
+    {
+      "virtualKey": 38,
+      "hidCode": 82
+    },
+    {
+      "virtualKey": 40,
+      "hidCode": 81
+    },
+    {
+      "virtualKey": 37,
+      "hidCode": 80
+    },
+    {
+      "virtualKey": 39,
+      "hidCode": 79
+    },
+    {
+      "virtualKey": 97,
+      "hidCode": 89
+    },
+    {
+      "virtualKey": 98,
+      "hidCode": 90
+    },
+    {
+      "virtualKey": 99,
+      "hidCode": 91
+    },
+    {
+      "virtualKey": 100,
+      "hidCode": 92
+    },
+    {
+      "virtualKey": 101,
+      "hidCode": 93
+    },
+    {
+      "virtualKey": 102,
+      "hidCode": 94
+    },
+    {
+      "virtualKey": 103,
+      "hidCode": 95
+    },
+    {
+      "virtualKey": 104,
+      "hidCode": 96
+    },
+    {
+      "virtualKey": 105,
+      "hidCode": 97
+    },
+    {
+      "virtualKey": 96,
+      "hidCode": 98
+    },
+    {
+      "virtualKey": 107,
+      "hidCode": 87
+    },
+    {
+      "virtualKey": 109,
+      "hidCode": 86
+    },
+    {
+      "virtualKey": 106,
+      "hidCode": 85
+    },
+    {
+      "virtualKey": 111,
+      "hidCode": 84
+    },
+    {
+      "virtualKey": 144,
+      "hidCode": 83
+    },
+    {
+      "virtualKey": 253,
+      "hidCode": 88
+    },
+    {
+      "virtualKey": 110,
+      "hidCode": 99
+    },
+    {
+      "virtualKey": 162,
+      "hidCode": 224
+    },
+    {
+      "virtualKey": 160,
+      "hidCode": 225
+    },
+    {
+      "virtualKey": 164,
+      "hidCode": 226
+    },
+    {
+      "virtualKey": 91,
+      "hidCode": 227
+    },
+    {
+      "virtualKey": 163,
+      "hidCode": 228
+    },
+    {
+      "virtualKey": 161,
+      "hidCode": 229
+    },
+    {
+      "virtualKey": 165,
+      "hidCode": 230
+    },
+    {
+      "virtualKey": 92,
+      "hidCode": 231
+    },
+    {
+      "virtualKey": 93,
+      "hidCode": 101
+    },
+    {
+      "virtualKey": 194,
+      "hidCode": 133
+    },
+    {
+      "virtualKey": 193,
+      "hidCode": 135
+    },
+    {
+      "virtualKey": 195,
+      "hidCode": 137
+    },
+    {
+      "virtualKey": 216,
+      "hidCode": 50
+    },
+    {
+      "virtualKey": 218,
+      "hidCode": 138
+    },
+    {
+      "virtualKey": 215,
+      "hidCode": 136
+    },
+    {
+      "virtualKey": 235,
+      "hidCode": 139
+    },
+    {
+      "virtualKey": 196,
+      "hidCode": 144
+    },
+    {
+      "virtualKey": 197,
+      "hidCode": 145
+    }
+  ]
+}

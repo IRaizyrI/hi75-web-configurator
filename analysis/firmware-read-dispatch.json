@@ -1,0 +1,62 @@
+{
+  "scope": "raw saved-image extraction only; jump table interpretation remains a static-analysis claim",
+  "firmwareSha256": "31ee5b474b06b5bd26f32e15e379ce8c3251913b57dfebc3194a7c4dbdcc7ad0",
+  "selectorAddress": "0x4e1e",
+  "selectorHex": "7877e6247eb409004003024f6b904e3975f003a4c58325f0c58373",
+  "tableAddress": "0x4e39",
+  "cases": [
+    {
+      "commandByte": "0x82",
+      "tableOffset": "0x4e39",
+      "target": "0x4e54"
+    },
+    {
+      "commandByte": "0x83",
+      "tableOffset": "0x4e3c",
+      "target": "0x4e74"
+    },
+    {
+      "commandByte": "0x84",
+      "tableOffset": "0x4e3f",
+      "target": "0x4ecc"
+    },
+    {
+      "commandByte": "0x85",
+      "tableOffset": "0x4e42",
+      "target": "0x4edd"
+    },
+    {
+      "commandByte": "0x86",
+      "tableOffset": "0x4e45",
+      "target": "0x4eed"
+    },
+    {
+      "commandByte": "0x87",
+      "tableOffset": "0x4e48",
+      "target": "0x4efd"
+    },
+    {
+      "commandByte": "0x88",
+      "tableOffset": "0x4e4b",
+      "target": "0x4f3c"
+    },
+    {
+      "commandByte": "0x89",
+      "tableOffset": "0x4e4e",
+      "target": "0x4f6b"
+    },
+    {
+      "commandByte": "0x8a",
+      "tableOffset": "0x4e51",
+      "target": "0x4f51"
+    }
+  ],
+  "command82BranchHex": "900389e0900f38b4010c74b3f0a374e3f0d25a024f6b74b3f0a374fcf0024f6b",
+  "command83BranchHex": "900389e014601e14602c14603a24036003024f6b900d0fe025e0fee42400ffee34cc024f64900d0fe025e0fee42400ffee34d0024f64900d0fe025e0fee42400ffee34d4024f64900d0fe025e0fee42400ffee34d8024f64",
+  "command84BranchHex": "900d0fe025e0fee42400ffee34c6024f64",
+  "command85BranchHex": "900d0fe025e0fee42400ffee34dc8077",
+  "command86BranchHex": "900d0fe025e0fee42400ffee34ca8067",
+  "command8aBranchHex": "900d0fe07f0025e0feef2400f58274c83eaf82900f38f0a3eff0",
+  "commonReadSetupHex": "90038ae0ffa3e0900f2dcff0a3eff0900f407401f0c27643970422",
+  "identityDataAtB3e3Hex": "03000000009b"
+}

@@ -1,0 +1,54 @@
+2026-09-22 22:07:35 INFO  (LoggingInitialization) Using log config file: jar:file:/C:/Users/Raizyr/Desktop/projects/KeyboardRE/local-tools/ghidra/ghidra_12.1.3_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-09-22 22:07:35 INFO  (LoggingInitialization) Using log file: C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-oemdrv-635587cf\headless-jython.log  
+2026-09-22 22:07:35 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-09-22 22:07:35 INFO  (Preferences) Loading user preferences: C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\appdata-fresh\ghidra\ghidra_12.1.3_PUBLIC\preferences  
+2026-09-22 22:07:35 INFO  (ClassSearcher) Searching for classes...  
+2026-09-22 22:07:36 INFO  (ClassSearcher) Class search complete (1079 ms)  
+2026-09-22 22:07:36 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-09-22 22:07:36 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-09-22 22:07:36 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-09-22 22:07:36 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-09-22 22:07:42 INFO  (AnalyzeHeadless) Headless startup complete (7819 ms)  
+2026-09-22 22:07:42 INFO  (ClassSearcher) Class searcher loaded 59 extension points (20 false positives)  
+2026-09-22 22:07:42 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\SwiftDemangler\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\BSim\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\tools\software-inspect
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts  
+2026-09-22 22:07:42 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-09-22 22:07:42 INFO  (HeadlessAnalyzer) Opening existing project: C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-projects\Hi75App  
+2026-09-22 22:07:42 INFO  (HeadlessProject) Opening project: C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-projects\Hi75App  
+2026-09-22 22:07:52 INFO  (HeadlessAnalyzer) REPORT: Processing project file: /OemDrv.exe  
+2026-09-22 22:07:52 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportHidPaths.py 'C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-oemdrv-635587cf'   
+2026-09-22 22:07:52 ERROR (HeadlessAnalyzer) REPORT SCRIPT ERROR: ExportHidPaths.py : Ghidra was not started with PyGhidra. Python is not available ghidra.app.script.GhidraScriptLoadException: Ghidra was not started with PyGhidra. Python is not available
+	at ghidra.pyghidra.PyGhidraScriptProvider.getScriptInstance(PyGhidraScriptProvider.java:75)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScriptsList(HeadlessAnalyzer.java:915)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1085)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileNoImport(HeadlessAnalyzer.java:1183)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFolderNoImport(HeadlessAnalyzer.java:1355)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processNoImport(HeadlessAnalyzer.java:1384)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:449)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:199)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:81)
+	at ghidra.Ghidra.main(Ghidra.java:54)
+ 
+2026-09-22 22:07:52 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for processed file: /OemDrv.exe  

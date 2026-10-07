@@ -1,0 +1,129 @@
+{
+    "schemaVersion":  1,
+    "generatedAtUtc":  "2026-09-19T08:46:43.4232279Z",
+    "dumpFileCount":  0,
+    "auditFileCount":  20,
+    "note":  "Audit evidence is not firmware recovery data. A hash does not validate a dump or prove restoration.",
+    "files":  [
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/commands.json",
+                      "bytes":  931,
+                      "sha256":  "ba9e9827235a3ee4d9b2aabf313f46b26f577e7eaa73bfbc441d6bd92f3c7b07"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/help.txt",
+                      "bytes":  450,
+                      "sha256":  "5876b601c932c9badc37fbb622b606e95db5806813c6db7407fe8af130f32b5e"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/list-candidate.txt",
+                      "bytes":  3171,
+                      "sha256":  "cc48e1bcdcc3e5fdd63103d41a88c03676c8fb64e226f3ba0d43f08d58b76f88"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/list-help.txt",
+                      "bytes":  201,
+                      "sha256":  "036e902382344cf094673fec32cd4314412952a7045a5c142a31f9b22856c3c1"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/read-help.txt",
+                      "bytes":  1829,
+                      "sha256":  "d204f1358adbf3a775f749c651b68b70571f89ad014ec005acc55d949449b6a0"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/release.json",
+                      "bytes":  9318,
+                      "sha256":  "9b062e8918b49dc9c00c5b5f4ea309533f27820e48e7ce274c46d42c43ba2216"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/sinowisp.exe",
+                      "bytes":  1522176,
+                      "sha256":  "321910b82185567afb1bbb9520e08ccecc009382fb8c8d179096b9f54f6997d7"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/sinowisp-x86_64-pc-windows-msvc-v2.1.0.tar.gz",
+                      "bytes":  610947,
+                      "sha256":  "63180e0d35fdd4e68834723fe2abec796e03cfdd1a168dc7745da83672ef71ab"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/Cargo.toml",
+                      "bytes":  1941,
+                      "sha256":  "0486f80b0bd329b8db8ed43fb8951e2a9159b35d9f918871f3fee788c9cbdd28"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/device_selector.rs",
+                      "bytes":  20072,
+                      "sha256":  "586f997e894c221e29b5b2ed4ed295687a38f7ea79af3005f7498263343acfc9"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/device_spec.rs",
+                      "bytes":  12487,
+                      "sha256":  "63deacf6fb00cd960ceeb0b55f4eba4c678fdbac64f3b1fb5a2bde89a30317f3"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/flasher.rs",
+                      "bytes":  4098,
+                      "sha256":  "278334e756bc029dd3a6e198efaaa46d401f24edb3247345ac2c28ef0d19389e"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/hid_tree.rs",
+                      "bytes":  5977,
+                      "sha256":  "2f6d090d1ae66ed01f2dbdc4b32b8f79a4ec95bcf31ba3e2cf2ae203a29152d2"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/isp_device.rs",
+                      "bytes":  11607,
+                      "sha256":  "6cc296e00599667fe6ae34eaea3e23003f9c7d6d42f6ad24243e006684138196"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/lib.rs",
+                      "bytes":  1060,
+                      "sha256":  "9d6e5389c0d17a0734c6503e6cc9e8e69f2be87734bc1f4ca98b50b53b863f46"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/LICENSE",
+                      "bytes":  1065,
+                      "sha256":  "a10143a4ad981253b0433d30681bda26662aad54c409584bb0d7d5eaf1696638"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/main.rs",
+                      "bytes":  17443,
+                      "sha256":  "a46d31c35b36377a9b773abdda55f8a0bc90e226e63cfa4abc98a4b0f734383d"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/platform_spec.rs",
+                      "bytes":  1550,
+                      "sha256":  "a3889b9b7ae3a9915d85549948a48f39472984c7203bb14303172dcb0759ed23"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/source/README.md",
+                      "bytes":  12385,
+                      "sha256":  "502b0547cd5af2244377b7d92377a26e966820a013e914356a2f9786802c6515"
+                  },
+                  {
+                      "category":  "audit",
+                      "path":  "audit/sinowisp-v2.1.0/version.txt",
+                      "bytes":  16,
+                      "sha256":  "bbbf75c43ef5a3a58cfd5f6c42a04084fb1e213a38a9d33f7dea87f84393c875"
+                  }
+              ]
+}

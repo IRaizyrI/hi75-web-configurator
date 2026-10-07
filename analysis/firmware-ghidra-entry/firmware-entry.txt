@@ -1,0 +1,38 @@
+Read-only static analysis; source firmware dump was not modified.
+Program: firmware.bin
+Language: 8051:BE:16:default
+Image base: CODE:0000
+Functions: 0
+Block: CODE CODE:0000..CODE:efff execute=true
+Block: REG_BANK_1 INTMEM:00..INTMEM:07 execute=false
+Block: REG_BANK_2 INTMEM:08..INTMEM:0f execute=false
+Block: REG_BANK_3 INTMEM:10..INTMEM:17 execute=false
+Block: REG_BANK_4 INTMEM:18..INTMEM:1f execute=false
+Block: INTMEM INTMEM:20..INTMEM:ff execute=false
+Block: SFR SFR:80..SFR:ff execute=false
+Block: BITS BITS:00..BITS:7f execute=false
+Block: SFR-BITS BITS:80..BITS:ff execute=false
+
+===== address CODE:0000 function=none =====
+
+===== address CODE:0003 function=none =====
+
+===== address CODE:000b function=none =====
+
+===== address CODE:0013 function=none =====
+
+===== address CODE:001b function=none =====
+
+===== address CODE:0023 function=none =====
+
+===== address CODE:002b function=none =====
+
+===== address CODE:0033 function=none =====
+
+===== address CODE:003b function=none =====
+
+===== address CODE:93a0 function=none =====
+
+===== address CODE:9d49 function=none =====
+
+===== address CODE:ac89 function=none =====

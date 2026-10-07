@@ -1,0 +1,170 @@
+# sinowisp
+
+[![crate](https://img.shields.io/crates/v/sinowisp.svg)](https://crates.io/crates/sinowisp) [![ci](https://github.com/carlossless/sinowisp/actions/workflows/push.yml/badge.svg)](https://github.com/carlossless/sinowisp/actions/workflows/push.yml)
+
+_(formerly `sinowealth-kb-tool`)_
+
+A utility for reading and writing flash contents on Sinowealth 8051-based USB HID devices (keyboards and mice) through the commonly found ISP bootloader.
+
+## Disclaimer
+
+I offer no guarantees that using this tool won't brick your device. Use this tool at your risk.
+
+## Usage
+
+### Reading
+
+⚠️ A read operation will set an LJMP (0x02) opcode at address `<firmware_size-5>` if it's not already present there. When this opcode is set, the bootloader considers the main firmware enabled and jumps to it when the device is powered on. This opcode should already be set on most devices and therefore the read operation **should** not cause any issues.
+
+⚠️ During reading the ISP bootloader will redirect values in `0x0001 - 0x0002` to `<firmware_size-4> - <firmware_size-3>`. Because of this, the produced payload will be different from how memory is actually laid out in the MCU flash.
+
+```sh
+# reads firmware excluding isp bootloader 
+sinowisp read -d nuphy-air60 foobar.hex
+
+# reads only isp bootloader section
+sinowisp read -d nuphy-air60 -s bootloader bootloader.hex
+
+# full dump including firmware and bootloader
+sinowisp read -d nuphy-air60 -s full full.hex
+
+# custom device
+sinowisp read \
+    --platform sh68f90 \
+    --vendor_id 0x05ac \
+    --product_id 0x024f \
+    --firmware_size 61440 \ # optional
+    --bootloader_size 4096 \ # optional
+    --page_size 2048 \ # optional
+    --isp_iface_num 1 \ # optional
+    --isp_report_id 5 \ # optional
+    --reboot false \ # optional
+    foobar.hex
+```
+
+### Writing
+
+⚠️ Same as the [read](#reading) operation, the ISP bootloader will write values meant for addresses `0x0001-0x0002` to `<firmware_size-4> - <firmware_size-3>`. 
+
+```sh
+# overwrites firmware (does not touch the bootloader section)
+sinowisp write -p nuphy-air60 foobar.hex
+
+# custom device
+sinowisp write \
+    --platform sh68f90 \
+    --vendor_id 0x05ac \
+    --product_id 0x024f \
+    --firmware_size 61440 \ # optional
+    --bootloader_size 4096 \ # optional
+    --page_size 2048 \ # optional
+    --isp_iface_num 1 \ # optional
+    --isp_report_id 5 \ # optional
+    --reboot false \ # optional
+    foobar.hex
+```
+
+## Supported Hardware
+
+### Keyboards
+
+| Model | ISP MD5 | MCU | MCU Label | Tested Read | Tested Write |
+| -------------------------------- | ------------------ | ---- | -------- | -------- | ----- |
+| [AOKO K101](https://aokowireless.com/product/k101-usb-c-wired-mechanical-keyboard/) | cfc8661da8c9d7e351b36c0a763426aa | SH68F90A | BYK901 | ✅ | ✅ |
+| [Aula F75](https://www.aulastar.com/gaming-keyboard/176.html) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | BYK916 | ✅ | ✅ |
+| [Aula F87](https://www.aulastar.com/index.php/gaming-keyboard/157.html) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A (?) | BYK916 (?) | ✅ | ✅ |
+| [CIY X77](https://a.co/d/fKEpeLU) | 571ea8b315654c39046e4cc3b1e43777 | SH68F89 (?) | BYK816 | ✅ | ✅ |
+| Deltaco Gaming WK95R | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A | BYK916 | ✅ | ✅ |
+| Dierya DK68SE | ❓ | ❓ | BYK903 | ✅ | ✅ |
+| Digital Alliance Meca Warrior X | 2d169670eae0d36eae8188562c1f66e8 | SH68F90 | SH68F90S | ✅ | ✅ |
+| E-Yooso Z11 | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | BYK901 | ✅ | ✅ |
+| E-Yooso Z82 | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | BYK916 | ✅ | ✅ |
+| [Genesis Thor 300](https://genesis-zone.com/product/thor-300-outemu-blue) | e57490acebcaabfcff84a0ff013955d9 | SH68F881 | SH68F881W | ✅ | ✅ |
+| [Genesis Thor 300 RGB](https://genesis-zone.com/product/thor-300-rgb-brown) | 2d169670eae0d36eae8188562c1f66e8 | SH68F90 | SH68F90S | ✅ | ✅ |
+| Hykker X Range 2017 (RE-K70-BYK800) | 13df4ce2933f9654ffef80d6a3c27199 | SH68F881 | BYK801 | ✅ | ✅ |
+| [Kzzi K68Pro](http://en.kzzi.com/product/37/) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | ❓ | ✅ | ✅ |
+| [Leobog Hi75](https://leobogtech.com/products/leobog-hi75) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A (?) | BYK916 (?) | ✅ | ✅ |
+| Leobog Hi75c Pro | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | BYK916 | ✅ | ✅ |
+| [Machenike K500-B61](https://global.machenike.com/products/k500-b61) | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A (?) | BYK916 (?) | ✅ | ✅ |
+| [MageGee MK-STAR61](https://www.magegee.com/products2.html?pid=1644595&_t=1737191677) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | BYK916 | ✅ | ✅ |
+| [NuPhy Air60](https://nuphy.com/products/air60) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | BYK916 | ✅ | ✅ |
+| [NuPhy Air75](https://nuphy.com/products/air75) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | BYK916 | ✅ | ✅ |
+| [NuPhy Air96](https://nuphy.com/products/air96-wireless-mechanical-keyboard) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | BYK916 | ✅ | ✅ |
+| [NuPhy Halo65](https://nuphy.com/products/halo65) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | BYK916 | ✅ | ✅ |
+| [Portronics Hydra 10](https://www.portronics.com/products/hydra-10) | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A | BYK916 | ✅ | ✅ |
+| [Redragon K530 Draconic PRO](https://www.redragonzone.com/products/draconic-k530) | cfc8661da8c9d7e351b36c0a763426aa | SH68F90A (?) | BYK916 (?) | ✅ | ✅ |
+| [Redragon K614 Anivia 60%](https://www.redragonzone.com/products/redragon-k614-anivia-60-ultra-thin-wired-mechanical-keyboard) | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A (?) | BYK916 (?) | ✅ | ✅ |
+| [Redragon K617 FIZZ 60%](https://www.redragonzone.com/collections/keyboard/products/redragon-k617-fizz-60-wired-rgb-gaming-keyboard-61-keys-compact-mechanical-keyboard) | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A (?) | BYK916 (?) | ✅ | ✅ |
+| [Redragon K618](https://www.redragonzone.com/products/redragon-k618-horus-wireless-rgb-mechanical-keyboard) | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A | BYK916 | ✅ | ✅ |
+| [Redragon K630 Single LED version](https://www.redragonzone.com/products/redragon-k630-gaming-mechanical-keyboard) | cfc8661da8c9d7e351b36c0a763426aa | SH68F90A (?) | SH68F90AU (?) | ✅ | ✅ |
+| [Redragon K633 RYZE](https://www.redragonzone.com/products/redragon-k633-ryze-rgb-led-backlit-mechanical-gaming-keyboard-with-68-professional-keys-linear-red-switches) | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A | BYK916 | ✅ | ✅ |
+| [Redragon K641 SHACO PRO](https://www.redragonzone.com/products/redragon-k641-shaco-pro-65-aluminum-rgb-mechanical-keyboard) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A (?) | BYK916 (?) | ✅ | ✅ |
+| Redragon K647WG-RGB SORAKA | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A | BYK916 | ✅ | ✅ |
+| [Redragon K652 PRO](https://www.redragonzone.com/products/redragon-k652-75-wireless-rgb-keyboard) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | ❓ | ✅ | ✅ |
+| [Redragon K658 PRO SE](https://www.redragonzone.com/products/k658-pro-se-90-wireless-rgb-gaming-keyboard) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A (?) | BYK916 (?) | ✅ | ✅ |
+| [Royal Kludge RK100](http://en.rkgaming.com/product/14/) | cfc8661da8c9d7e351b36c0a763426aa | SH68F90? | BYK916 | ✅ | ✅ |
+| [Royal Kludge RK61](http://en.rkgaming.com/product/11/) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A (?) | BYK916 (?) | ✅ | ✅ |
+| Royal Kludge RK68 BT Dual | cfc8661da8c9d7e351b36c0a763426aa | SH68F90A (?) | BYK901 (?) | ✅ | ✅ |
+| Royal Kludge RK68 ISO Return | ❓ | SH68F90A (?) | BYK916 (?) | ✅ | ❓ |
+| [Royal Kludge RK71](http://en.rkgaming.com/product/12/) | cfc8661da8c9d7e351b36c0a763426aa | SH68F90? | ❓ | ✅ | ✅ |
+| [Royal Kludge RK84](http://en.rkgaming.com/product/16/) | cfc8661da8c9d7e351b36c0a763426aa | SH68F90? | BYK916 | ✅ | ✅ |
+| Royal Kludge RKG68 | cfc8661da8c9d7e351b36c0a763426aa | SH68F90A | SH68F90AS | ✅ | ✅ |
+| [SuperFrame Phantom](https://www.terabyteshop.com.br/produto/37211/teclado-mecanico-gamer-superframe-phantom-rgb-wirelessbluetooth-switch-ktt-winered-linear-abnt2-preto-sf-kb-gtktfsbrtab) | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | ❓ | ✅ | ✅ |
+| Terport TR95 | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A (?) | BYK916 (?) | ✅ | ✅ |
+| Weikav Sugar65 | 2d169670eae0d36eae8188562c1f66e8 | SH68F90 | SH68F90S | ✅ | ✅ |
+| Xinmeng K916 | cfc8661da8c9d7e351b36c0a763426aa | SH68F90 | ❓ | ✅ | ✅ |
+| Xinmeng M66 | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A (?) | SH68F90AS (?) | ✅ | ✅ |
+| Xinmeng M71 | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A | SH68F90AS | ✅ | ✅ |
+| Xinmeng XM-RF68 | 2d169670eae0d36eae8188562c1f66e8 | SH68F90 | SH68F90U | ✅ | ✅ |
+| Yinren R108 | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A | BYK916 | ✅ | ✅ |
+| Yunzii AL66 | 3e0ebd0c440af5236d7ff8872343f85d | SH68F90A (?) | SH68F90AS (?) | ✅ | ✅ |
+| Yunzii AL71 | 2d169670eae0d36eae8188562c1f66e8 | SH68F90A | SH68F90AS | ✅ | ✅ |
+| [Zifriend ZA981](https://www.zifriend.net/products/za981-85-keyboard-98-keys-hot-swappable-green-red-switch-custom-keycap-computer-gaming-usb-wired-rgb-light-led-mechanical-keyboard) | 6dac0d2288f2a3d83b5703d979c114ec | SH68F902A | BYK90? | ✅ | ✅ |
+
+### Mice
+
+| Model | ISP MD5 | MCU | MCU Label | Tested Read | Tested Write |
+| -------------------------------- | ------------------ | ---- | -------- | -------- | ----- |
+| [Glorious Model O](https://web.archive.org/web/20220609205659mp_/https://www.gloriousgaming.com/products/glorious-model-o-black) | 571ea8b315654c39046e4cc3b1e43777 | SH68F89 | BY8948 | ✅ | ✅ |
+| [Trust GXT 960](https://www.trust.com/en/product/23758-gxt-960-graphin-ultra-lightweight-gaming-mouse) | 13df4ce2933f9654ffef80d6a3c27199 | SH68F881 | BY8801 | ✅ | ✅ |
+
+## Bootloader Support
+
+### Platforms
+
+| ISP MD5                          | MCU                | Size | Windows  | macOS    | Linux | Notes                                                                       |
+| -------------------------------- | ------------------ | ---- | -------- | -------- | ----- | --------------------------------------------------------------------------- |
+| 13df4ce2933f9654ffef80d6a3c27199 | SH68F881           | 4096 | ok       | ok       | ok    | byte-identical to `e57490ac` apart from 5 bytes at `0x0fa0`                 |
+| e57490acebcaabfcff84a0ff013955d9 | SH68F881           | 4096 | ok       | ok       | ok    | byte-identical to `13df4ce2` apart from 5 bytes at `0x0fa0`                 |
+| 571ea8b315654c39046e4cc3b1e43777 | SH68F89            | 4096 | ok       | ok       | ok    | enumerates as `0603:1021`; requires a byte transform                        |
+| 2d169670eae0d36eae8188562c1f66e8 | SH68F90 / SH68F90A | 4096 | ok       | ok       | ok    |                                                                             |
+| 3e0ebd0c440af5236d7ff8872343f85d | SH68F90 / SH68F90A | 4096 | ok       | ok       | ok    | only bootloader with USB strings (`Gaming KB`) and an interrupt IN endpoint |
+| cfc8661da8c9d7e351b36c0a763426aa | SH68F90 / SH68F90A | 4096 | ok       | ok       | ok    |                                                                             |
+| 6dac0d2288f2a3d83b5703d979c114ec | SH68F902A          | 3072 | ok       | ?        | ?     | `2d169670` relinked to a 0x3000 base                                        |
+
+## Prerequisites
+
+### Linux
+
+To enable running this tool without superuser privileges add the following udev rule with `xxxx` and `yyyy` replaced with your device Vendor ID and Product ID respectively.
+
+```udev
+# /etc/udev/rules.d/plugdev.rules
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="xxxx", ATTRS{idProduct}=="yyyy", MODE="0660", GROUP="plugdev"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0603", ATTRS{idProduct}=="1020", MODE="0660", GROUP="plugdev"
+```
+
+Make sure your user is part of the `plugdev` group.
+
+### macOS
+
+If you encounter errors like:
+```
+hid_open_path: failed to open IOHIDDevice from mach entry...
+```
+
+Ensure that your terminal application has [access to input monitoring](https://support.apple.com/guide/mac-help/control-access-to-input-monitoring-on-mac-mchl4cedafb6/mac).
+
+## Acknowledgments
+
+Thanks to [@gashtaan](https://github.com/gashtaan) for analyzing and explaining the inner workings of the ISP bootloaders. Without his help, this tool wouldn't be here!

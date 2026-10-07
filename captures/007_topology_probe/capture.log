@@ -1,0 +1,4 @@
+Capturing on 'USBPcap2'
+tshark: File type is neither a supported pcap nor pcapng format. (magic = 0x00000000)
+Please report this to the developers of the program writing to the pipe.
+0 packets captured

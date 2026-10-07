@@ -1,0 +1,21 @@
+Ghidra project analysis only; no hardware access or source-image mutation.
+Program: firmware.bin
+vector CODE:0000 opcode=02 target=CODE:93a0 function=vector_target_0000
+vector CODE:0003 opcode=02 target=CODE:9d49 function=vector_target_0003
+vector CODE:000b opcode=02 target=CODE:ac89 function=vector_target_000B
+vector CODE:0013 opcode=02 target=CODE:ac8f function=vector_target_0013
+vector CODE:001b opcode=02 target=CODE:ac95 function=vector_target_001B
+vector CODE:0023 opcode=A3; not an LJMP, left for manual review
+vector CODE:002b opcode=E0; not an LJMP, left for manual review
+vector CODE:0033 opcode=E0; not an LJMP, left for manual review
+vector CODE:003b opcode=02 target=CODE:a3f1 function=vector_target_003B
+Functions after analysis: 124
+CODE:0000 LJMP 0x93a0
+CODE:0003 LJMP 0x9d49
+CODE:000b LJMP 0xac89
+CODE:0013 LJMP 0xac8f
+CODE:001b LJMP 0xac95
+CODE:0023 undefined
+CODE:002b undefined
+CODE:0033 undefined
+CODE:003b LJMP 0xa3f1

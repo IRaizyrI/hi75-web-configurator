@@ -1,0 +1,71 @@
+2026-09-22 22:49:42 INFO  (LoggingInitialization) Using log config file: jar:file:/C:/Users/Raizyr/Desktop/projects/KeyboardRE/local-tools/ghidra/ghidra_12.1.3_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-09-22 22:49:42 INFO  (LoggingInitialization) Using log file: hi75-web\analysis\firmware-ghidra-import.log  
+2026-09-22 22:49:42 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-09-22 22:49:42 INFO  (Preferences) Loading user preferences: C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\appdata-fresh\ghidra\ghidra_12.1.3_PUBLIC\preferences  
+2026-09-22 22:49:42 INFO  (ClassSearcher) Searching for classes...  
+2026-09-22 22:49:43 INFO  (ClassSearcher) Class search complete (1048 ms)  
+2026-09-22 22:49:44 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-09-22 22:49:44 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-09-22 22:49:44 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-09-22 22:49:44 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-09-22 22:49:51 INFO  (AnalyzeHeadless) Headless startup complete (9686 ms)  
+2026-09-22 22:49:51 INFO  (ClassSearcher) Class searcher loaded 211 extension points (114 false positives)  
+2026-09-22 22:49:51 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\SwiftDemangler\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\BSim\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts  
+2026-09-22 22:49:51 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-09-22 22:49:51 INFO  (HeadlessAnalyzer) Creating project: C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-projects\Hi75Firmware  
+2026-09-22 22:49:51 INFO  (DefaultProject) Creating project: C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-projects\Hi75Firmware  
+2026-09-22 22:49:51 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2026-09-22 22:49:51 INFO  (HeadlessAnalyzer)      project: C:\Users\Raizyr\Desktop\projects\KeyboardRE\hi75-web\analysis\ghidra-projects\Hi75Firmware  
+2026-09-22 22:49:51 INFO  (HeadlessAnalyzer) IMPORTING: file:///C:/Users/Raizyr/Desktop/projects/KeyboardRE/hi75-web/backup/dumps/20260919T085231Z/firmware.bin  
+2026-09-22 22:49:51 INFO  (ProgramLoader) Successfully applied "-loader-baseAddr" to "Base Address" (old: "null", new: "0x0000")  
+2026-09-22 22:49:51 INFO  (ProgramLoader) Successfully applied "-loader-blockName" to "Block Name" (old: "", new: "CODE")  
+2026-09-22 22:49:51 INFO  (ProgramLoader) Using Loader: Raw Binary  
+2026-09-22 22:49:51 INFO  (ProgramLoader) Using Language/Compiler: 8051:BE:16:default:default  
+2026-09-22 22:49:51 INFO  (ProgramLoader) Using Library Search Path: [., C:\WINDOWS\SysWOW64, C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\jdk21\jdk-21.0.12.1+1\bin, C:\WINDOWS\Sun\Java\bin, C:\WINDOWS\system32, C:\WINDOWS, C:\Users\Raizyr\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell, C:\Users\Raizyr\.codex\tmp\arg0\codex-arg0hWtpan, C:\Users\Raizyr\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\libheif\libheif\bin, C:\Users\Raizyr\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\jxrlib\jxrlib\bin, C:\Users\Raizyr\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin, C:\Users\Raizyr\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\override, C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin, C:\Program Files (x86)\VMware\VMware Workstation\bin\, C:\WINDOWS\System32\Wbem, C:\WINDOWS\System32\WindowsPowerShell\v1.0\, C:\WINDOWS\System32\OpenSSH\, C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR, C:\Program Files\dotnet\, C:\Program Files\WireGuard\, C:\Program Files\Git\cmd, C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common, C:\Program Files\Sunshine, C:\Program Files\Sunshine\tools, C:\Program Files\Apollo, C:\Program Files\Apollo\tools, C:\Program Files\nodejs\, C:\Program Files\Go\bin, C:\Program Files\Cloudflare\Cloudflare WARP\, C:\Users\Raizyr\.unsloth\studio\bin, C:\Users\Raizyr\AppData\Local\Programs\Python\Python312\Scripts\, C:\Users\Raizyr\AppData\Local\Programs\Python\Python312\, C:\Users\Raizyr\AppData\Local\Programs\Python\Python314\Scripts\, C:\Users\Raizyr\AppData\Local\Programs\Python\Python314\, C:\Users\Raizyr\Desktop\EZPico\tools\jdk-22\bin, C:\Users\Raizyr\AppData\Local\Programs\Python\Python313\Scripts\, C:\Users\Raizyr\AppData\Local\Programs\Python\Python313\, C:\Users\Raizyr\AppData\Local\Programs\Python\Launcher\, C:\Users\Raizyr\AppData\Local\Microsoft\WindowsApps, C:\Users\Raizyr\AppData\Local\Microsoft\WinGet\Links, C:\Users\Raizyr\AppData\Local\Programs\Microsoft VS Code\bin, C:\Users\Raizyr\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-N-121583-g4348bde2d2-win64-gpl/bin, C:\Program Files\mitmproxy\bin, C:\Users\Raizyr\AppData\Roaming\npm, C:\Program Files\ripgrep, C:\Users\Raizyr\AppData\Local\Programs\Ollama, C:\Users\Raizyr\go\bin, C:\Users\Raizyr\AppData\Local\Microsoft\WinGet\Packages\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe, C:\Users\Raizyr\AppData\Local\PowerToys\DSCModules\, c:\users\raizyr\appdata\roaming\python\python314\scripts, c:\users\raizyr\.local\bin, C:\Users\Raizyr\AppData\Local\Programs\cursor\resources\app\bin, C:\Users\Raizyr\AppData\Local\Microsoft\WinGet\Packages\astral-sh.uv_Microsoft.Winget.Source_8wekyb3d8bbwe, C:\Users\Raizyr\AppData\Local\Programs\DockerDesktop\resources\bin, C:\Users\Raizyr\AppData\Local\Programs\Zed\bin, C:\Users\Raizyr\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\fallback, C:\Users\Raizyr\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin, C:\Users\Raizyr\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd, C:\Users\Raizyr\AppData\Local\OpenAI\Codex\bin\73fd6465d9c76545, C:\Users\Raizyr\AppData\Local\OpenAI\Codex\bin\247581e40ee272fb]  
+2026-09-22 22:49:57 INFO  (HeadlessAnalyzer) IMPORTING: Loaded 0 additional files  
+2026-09-22 22:49:57 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: file:///C:/Users/Raizyr/Desktop/projects/KeyboardRE/hi75-web/backup/dumps/20260919T085231Z/firmware.bin  
+2026-09-22 22:49:57 DEBUG (FidAnalyzer) No FID Libraries apply for language 8051:BE:16:default  
+2026-09-22 22:49:57 INFO  (PackedDatabaseCache) Packed database cache: C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\localappdata-fresh\ghidra\packed-db-cache  
+2026-09-22 22:49:57 DEBUG (PackedDatabaseCache) Caching packed database: C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\Base\data\typeinfo\generic\generic_clib.gdt  
+2026-09-22 22:49:57 DEBUG (PackedDatabase) Unpacking database C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\Base\data\typeinfo\generic\generic_clib.gdt -> C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\localappdata-fresh\ghidra\packed-db-cache\pdbB97730E9\db.1.gbf  
+2026-09-22 22:49:58 DEBUG (PackedDatabaseCache) Cache update completed: C:\Users\Raizyr\Desktop\projects\KeyboardRE\local-tools\ghidra\ghidra_12.1.3_PUBLIC\Ghidra\Features\Base\data\typeinfo\generic\generic_clib.gdt  
+2026-09-22 22:49:58 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: generic_clib  
+2026-09-22 22:49:59 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.498 secs
+    Apply Data Archives                        0.885 secs
+    Create Function                            0.001 secs
+    Demangler GNU                              0.149 secs
+    Disassemble Entry Points                   0.001 secs
+    Embedded Media                             0.021 secs
+    External Entry References                  0.000 secs
+    Function ID                                0.144 secs
+-----------------------------------------------------
+     Total Time   1 secs
+-----------------------------------------------------
+  
+2026-09-22 22:49:59 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: file:///C:/Users/Raizyr/Desktop/projects/KeyboardRE/hi75-web/backup/dumps/20260919T085231Z/firmware.bin  
+2026-09-22 22:49:59 INFO  (LocalFileSystem) /firmware.bin: file created (Raizyr)  
+2026-09-22 22:49:59 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for: /firmware.bin (Hi75Firmware:/firmware.bin)  
+2026-09-22 22:49:59 INFO  (HeadlessAnalyzer) REPORT: Import succeeded  

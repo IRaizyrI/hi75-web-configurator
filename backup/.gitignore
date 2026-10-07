@@ -1,0 +1,6 @@
+# Keep local recovery payloads private unless deliberately reviewed for sharing.
+/dumps/
+/CURRENT-RUN.txt
+/audit/**/*.exe
+/audit/**/*.tar.gz
+/audit/**/list-candidate.txt

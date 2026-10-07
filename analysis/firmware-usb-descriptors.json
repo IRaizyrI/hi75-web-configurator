@@ -1,0 +1,339 @@
+{
+  "analysisOnly": true,
+  "firmwareSha256": "31ee5b474b06b5bd26f32e15e379ce8c3251913b57dfebc3194a7c4dbdcc7ad0",
+  "capturedDeviceDescriptor": {
+    "frame": 2,
+    "offset": 21733,
+    "length": 18,
+    "sha256": "43cdac91e16ef71aa12c23e6d69cd136d12fed9d4351b1676d730901f90bc8f6"
+  },
+  "capturedConfigurationDescriptor": {
+    "frame": 4,
+    "offset": 21751,
+    "length": 59,
+    "sha256": "8eb287c4e807c5318e35c539b0015e74cee8d1473bbd562244a5f04aebe3e516"
+  },
+  "hidReportDescriptors": {
+    "interface0": {
+      "firmwareOffset": 21426,
+      "length": 67,
+      "sha256": "a793c0d945b1047f33e64d404208e5e69fbe5494dc438fc22552d91af3fa396c",
+      "hex": "05010906a101050719e029e71500250195087501810295017508810395067508150026ff00050719002aff0081002501950575010508190129059102950175039103c0",
+      "reportSizes": {
+        "0": {
+          "input": {
+            "payloadBits": 64,
+            "reportBytesIncludingId": 8
+          },
+          "output": {
+            "payloadBits": 8,
+            "reportBytesIncludingId": 1
+          }
+        }
+      },
+      "fields": [
+        {
+          "descriptorOffset": 20,
+          "reportId": 0,
+          "kind": "input",
+          "usagePage": 7,
+          "usages": [],
+          "usageMinimum": 224,
+          "usageMaximum": 231,
+          "reportSizeBits": 1,
+          "reportCount": 8,
+          "fieldBits": 8,
+          "flags": 2
+        },
+        {
+          "descriptorOffset": 26,
+          "reportId": 0,
+          "kind": "input",
+          "usagePage": 7,
+          "usages": [],
+          "usageMinimum": null,
+          "usageMaximum": null,
+          "reportSizeBits": 8,
+          "reportCount": 1,
+          "fieldBits": 8,
+          "flags": 3
+        },
+        {
+          "descriptorOffset": 44,
+          "reportId": 0,
+          "kind": "input",
+          "usagePage": 7,
+          "usages": [],
+          "usageMinimum": 0,
+          "usageMaximum": 255,
+          "reportSizeBits": 8,
+          "reportCount": 6,
+          "fieldBits": 48,
+          "flags": 0
+        },
+        {
+          "descriptorOffset": 58,
+          "reportId": 0,
+          "kind": "output",
+          "usagePage": 8,
+          "usages": [],
+          "usageMinimum": 1,
+          "usageMaximum": 5,
+          "reportSizeBits": 1,
+          "reportCount": 5,
+          "fieldBits": 5,
+          "flags": 2
+        },
+        {
+          "descriptorOffset": 64,
+          "reportId": 0,
+          "kind": "output",
+          "usagePage": 8,
+          "usages": [],
+          "usageMinimum": null,
+          "usageMaximum": null,
+          "reportSizeBits": 3,
+          "reportCount": 1,
+          "fieldBits": 3,
+          "flags": 3
+        }
+      ]
+    },
+    "interface1": {
+      "firmwareOffset": 21493,
+      "length": 240,
+      "sha256": "b67963b7e7759ee51e7766b2c1af46b81577bdf09f10634fa6839ca4a51beb46",
+      "hex": "0601000980a10185011981298315002501950375018102950175058101c0050c0901a101850219002aff02150026ff7f950175108100c00600ff0901a1018503150026ff00092f750895038102c005010906a101850405071904297015002501750195788102c00600ff0901a1018505150026ff001901290275089505b102c00600ff0901a1018506150026ff007508950709028100150026ff00190129027508960702b102c005010902a10185070901a1000509150025011901290575019505810295038101050116008026ff7f093009317510950281061581257f0938750895018106050c0a380295018106c0c0",
+      "reportSizes": {
+        "1": {
+          "input": {
+            "payloadBits": 8,
+            "reportBytesIncludingId": 2
+          }
+        },
+        "2": {
+          "input": {
+            "payloadBits": 16,
+            "reportBytesIncludingId": 3
+          }
+        },
+        "3": {
+          "input": {
+            "payloadBits": 24,
+            "reportBytesIncludingId": 4
+          }
+        },
+        "4": {
+          "input": {
+            "payloadBits": 120,
+            "reportBytesIncludingId": 16
+          }
+        },
+        "5": {
+          "feature": {
+            "payloadBits": 40,
+            "reportBytesIncludingId": 6
+          }
+        },
+        "6": {
+          "feature": {
+            "payloadBits": 4152,
+            "reportBytesIncludingId": 520
+          },
+          "input": {
+            "payloadBits": 56,
+            "reportBytesIncludingId": 8
+          }
+        },
+        "7": {
+          "input": {
+            "payloadBits": 56,
+            "reportBytesIncludingId": 8
+          }
+        }
+      },
+      "fields": [
+        {
+          "descriptorOffset": 21,
+          "reportId": 1,
+          "kind": "input",
+          "usagePage": 1,
+          "usages": [],
+          "usageMinimum": 129,
+          "usageMaximum": 131,
+          "reportSizeBits": 1,
+          "reportCount": 3,
+          "fieldBits": 3,
+          "flags": 2
+        },
+        {
+          "descriptorOffset": 27,
+          "reportId": 1,
+          "kind": "input",
+          "usagePage": 1,
+          "usages": [],
+          "usageMinimum": null,
+          "usageMaximum": null,
+          "reportSizeBits": 5,
+          "reportCount": 1,
+          "fieldBits": 5,
+          "flags": 1
+        },
+        {
+          "descriptorOffset": 52,
+          "reportId": 2,
+          "kind": "input",
+          "usagePage": 12,
+          "usages": [],
+          "usageMinimum": 0,
+          "usageMaximum": 767,
+          "reportSizeBits": 16,
+          "reportCount": 1,
+          "fieldBits": 16,
+          "flags": 0
+        },
+        {
+          "descriptorOffset": 75,
+          "reportId": 3,
+          "kind": "input",
+          "usagePage": 65280,
+          "usages": [
+            47
+          ],
+          "usageMinimum": null,
+          "usageMaximum": null,
+          "reportSizeBits": 8,
+          "reportCount": 3,
+          "fieldBits": 24,
+          "flags": 2
+        },
+        {
+          "descriptorOffset": 100,
+          "reportId": 4,
+          "kind": "input",
+          "usagePage": 7,
+          "usages": [],
+          "usageMinimum": 4,
+          "usageMaximum": 112,
+          "reportSizeBits": 1,
+          "reportCount": 120,
+          "fieldBits": 120,
+          "flags": 2
+        },
+        {
+          "descriptorOffset": 125,
+          "reportId": 5,
+          "kind": "feature",
+          "usagePage": 65280,
+          "usages": [],
+          "usageMinimum": 1,
+          "usageMaximum": 2,
+          "reportSizeBits": 8,
+          "reportCount": 5,
+          "fieldBits": 40,
+          "flags": 2
+        },
+        {
+          "descriptorOffset": 148,
+          "reportId": 6,
+          "kind": "input",
+          "usagePage": 65280,
+          "usages": [
+            2
+          ],
+          "usageMinimum": null,
+          "usageMaximum": null,
+          "reportSizeBits": 8,
+          "reportCount": 7,
+          "fieldBits": 56,
+          "flags": 0
+        },
+        {
+          "descriptorOffset": 164,
+          "reportId": 6,
+          "kind": "feature",
+          "usagePage": 65280,
+          "usages": [],
+          "usageMinimum": 1,
+          "usageMaximum": 2,
+          "reportSizeBits": 8,
+          "reportCount": 519,
+          "fieldBits": 4152,
+          "flags": 2
+        },
+        {
+          "descriptorOffset": 193,
+          "reportId": 7,
+          "kind": "input",
+          "usagePage": 9,
+          "usages": [],
+          "usageMinimum": 1,
+          "usageMaximum": 5,
+          "reportSizeBits": 1,
+          "reportCount": 5,
+          "fieldBits": 5,
+          "flags": 2
+        },
+        {
+          "descriptorOffset": 197,
+          "reportId": 7,
+          "kind": "input",
+          "usagePage": 9,
+          "usages": [],
+          "usageMinimum": null,
+          "usageMaximum": null,
+          "reportSizeBits": 1,
+          "reportCount": 3,
+          "fieldBits": 3,
+          "flags": 1
+        },
+        {
+          "descriptorOffset": 215,
+          "reportId": 7,
+          "kind": "input",
+          "usagePage": 1,
+          "usages": [
+            48,
+            49
+          ],
+          "usageMinimum": null,
+          "usageMaximum": null,
+          "reportSizeBits": 16,
+          "reportCount": 2,
+          "fieldBits": 32,
+          "flags": 6
+        },
+        {
+          "descriptorOffset": 227,
+          "reportId": 7,
+          "kind": "input",
+          "usagePage": 1,
+          "usages": [
+            56
+          ],
+          "usageMinimum": null,
+          "usageMaximum": null,
+          "reportSizeBits": 8,
+          "reportCount": 1,
+          "fieldBits": 8,
+          "flags": 6
+        },
+        {
+          "descriptorOffset": 236,
+          "reportId": 7,
+          "kind": "input",
+          "usagePage": 12,
+          "usages": [
+            568
+          ],
+          "usageMinimum": null,
+          "usageMaximum": null,
+          "reportSizeBits": 8,
+          "reportCount": 1,
+          "fieldBits": 8,
+          "flags": 6
+        }
+      ]
+    }
+  }
+}

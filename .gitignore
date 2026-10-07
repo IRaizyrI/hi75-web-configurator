@@ -1,0 +1,21 @@
+# Vendor firmware images and anything derived from them stay local.
+/backup/dumps/
+/backup/patched/*.bin
+/backup/CURRENT-RUN.txt
+/backup/audit/**/*.exe
+/backup/audit/**/*.tar.gz
+/backup/audit/**/list-candidate.txt
+# Personal keyboard configuration backups.
+/backup/config/
+# Raw USB captures can contain unrelated traffic; derived JSON is kept.
+/captures/**/*.pcap
+/captures/**/*.pcapng
+/tools/capture/extcap/
+# Large or regenerable analysis artefacts.
+/analysis/ghidra-projects/
+/analysis/oemdrv-635587cf/disassembly.txt
+/tools/software-inspect/.deps/
+/tools/software-inspect/.boot-state.pkl
+__pycache__/
+.claude/
+node_modules/

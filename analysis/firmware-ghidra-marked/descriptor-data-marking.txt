@@ -1,0 +1,5 @@
+Ghidra listing annotations only; source image untouched.
+CODE:53b2 length=67
+CODE:53f5 length=240
+CODE:54e5 length=18
+CODE:54f7 length=59

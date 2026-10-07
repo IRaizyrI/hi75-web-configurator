@@ -1,0 +1,18 @@
+{
+  "auditDate": "2026-09-19",
+  "workingDirectory": "C:\\Users\\Raizyr\\Desktop\\projects\\KeyboardRE",
+  "executable": "hi75-web/backup/audit/sinowisp-v2.1.0/sinowisp.exe",
+  "executableSha256": "321910b82185567afb1bbb9520e08ccecc009382fb8c8d179096b9f54f6997d7",
+  "version": "sinowisp 2.1.0",
+  "commandsExecuted": [
+    { "arguments": ["--version"], "log": "version.txt" },
+    { "arguments": ["--help"], "log": "help.txt" },
+    { "arguments": ["read", "--help"], "log": "read-help.txt" },
+    { "arguments": ["list", "--help"], "log": "list-help.txt" },
+    { "arguments": ["list", "--vendor_id", "0x258A", "--product_id", "0x010C"], "log": "list-candidate.txt", "exitCode": 0 }
+  ],
+  "deviceReadCommandsExecuted": [],
+  "eraseOrWriteCommandsExecuted": [],
+  "dumpFiles": [],
+  "readBlockReason": "Every CLI read section unconditionally calls enable_firmware, which can modify flash. No skip-enable CLI option was found."
+}

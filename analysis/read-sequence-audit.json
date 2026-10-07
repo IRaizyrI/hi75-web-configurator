@@ -1,0 +1,209 @@
+{
+  "scope": "offline official-app capture audit; no HID access",
+  "captures": [
+    {
+      "input": "captures\\003_idle_startup\\derived\\control-transfers.json",
+      "sourceSha256": "21e86edb7cdc81076933345636e7985c4c28bb9bbe7f1378f64087f0600ed69f",
+      "pairCount": 8,
+      "pairs": [
+        {
+          "command": "0x82",
+          "setFrame": 7,
+          "getFrame": 9,
+          "responseFrame": 10,
+          "requestBytes": 520,
+          "requestHexPrefix": "0682010001000600",
+          "requestDataAllZero": true,
+          "requestSha256": "b2927ca4e2e12dd788bb91022eaeba0483bddfcec1ef34fb279ed520dad6bab6",
+          "responseBytes": 14,
+          "responseHexPrefix": "0682010001000600",
+          "responseDataHex": "03000000009b",
+          "responseSha256": "6411c6c46db2cb764cb1f5b91279de7bb6bb014af94176c432cc90d63391e281",
+          "nextSetFrame": 13,
+          "nextSetCommand": "0x82"
+        },
+        {
+          "command": "0x82",
+          "setFrame": 13,
+          "getFrame": 15,
+          "responseFrame": 18,
+          "requestBytes": 520,
+          "requestHexPrefix": "0682010001000600",
+          "requestDataAllZero": true,
+          "requestSha256": "b2927ca4e2e12dd788bb91022eaeba0483bddfcec1ef34fb279ed520dad6bab6",
+          "responseBytes": 14,
+          "responseHexPrefix": "0682010001000600",
+          "responseDataHex": "03000000009b",
+          "responseSha256": "6411c6c46db2cb764cb1f5b91279de7bb6bb014af94176c432cc90d63391e281",
+          "nextSetFrame": 19,
+          "nextSetCommand": "0x82"
+        },
+        {
+          "command": "0x82",
+          "setFrame": 19,
+          "getFrame": 21,
+          "responseFrame": 22,
+          "requestBytes": 520,
+          "requestHexPrefix": "0682010001000600",
+          "requestDataAllZero": true,
+          "requestSha256": "b2927ca4e2e12dd788bb91022eaeba0483bddfcec1ef34fb279ed520dad6bab6",
+          "responseBytes": 14,
+          "responseHexPrefix": "0682010001000600",
+          "responseDataHex": "03000000009b",
+          "responseSha256": "6411c6c46db2cb764cb1f5b91279de7bb6bb014af94176c432cc90d63391e281",
+          "nextSetFrame": 25,
+          "nextSetCommand": "0x82"
+        },
+        {
+          "command": "0x82",
+          "setFrame": 25,
+          "getFrame": 27,
+          "responseFrame": 30,
+          "requestBytes": 520,
+          "requestHexPrefix": "0682010001000600",
+          "requestDataAllZero": true,
+          "requestSha256": "b2927ca4e2e12dd788bb91022eaeba0483bddfcec1ef34fb279ed520dad6bab6",
+          "responseBytes": 14,
+          "responseHexPrefix": "0682010001000600",
+          "responseDataHex": "03000000009b",
+          "responseSha256": "6411c6c46db2cb764cb1f5b91279de7bb6bb014af94176c432cc90d63391e281",
+          "nextSetFrame": 31,
+          "nextSetCommand": "0x82"
+        },
+        {
+          "command": "0x82",
+          "setFrame": 31,
+          "getFrame": 33,
+          "responseFrame": 34,
+          "requestBytes": 520,
+          "requestHexPrefix": "0682010001000600",
+          "requestDataAllZero": true,
+          "requestSha256": "b2927ca4e2e12dd788bb91022eaeba0483bddfcec1ef34fb279ed520dad6bab6",
+          "responseBytes": 14,
+          "responseHexPrefix": "0682010001000600",
+          "responseDataHex": "03000000009b",
+          "responseSha256": "6411c6c46db2cb764cb1f5b91279de7bb6bb014af94176c432cc90d63391e281",
+          "nextSetFrame": 37,
+          "nextSetCommand": "0x82"
+        },
+        {
+          "command": "0x82",
+          "setFrame": 37,
+          "getFrame": 39,
+          "responseFrame": 42,
+          "requestBytes": 520,
+          "requestHexPrefix": "0682010001000600",
+          "requestDataAllZero": true,
+          "requestSha256": "b2927ca4e2e12dd788bb91022eaeba0483bddfcec1ef34fb279ed520dad6bab6",
+          "responseBytes": 14,
+          "responseHexPrefix": "0682010001000600",
+          "responseDataHex": "03000000009b",
+          "responseSha256": "6411c6c46db2cb764cb1f5b91279de7bb6bb014af94176c432cc90d63391e281",
+          "nextSetFrame": 43,
+          "nextSetCommand": "0x82"
+        },
+        {
+          "command": "0x82",
+          "setFrame": 43,
+          "getFrame": 45,
+          "responseFrame": 46,
+          "requestBytes": 520,
+          "requestHexPrefix": "0682010001000600",
+          "requestDataAllZero": true,
+          "requestSha256": "b2927ca4e2e12dd788bb91022eaeba0483bddfcec1ef34fb279ed520dad6bab6",
+          "responseBytes": 14,
+          "responseHexPrefix": "0682010001000600",
+          "responseDataHex": "03000000009b",
+          "responseSha256": "6411c6c46db2cb764cb1f5b91279de7bb6bb014af94176c432cc90d63391e281",
+          "nextSetFrame": 49,
+          "nextSetCommand": "0x82"
+        },
+        {
+          "command": "0x82",
+          "setFrame": 49,
+          "getFrame": 51,
+          "responseFrame": 52,
+          "requestBytes": 520,
+          "requestHexPrefix": "0682010001000600",
+          "requestDataAllZero": true,
+          "requestSha256": "b2927ca4e2e12dd788bb91022eaeba0483bddfcec1ef34fb279ed520dad6bab6",
+          "responseBytes": 14,
+          "responseHexPrefix": "0682010001000600",
+          "responseDataHex": "03000000009b",
+          "responseSha256": "6411c6c46db2cb764cb1f5b91279de7bb6bb014af94176c432cc90d63391e281",
+          "nextSetFrame": null,
+          "nextSetCommand": null
+        }
+      ]
+    },
+    {
+      "input": "captures\\004_lighting_open\\derived\\control-transfers.json",
+      "sourceSha256": "673b4761d66f89be42dce9efa3da9841f984271d79377a7e0c30f005e2cee391",
+      "pairCount": 1,
+      "pairs": [
+        {
+          "command": "0x84",
+          "setFrame": 51,
+          "getFrame": 53,
+          "responseFrame": 54,
+          "requestBytes": 520,
+          "requestHexPrefix": "0684000001008000",
+          "requestDataAllZero": true,
+          "requestSha256": "d5a4276c88ecdf6688d93ba926a1161ad52f11d7bca1d762c0de79a3363110ed",
+          "responseBytes": 136,
+          "responseHexPrefix": "0684000001008000",
+          "responseDataHex": "0003030200000404070003200100000000000100020100ff0400000001000301000000000000000000000000000000000000000000000000ffff04470447042704470447044704470447044704470447044704470447044704470447044704470437074707470744074407440744074407440744040404040404040404045aa5",
+          "responseSha256": "7aa577bbd8d7eb0e99088e181fd966b7cd699fa3c743c893873efea9e7d0cbd8",
+          "nextSetFrame": 55,
+          "nextSetCommand": "0x4"
+        }
+      ]
+    },
+    {
+      "input": "captures\\008_rgb_brightness_one_step\\derived\\control-transfers.json",
+      "sourceSha256": "53de1fbcb70796c9df8d8c9ff2cf34e6a066a3d9b2dcd303ffa7fb65b39e9a86",
+      "pairCount": 1,
+      "pairs": [
+        {
+          "command": "0x84",
+          "setFrame": 32125,
+          "getFrame": 32159,
+          "responseFrame": 32164,
+          "requestBytes": 520,
+          "requestHexPrefix": "0684000001008000",
+          "requestDataAllZero": true,
+          "requestSha256": "d5a4276c88ecdf6688d93ba926a1161ad52f11d7bca1d762c0de79a3363110ed",
+          "responseBytes": 136,
+          "responseHexPrefix": "0684000001008000",
+          "responseDataHex": "0003030200000404070002200100000000000100020100ff0400000001000301000000000000000000000000000000000000000000000000ffff04470300044704470447044704470447044704470447044704470447044704470447044704470437074707470744074407440744074407440744040404040404040404045aa5",
+          "responseSha256": "864b652456fedf944a7b171ec58a3165a20fe0db5f3debf99f4360778e2ecee0",
+          "nextSetFrame": 32253,
+          "nextSetCommand": "0x4"
+        }
+      ]
+    },
+    {
+      "input": "captures\\009_rgb_brightness_4_to_3\\derived\\control-transfers.json",
+      "sourceSha256": "9695156a01bd31e48c7be39118091fceb583de3dad797f89d4ae1e35b705a30a",
+      "pairCount": 1,
+      "pairs": [
+        {
+          "command": "0x84",
+          "setFrame": 6209,
+          "getFrame": 6245,
+          "responseFrame": 6250,
+          "requestBytes": 520,
+          "requestHexPrefix": "0684000001008000",
+          "requestDataAllZero": true,
+          "requestSha256": "d5a4276c88ecdf6688d93ba926a1161ad52f11d7bca1d762c0de79a3363110ed",
+          "responseBytes": 136,
+          "responseHexPrefix": "0684000001008000",
+          "responseDataHex": "0003030200000404070002200100000000000100020100ff0400000001000301000000000000000000000000000000000000000000000000ffff04470400044704470447044704470447044704470447044704470447044704470447044704470437074707470744074407440744074407440744040404040404040404045aa5",
+          "responseSha256": "d0ed0e240cb1f961711915092814120656bdbf7419aeb863d26bac2d742399c1",
+          "nextSetFrame": 6341,
+          "nextSetCommand": "0x4"
+        }
+      ]
+    }
+  ]
+}

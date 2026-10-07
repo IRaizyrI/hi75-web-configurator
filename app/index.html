@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hi75 Configurator</title>
+    <link rel="stylesheet" href="/app/app.css">
+    <script type="module" src="/app/main.js"></script>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">Hi75 Configurator</div>
+        <div class="device-card" id="device-card">
+          <div class="device-thumb" aria-hidden="true"></div>
+          <div class="device-text">
+            <div class="device-sub" id="device-sub">No keyboard</div>
+            <div class="device-name">LEOBOG Hi75</div>
+          </div>
+        </div>
+        <button class="btn btn-accent wide" id="connect" type="button">Connect keyboard</button>
+        <button class="btn wide" id="demo" type="button">Try demo mode</button>
+        <nav class="nav" aria-label="Pages">
+          <div class="nav-title">Configuration</div>
+          <button type="button" data-page="remap" class="active"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg>Remap</button>
+          <button type="button" data-page="lighting"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>Lighting</button>
+          <button type="button" data-page="macros"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>Macros</button>
+          <button type="button" data-page="knob"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v6"/></svg>Knob</button>
+          <div class="nav-title">Device</div>
+          <button type="button" data-page="backup"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16M3 8l4-4 4 4M17 20V4M13 16l4 4 4-4"/></svg>Backup &amp; Restore</button>
+        </nav>
+        <div class="sidebar-foot">Stock firmware · v1.0 · <a href="/research/">research tools</a></div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="page-title" id="page-title">Remap</div>
+          <div class="layer-switch" id="layer-switch" role="tablist" aria-label="Layer">
+            <button type="button" data-layer="0" class="active">Base layer</button>
+            <button type="button" data-layer="1">Fn layer</button>
+          </div>
+          <div class="status" id="status" role="status"></div>
+        </header>
+
+        <section class="board-wrap">
+          <div id="keyboard"></div>
+          <p class="board-hint" id="board-hint">Connect your keyboard to begin.</p>
+        </section>
+
+        <section class="panel" id="page-remap" data-page-panel="remap"></section>
+        <section class="panel" id="page-lighting" data-page-panel="lighting" hidden></section>
+        <section class="panel" id="page-macros" data-page-panel="macros" hidden></section>
+        <section class="panel" id="page-knob" data-page-panel="knob" hidden></section>
+        <section class="panel" id="page-backup" data-page-panel="backup" hidden></section>
+
+        <div class="empty" id="empty-state">
+          <h2>Connect your Hi75</h2>
+          <p>Use Chrome or Edge. Close LEOBOG ONE first, then click <strong>Connect keyboard</strong> and choose the Hi75 in the browser prompt.</p>
+          <p class="muted">Every change is saved to the keyboard straight away and checked by reading it back. Download a backup on the Backup &amp; Restore page before big changes.</p>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast" hidden></div>
+  </body>
+</html>

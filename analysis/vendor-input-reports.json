@@ -1,0 +1,73 @@
+{
+  "scope": "saved capture analysis only; bus 2/device 5/endpoint 0x82",
+  "displayFilter": "usb.bus_id == 2 && usb.device_address == 5 && usb.transfer_type == 1 && usb.endpoint_address == 0x82 && usbhid.data",
+  "captures": [
+    {
+      "path": "captures/003_idle_startup/traffic.pcapng",
+      "sourceSha256": "21e86edb7cdc81076933345636e7985c4c28bb9bbe7f1378f64087f0600ed69f",
+      "reports": [
+        {
+          "frame": 11,
+          "epochSeconds": "1789854310.540251000",
+          "reportHex": "060a056401000000"
+        },
+        {
+          "frame": 16,
+          "epochSeconds": "1789854310.594246000",
+          "reportHex": "060a056401000000"
+        },
+        {
+          "frame": 23,
+          "epochSeconds": "1789854310.650242000",
+          "reportHex": "060a056401000000"
+        },
+        {
+          "frame": 28,
+          "epochSeconds": "1789854310.704239000",
+          "reportHex": "060a056401000000"
+        },
+        {
+          "frame": 35,
+          "epochSeconds": "1789854310.761235000",
+          "reportHex": "060a056401000000"
+        },
+        {
+          "frame": 40,
+          "epochSeconds": "1789854310.814238000",
+          "reportHex": "060a056401000000"
+        },
+        {
+          "frame": 47,
+          "epochSeconds": "1789854310.870231000",
+          "reportHex": "060a056401000000"
+        },
+        {
+          "frame": 53,
+          "epochSeconds": "1789854310.925231000",
+          "reportHex": "060a056401000000"
+        }
+      ]
+    },
+    {
+      "path": "captures/004_lighting_open/traffic.pcapng",
+      "sourceSha256": "673b4761d66f89be42dce9efa3da9841f984271d79377a7e0c30f005e2cee391",
+      "reports": [
+        {
+          "frame": 59,
+          "epochSeconds": "1789854447.508493000",
+          "reportHex": "060a070001000000"
+        }
+      ]
+    },
+    {
+      "path": "captures/008_rgb_brightness_one_step/traffic.pcapng",
+      "sourceSha256": "53de1fbcb70796c9df8d8c9ff2cf34e6a066a3d9b2dcd303ffa7fb65b39e9a86",
+      "reports": []
+    },
+    {
+      "path": "captures/009_rgb_brightness_4_to_3/traffic.pcapng",
+      "sourceSha256": "9695156a01bd31e48c7be39118091fceb583de3dad797f89d4ae1e35b705a30a",
+      "reports": []
+    }
+  ]
+}

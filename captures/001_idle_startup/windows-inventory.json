@@ -1,0 +1,1479 @@
+{
+  "errors": [],
+  "filterVid": "0x258A",
+  "filterPid": "0x010C",
+  "hidCollections": [
+    {
+      "devicePath": "\\\\?\\hid#vid_258a&pid_010c&mi_00#b&16ee394a&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\\kbd",
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(13): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(35): Win32 13 (The data is invalid.)",
+        "HidD_GetSerialNumberString: Win32 87 (The parameter is incorrect.)"
+      ],
+      "pnp": {
+        "instanceId": "HID\\VID_258A&PID_010C&MI_00\\B&16EE394A&0&0000",
+        "classGuid": "4d36e96b-e325-11ce-bfc1-08002be10318",
+        "deviceDescription": "HID Keyboard Device",
+        "hardwareIds": [
+          "HID\\VID_258A&PID_010C&REV_0500&MI_00",
+          "HID\\VID_258A&PID_010C&MI_00",
+          "HID\\VID_258A&UP:0001_U:0006",
+          "HID_DEVICE_SYSTEM_KEYBOARD",
+          "HID_DEVICE_UP:0001_U:0006",
+          "HID_DEVICE"
+        ],
+        "compatibleIds": [],
+        "service": "kbdhid",
+        "registryManufacturer": "(Standard keyboards)",
+        "friendlyName": null,
+        "locationInformation": null,
+        "physicalDeviceObjectName": "\\Device\\0000009a",
+        "busNumber": "HID",
+        "locationPaths": null,
+        "parentChainEndConfigRet": "0xD",
+        "parentInstanceIds": [
+          "USB\\VID_258A&PID_010C&MI_00\\A&37836D3&0&0000",
+          "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+          "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+          "USB\\ROOT_HUB30\\7&124F193F&0&0",
+          "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+          "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+          "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+          "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+          "ACPI\\PNP0A08\\0",
+          "ACPI_HAL\\PNP0C08\\0",
+          "ROOT\\ACPI_HAL\\0000",
+          "HTREE\\ROOT\\0"
+        ],
+        "usbInterfaceNumberHint": 0,
+        "usbInterfaceNumberHintSource": "HID\\VID_258A&PID_010C&MI_00\\B&16EE394A&0&0000"
+      },
+      "vid": "0x258A",
+      "pid": "0x010C",
+      "hidDeviceVersionNumber": "0x0500",
+      "manufacturerString": "BY Tech",
+      "productString": "Gaming Keyboard",
+      "serialNumberString": null,
+      "capabilities": {
+        "usageId": "0x0006",
+        "usagePage": "0x0001",
+        "nativeHidpCapsHex": "06 00 01 00 09 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 02 00 00 00 08 01 01 00 00 00 05 00 00 00 00 00 00 00",
+        "reports": {
+          "input": {
+            "maxWindowsReportBytesIncludingIdSlot": 9,
+            "declaredButtonCapabilityCount": 2,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 264,
+            "buttonCapabilities": [
+              {
+                "usagePage": "0x0007",
+                "reportId": 0,
+                "isAlias": false,
+                "mainItemFlags": "0x0002",
+                "linkCollectionIndex": 0,
+                "linkUsageId": "0x0006",
+                "linkUsagePage": "0x0001",
+                "isUsageRange": true,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": null,
+                "usageMin": "0x00E0",
+                "usageMax": "0x00E7",
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 0,
+                "dataIndexMax": 7,
+                "nativeCapabilityHex": "07 00 00 00 02 00 00 00 06 00 01 00 01 00 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 E0 00 E7 00 00 00 00 00 00 00 00 00 00 00 07 00"
+              },
+              {
+                "usagePage": "0x0007",
+                "reportId": 0,
+                "isAlias": false,
+                "mainItemFlags": "0x0000",
+                "linkCollectionIndex": 0,
+                "linkUsageId": "0x0006",
+                "linkUsagePage": "0x0001",
+                "isUsageRange": true,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": null,
+                "usageMin": "0x0000",
+                "usageMax": "0x00FF",
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 8,
+                "dataIndexMax": 263,
+                "nativeCapabilityHex": "07 00 00 00 00 00 00 00 06 00 01 00 01 00 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 00 00 00 08 00 07 01"
+              }
+            ],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [
+              0
+            ],
+            "exactWireBytesPerReportId": null
+          },
+          "output": {
+            "maxWindowsReportBytesIncludingIdSlot": 2,
+            "declaredButtonCapabilityCount": 1,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 5,
+            "buttonCapabilities": [
+              {
+                "usagePage": "0x0008",
+                "reportId": 0,
+                "isAlias": false,
+                "mainItemFlags": "0x0002",
+                "linkCollectionIndex": 0,
+                "linkUsageId": "0x0006",
+                "linkUsagePage": "0x0001",
+                "isUsageRange": true,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": null,
+                "usageMin": "0x0001",
+                "usageMax": "0x0005",
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 0,
+                "dataIndexMax": 4,
+                "nativeCapabilityHex": "08 00 00 00 02 00 00 00 06 00 01 00 01 00 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 05 00 00 00 00 00 00 00 00 00 00 00 04 00"
+              }
+            ],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [
+              0
+            ],
+            "exactWireBytesPerReportId": null
+          },
+          "feature": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          }
+        },
+        "declaredLinkCollectionCount": 1,
+        "linkCollections": [
+          {
+            "usageId": "0x0006",
+            "usagePage": "0x0001",
+            "parentIndex": 0,
+            "numberOfChildren": 0,
+            "nextSiblingIndex": 0,
+            "firstChildIndex": 0,
+            "collectionType": 1,
+            "isAlias": false,
+            "index": 0
+          }
+        ]
+      },
+      "metadataHandleOpened": true,
+      "matchesReportedVidPidHintOnly": true
+    },
+    {
+      "devicePath": "\\\\?\\hid#vid_258a&pid_010c&mi_01&col01#b&2a1e5588&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(4): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(13): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(35): Win32 13 (The data is invalid.)",
+        "HidD_GetSerialNumberString: Win32 87 (The parameter is incorrect.)"
+      ],
+      "pnp": {
+        "instanceId": "HID\\VID_258A&PID_010C&MI_01&COL01\\B&2A1E5588&0&0000",
+        "classGuid": "745a17a0-74d3-11d0-b6fe-00a0c90f57da",
+        "deviceDescription": "HID-compliant system controller",
+        "hardwareIds": [
+          "HID\\VID_258A&PID_010C&REV_0500&MI_01&Col01",
+          "HID\\VID_258A&PID_010C&MI_01&Col01",
+          "HID\\VID_258A&UP:0001_U:0080",
+          "HID_DEVICE_SYSTEM_CONTROL",
+          "HID_DEVICE_UP:0001_U:0080",
+          "HID_DEVICE"
+        ],
+        "compatibleIds": [],
+        "service": null,
+        "registryManufacturer": "(Standard system devices)",
+        "friendlyName": null,
+        "locationInformation": null,
+        "physicalDeviceObjectName": "\\Device\\0000009b",
+        "busNumber": "HID",
+        "locationPaths": null,
+        "parentChainEndConfigRet": "0xD",
+        "parentInstanceIds": [
+          "USB\\VID_258A&PID_010C&MI_01\\A&37836D3&0&0001",
+          "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+          "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+          "USB\\ROOT_HUB30\\7&124F193F&0&0",
+          "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+          "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+          "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+          "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+          "ACPI\\PNP0A08\\0",
+          "ACPI_HAL\\PNP0C08\\0",
+          "ROOT\\ACPI_HAL\\0000",
+          "HTREE\\ROOT\\0"
+        ],
+        "usbInterfaceNumberHint": 1,
+        "usbInterfaceNumberHintSource": "HID\\VID_258A&PID_010C&MI_01&COL01\\B&2A1E5588&0&0000"
+      },
+      "vid": "0x258A",
+      "pid": "0x010C",
+      "hidDeviceVersionNumber": "0x0500",
+      "manufacturerString": "BY Tech",
+      "productString": "Gaming Keyboard",
+      "serialNumberString": null,
+      "capabilities": {
+        "usageId": "0x0080",
+        "usagePage": "0x0001",
+        "nativeHidpCapsHex": "80 00 01 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 01 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00",
+        "reports": {
+          "input": {
+            "maxWindowsReportBytesIncludingIdSlot": 2,
+            "declaredButtonCapabilityCount": 1,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 3,
+            "buttonCapabilities": [
+              {
+                "usagePage": "0x0001",
+                "reportId": 1,
+                "isAlias": false,
+                "mainItemFlags": "0x0002",
+                "linkCollectionIndex": 0,
+                "linkUsageId": "0x0080",
+                "linkUsagePage": "0x0001",
+                "isUsageRange": true,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": null,
+                "usageMin": "0x0081",
+                "usageMax": "0x0083",
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 0,
+                "dataIndexMax": 2,
+                "nativeCapabilityHex": "01 00 01 00 02 00 00 00 80 00 01 00 01 00 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 81 00 83 00 00 00 00 00 00 00 00 00 00 00 02 00"
+              }
+            ],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [
+              1
+            ],
+            "exactWireBytesPerReportId": null
+          },
+          "output": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          },
+          "feature": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          }
+        },
+        "declaredLinkCollectionCount": 1,
+        "linkCollections": [
+          {
+            "usageId": "0x0080",
+            "usagePage": "0x0001",
+            "parentIndex": 0,
+            "numberOfChildren": 0,
+            "nextSiblingIndex": 0,
+            "firstChildIndex": 0,
+            "collectionType": 1,
+            "isAlias": false,
+            "index": 0
+          }
+        ]
+      },
+      "metadataHandleOpened": true,
+      "matchesReportedVidPidHintOnly": true
+    },
+    {
+      "devicePath": "\\\\?\\hid#vid_258a&pid_010c&mi_01&col02#b&2a1e5588&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(4): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(13): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(35): Win32 13 (The data is invalid.)",
+        "HidD_GetSerialNumberString: Win32 87 (The parameter is incorrect.)"
+      ],
+      "pnp": {
+        "instanceId": "HID\\VID_258A&PID_010C&MI_01&COL02\\B&2A1E5588&0&0001",
+        "classGuid": "745a17a0-74d3-11d0-b6fe-00a0c90f57da",
+        "deviceDescription": "HID-compliant consumer control device",
+        "hardwareIds": [
+          "HID\\VID_258A&PID_010C&REV_0500&MI_01&Col02",
+          "HID\\VID_258A&PID_010C&MI_01&Col02",
+          "HID\\VID_258A&UP:000C_U:0001",
+          "HID_DEVICE_SYSTEM_CONSUMER",
+          "HID_DEVICE_UP:000C_U:0001",
+          "HID_DEVICE"
+        ],
+        "compatibleIds": [],
+        "service": null,
+        "registryManufacturer": "Microsoft",
+        "friendlyName": null,
+        "locationInformation": null,
+        "physicalDeviceObjectName": "\\Device\\0000009c",
+        "busNumber": "HID",
+        "locationPaths": null,
+        "parentChainEndConfigRet": "0xD",
+        "parentInstanceIds": [
+          "USB\\VID_258A&PID_010C&MI_01\\A&37836D3&0&0001",
+          "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+          "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+          "USB\\ROOT_HUB30\\7&124F193F&0&0",
+          "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+          "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+          "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+          "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+          "ACPI\\PNP0A08\\0",
+          "ACPI_HAL\\PNP0C08\\0",
+          "ROOT\\ACPI_HAL\\0000",
+          "HTREE\\ROOT\\0"
+        ],
+        "usbInterfaceNumberHint": 1,
+        "usbInterfaceNumberHintSource": "HID\\VID_258A&PID_010C&MI_01&COL02\\B&2A1E5588&0&0001"
+      },
+      "vid": "0x258A",
+      "pid": "0x010C",
+      "hidDeviceVersionNumber": "0x0500",
+      "manufacturerString": "BY Tech",
+      "productString": "Gaming Keyboard",
+      "serialNumberString": null,
+      "capabilities": {
+        "usageId": "0x0001",
+        "usagePage": "0x000C",
+        "nativeHidpCapsHex": "01 00 0C 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 01 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00",
+        "reports": {
+          "input": {
+            "maxWindowsReportBytesIncludingIdSlot": 3,
+            "declaredButtonCapabilityCount": 1,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 768,
+            "buttonCapabilities": [
+              {
+                "usagePage": "0x000C",
+                "reportId": 2,
+                "isAlias": false,
+                "mainItemFlags": "0x0000",
+                "linkCollectionIndex": 0,
+                "linkUsageId": "0x0001",
+                "linkUsagePage": "0x000C",
+                "isUsageRange": true,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": null,
+                "usageMin": "0x0000",
+                "usageMax": "0x02FF",
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 0,
+                "dataIndexMax": 767,
+                "nativeCapabilityHex": "0C 00 02 00 00 00 00 00 01 00 0C 00 01 00 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 02 00 00 00 00 00 00 00 00 00 00 FF 02"
+              }
+            ],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [
+              2
+            ],
+            "exactWireBytesPerReportId": null
+          },
+          "output": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          },
+          "feature": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          }
+        },
+        "declaredLinkCollectionCount": 1,
+        "linkCollections": [
+          {
+            "usageId": "0x0001",
+            "usagePage": "0x000C",
+            "parentIndex": 0,
+            "numberOfChildren": 0,
+            "nextSiblingIndex": 0,
+            "firstChildIndex": 0,
+            "collectionType": 1,
+            "isAlias": false,
+            "index": 0
+          }
+        ]
+      },
+      "metadataHandleOpened": true,
+      "matchesReportedVidPidHintOnly": true
+    },
+    {
+      "devicePath": "\\\\?\\hid#vid_258a&pid_010c&mi_01&col03#b&2a1e5588&0&0002#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(4): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(13): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(35): Win32 13 (The data is invalid.)",
+        "HidD_GetSerialNumberString: Win32 87 (The parameter is incorrect.)"
+      ],
+      "pnp": {
+        "instanceId": "HID\\VID_258A&PID_010C&MI_01&COL03\\B&2A1E5588&0&0002",
+        "classGuid": "745a17a0-74d3-11d0-b6fe-00a0c90f57da",
+        "deviceDescription": "HID-compliant vendor-defined device",
+        "hardwareIds": [
+          "HID\\VID_258A&PID_010C&REV_0500&MI_01&Col03",
+          "HID\\VID_258A&PID_010C&MI_01&Col03",
+          "HID\\VID_258A&UP:FF00_U:0001",
+          "HID_DEVICE_UP:FF00_U:0001",
+          "HID_DEVICE_UPR:FF00-FFFF",
+          "HID_DEVICE"
+        ],
+        "compatibleIds": [],
+        "service": null,
+        "registryManufacturer": "(Standard system devices)",
+        "friendlyName": null,
+        "locationInformation": null,
+        "physicalDeviceObjectName": "\\Device\\0000009d",
+        "busNumber": "HID",
+        "locationPaths": null,
+        "parentChainEndConfigRet": "0xD",
+        "parentInstanceIds": [
+          "USB\\VID_258A&PID_010C&MI_01\\A&37836D3&0&0001",
+          "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+          "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+          "USB\\ROOT_HUB30\\7&124F193F&0&0",
+          "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+          "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+          "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+          "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+          "ACPI\\PNP0A08\\0",
+          "ACPI_HAL\\PNP0C08\\0",
+          "ROOT\\ACPI_HAL\\0000",
+          "HTREE\\ROOT\\0"
+        ],
+        "usbInterfaceNumberHint": 1,
+        "usbInterfaceNumberHintSource": "HID\\VID_258A&PID_010C&MI_01&COL03\\B&2A1E5588&0&0002"
+      },
+      "vid": "0x258A",
+      "pid": "0x010C",
+      "hidDeviceVersionNumber": "0x0500",
+      "manufacturerString": "BY Tech",
+      "productString": "Gaming Keyboard",
+      "serialNumberString": null,
+      "capabilities": {
+        "usageId": "0x0001",
+        "usagePage": "0xFF00",
+        "nativeHidpCapsHex": "01 00 00 FF 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00",
+        "reports": {
+          "input": {
+            "maxWindowsReportBytesIncludingIdSlot": 4,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 1,
+            "dataIndexCount": 1,
+            "buttonCapabilities": [],
+            "valueCapabilities": [
+              {
+                "usagePage": "0xFF00",
+                "reportId": 3,
+                "isAlias": false,
+                "mainItemFlags": "0x0002",
+                "linkCollectionIndex": 0,
+                "linkUsageId": "0x0001",
+                "linkUsagePage": "0xFF00",
+                "isUsageRange": false,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": "0x002F",
+                "usageMin": null,
+                "usageMax": null,
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 0,
+                "dataIndexMax": null,
+                "hasNull": false,
+                "bitSize": 8,
+                "reportCount": 3,
+                "unitsExponentRaw": 0,
+                "unitsRaw": 0,
+                "logicalMin": 0,
+                "logicalMax": 255,
+                "physicalMin": 0,
+                "physicalMax": 0,
+                "nativeCapabilityHex": "00 FF 03 00 02 00 00 00 01 00 00 FF 00 00 00 01 00 00 08 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 00 00 00 00 00 2F 00 2F 00 00 00 00 00 00 00 00 00 00 00 00 00"
+              }
+            ],
+            "reportIdsFromCapabilities": [
+              3
+            ],
+            "exactWireBytesPerReportId": null
+          },
+          "output": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          },
+          "feature": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          }
+        },
+        "declaredLinkCollectionCount": 1,
+        "linkCollections": [
+          {
+            "usageId": "0x0001",
+            "usagePage": "0xFF00",
+            "parentIndex": 0,
+            "numberOfChildren": 0,
+            "nextSiblingIndex": 0,
+            "firstChildIndex": 0,
+            "collectionType": 1,
+            "isAlias": false,
+            "index": 0
+          }
+        ]
+      },
+      "metadataHandleOpened": true,
+      "matchesReportedVidPidHintOnly": true
+    },
+    {
+      "devicePath": "\\\\?\\hid#vid_258a&pid_010c&mi_01&col05#b&2a1e5588&0&0004#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(4): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(13): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(35): Win32 13 (The data is invalid.)",
+        "HidD_GetSerialNumberString: Win32 87 (The parameter is incorrect.)"
+      ],
+      "pnp": {
+        "instanceId": "HID\\VID_258A&PID_010C&MI_01&COL05\\B&2A1E5588&0&0004",
+        "classGuid": "745a17a0-74d3-11d0-b6fe-00a0c90f57da",
+        "deviceDescription": "HID-compliant vendor-defined device",
+        "hardwareIds": [
+          "HID\\VID_258A&PID_010C&REV_0500&MI_01&Col05",
+          "HID\\VID_258A&PID_010C&MI_01&Col05",
+          "HID\\VID_258A&UP:FF00_U:0001",
+          "HID_DEVICE_UP:FF00_U:0001",
+          "HID_DEVICE_UPR:FF00-FFFF",
+          "HID_DEVICE"
+        ],
+        "compatibleIds": [],
+        "service": null,
+        "registryManufacturer": "(Standard system devices)",
+        "friendlyName": null,
+        "locationInformation": null,
+        "physicalDeviceObjectName": "\\Device\\0000009f",
+        "busNumber": "HID",
+        "locationPaths": null,
+        "parentChainEndConfigRet": "0xD",
+        "parentInstanceIds": [
+          "USB\\VID_258A&PID_010C&MI_01\\A&37836D3&0&0001",
+          "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+          "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+          "USB\\ROOT_HUB30\\7&124F193F&0&0",
+          "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+          "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+          "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+          "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+          "ACPI\\PNP0A08\\0",
+          "ACPI_HAL\\PNP0C08\\0",
+          "ROOT\\ACPI_HAL\\0000",
+          "HTREE\\ROOT\\0"
+        ],
+        "usbInterfaceNumberHint": 1,
+        "usbInterfaceNumberHintSource": "HID\\VID_258A&PID_010C&MI_01&COL05\\B&2A1E5588&0&0004"
+      },
+      "vid": "0x258A",
+      "pid": "0x010C",
+      "hidDeviceVersionNumber": "0x0500",
+      "manufacturerString": "BY Tech",
+      "productString": "Gaming Keyboard",
+      "serialNumberString": null,
+      "capabilities": {
+        "usageId": "0x0001",
+        "usagePage": "0xFF00",
+        "nativeHidpCapsHex": "01 00 00 FF 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 02 00",
+        "reports": {
+          "input": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          },
+          "output": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          },
+          "feature": {
+            "maxWindowsReportBytesIncludingIdSlot": 6,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 1,
+            "dataIndexCount": 2,
+            "buttonCapabilities": [],
+            "valueCapabilities": [
+              {
+                "usagePage": "0xFF00",
+                "reportId": 5,
+                "isAlias": false,
+                "mainItemFlags": "0x0002",
+                "linkCollectionIndex": 0,
+                "linkUsageId": "0x0001",
+                "linkUsagePage": "0xFF00",
+                "isUsageRange": true,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": null,
+                "usageMin": "0x0001",
+                "usageMax": "0x0002",
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 0,
+                "dataIndexMax": 1,
+                "hasNull": false,
+                "bitSize": 8,
+                "reportCount": 1,
+                "unitsExponentRaw": 0,
+                "unitsRaw": 0,
+                "logicalMin": 0,
+                "logicalMax": 255,
+                "physicalMin": 0,
+                "physicalMax": 0,
+                "nativeCapabilityHex": "00 FF 05 00 02 00 00 00 01 00 00 FF 01 00 00 01 00 00 08 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 00 00 00 00 00 01 00 02 00 00 00 00 00 00 00 00 00 00 00 01 00"
+              }
+            ],
+            "reportIdsFromCapabilities": [
+              5
+            ],
+            "exactWireBytesPerReportId": null
+          }
+        },
+        "declaredLinkCollectionCount": 1,
+        "linkCollections": [
+          {
+            "usageId": "0x0001",
+            "usagePage": "0xFF00",
+            "parentIndex": 0,
+            "numberOfChildren": 0,
+            "nextSiblingIndex": 0,
+            "firstChildIndex": 0,
+            "collectionType": 1,
+            "isAlias": false,
+            "index": 0
+          }
+        ]
+      },
+      "metadataHandleOpened": true,
+      "matchesReportedVidPidHintOnly": true
+    },
+    {
+      "devicePath": "\\\\?\\hid#vid_258a&pid_010c&mi_01&col04#b&2a1e5588&0&0003#{4d1e55b2-f16f-11cf-88cb-001111000030}\\kbd",
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(13): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(35): Win32 13 (The data is invalid.)",
+        "HidD_GetSerialNumberString: Win32 87 (The parameter is incorrect.)"
+      ],
+      "pnp": {
+        "instanceId": "HID\\VID_258A&PID_010C&MI_01&COL04\\B&2A1E5588&0&0003",
+        "classGuid": "4d36e96b-e325-11ce-bfc1-08002be10318",
+        "deviceDescription": "HID Keyboard Device",
+        "hardwareIds": [
+          "HID\\VID_258A&PID_010C&REV_0500&MI_01&Col04",
+          "HID\\VID_258A&PID_010C&MI_01&Col04",
+          "HID\\VID_258A&UP:0001_U:0006",
+          "HID_DEVICE_SYSTEM_KEYBOARD",
+          "HID_DEVICE_UP:0001_U:0006",
+          "HID_DEVICE"
+        ],
+        "compatibleIds": [],
+        "service": "kbdhid",
+        "registryManufacturer": "(Standard keyboards)",
+        "friendlyName": null,
+        "locationInformation": null,
+        "physicalDeviceObjectName": "\\Device\\0000009e",
+        "busNumber": "HID",
+        "locationPaths": null,
+        "parentChainEndConfigRet": "0xD",
+        "parentInstanceIds": [
+          "USB\\VID_258A&PID_010C&MI_01\\A&37836D3&0&0001",
+          "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+          "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+          "USB\\ROOT_HUB30\\7&124F193F&0&0",
+          "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+          "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+          "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+          "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+          "ACPI\\PNP0A08\\0",
+          "ACPI_HAL\\PNP0C08\\0",
+          "ROOT\\ACPI_HAL\\0000",
+          "HTREE\\ROOT\\0"
+        ],
+        "usbInterfaceNumberHint": 1,
+        "usbInterfaceNumberHintSource": "HID\\VID_258A&PID_010C&MI_01&COL04\\B&2A1E5588&0&0003"
+      },
+      "vid": "0x258A",
+      "pid": "0x010C",
+      "hidDeviceVersionNumber": "0x0500",
+      "manufacturerString": "BY Tech",
+      "productString": "Gaming Keyboard",
+      "serialNumberString": null,
+      "capabilities": {
+        "usageId": "0x0006",
+        "usagePage": "0x0001",
+        "nativeHidpCapsHex": "06 00 01 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 01 00 00 00 6D 00 00 00 00 00 00 00 00 00 00 00 00 00",
+        "reports": {
+          "input": {
+            "maxWindowsReportBytesIncludingIdSlot": 16,
+            "declaredButtonCapabilityCount": 1,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 109,
+            "buttonCapabilities": [
+              {
+                "usagePage": "0x0007",
+                "reportId": 4,
+                "isAlias": false,
+                "mainItemFlags": "0x0002",
+                "linkCollectionIndex": 0,
+                "linkUsageId": "0x0006",
+                "linkUsagePage": "0x0001",
+                "isUsageRange": true,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": null,
+                "usageMin": "0x0004",
+                "usageMax": "0x0070",
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 0,
+                "dataIndexMax": 108,
+                "nativeCapabilityHex": "07 00 04 00 02 00 00 00 06 00 01 00 01 00 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 70 00 00 00 00 00 00 00 00 00 00 00 6C 00"
+              }
+            ],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [
+              4
+            ],
+            "exactWireBytesPerReportId": null
+          },
+          "output": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          },
+          "feature": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          }
+        },
+        "declaredLinkCollectionCount": 1,
+        "linkCollections": [
+          {
+            "usageId": "0x0006",
+            "usagePage": "0x0001",
+            "parentIndex": 0,
+            "numberOfChildren": 0,
+            "nextSiblingIndex": 0,
+            "firstChildIndex": 0,
+            "collectionType": 1,
+            "isAlias": false,
+            "index": 0
+          }
+        ]
+      },
+      "metadataHandleOpened": true,
+      "matchesReportedVidPidHintOnly": true
+    },
+    {
+      "devicePath": "\\\\?\\hid#vid_258a&pid_010c&mi_01&col06#b&2a1e5588&0&0005#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(4): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(13): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(35): Win32 13 (The data is invalid.)",
+        "HidD_GetSerialNumberString: Win32 87 (The parameter is incorrect.)"
+      ],
+      "pnp": {
+        "instanceId": "HID\\VID_258A&PID_010C&MI_01&COL06\\B&2A1E5588&0&0005",
+        "classGuid": "745a17a0-74d3-11d0-b6fe-00a0c90f57da",
+        "deviceDescription": "HID-compliant vendor-defined device",
+        "hardwareIds": [
+          "HID\\VID_258A&PID_010C&REV_0500&MI_01&Col06",
+          "HID\\VID_258A&PID_010C&MI_01&Col06",
+          "HID\\VID_258A&UP:FF00_U:0001",
+          "HID_DEVICE_UP:FF00_U:0001",
+          "HID_DEVICE_UPR:FF00-FFFF",
+          "HID_DEVICE"
+        ],
+        "compatibleIds": [],
+        "service": null,
+        "registryManufacturer": "(Standard system devices)",
+        "friendlyName": null,
+        "locationInformation": null,
+        "physicalDeviceObjectName": "\\Device\\000000a0",
+        "busNumber": "HID",
+        "locationPaths": null,
+        "parentChainEndConfigRet": "0xD",
+        "parentInstanceIds": [
+          "USB\\VID_258A&PID_010C&MI_01\\A&37836D3&0&0001",
+          "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+          "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+          "USB\\ROOT_HUB30\\7&124F193F&0&0",
+          "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+          "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+          "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+          "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+          "ACPI\\PNP0A08\\0",
+          "ACPI_HAL\\PNP0C08\\0",
+          "ROOT\\ACPI_HAL\\0000",
+          "HTREE\\ROOT\\0"
+        ],
+        "usbInterfaceNumberHint": 1,
+        "usbInterfaceNumberHintSource": "HID\\VID_258A&PID_010C&MI_01&COL06\\B&2A1E5588&0&0005"
+      },
+      "vid": "0x258A",
+      "pid": "0x010C",
+      "hidDeviceVersionNumber": "0x0500",
+      "manufacturerString": "BY Tech",
+      "productString": "Gaming Keyboard",
+      "serialNumberString": null,
+      "capabilities": {
+        "usageId": "0x0001",
+        "usagePage": "0xFF00",
+        "nativeHidpCapsHex": "01 00 00 FF 08 00 00 00 08 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 01 00 02 00",
+        "reports": {
+          "input": {
+            "maxWindowsReportBytesIncludingIdSlot": 8,
+            "declaredButtonCapabilityCount": 1,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 1,
+            "buttonCapabilities": [
+              {
+                "usagePage": "0xFF00",
+                "reportId": 6,
+                "isAlias": false,
+                "mainItemFlags": "0x0000",
+                "linkCollectionIndex": 0,
+                "linkUsageId": "0x0001",
+                "linkUsagePage": "0xFF00",
+                "isUsageRange": false,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": "0x0002",
+                "usageMin": null,
+                "usageMax": null,
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 0,
+                "dataIndexMax": null,
+                "nativeCapabilityHex": "00 FF 06 00 00 00 00 00 01 00 00 FF 00 00 00 01 07 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00"
+              }
+            ],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [
+              6
+            ],
+            "exactWireBytesPerReportId": null
+          },
+          "output": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          },
+          "feature": {
+            "maxWindowsReportBytesIncludingIdSlot": 520,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 1,
+            "dataIndexCount": 2,
+            "buttonCapabilities": [],
+            "valueCapabilities": [
+              {
+                "usagePage": "0xFF00",
+                "reportId": 6,
+                "isAlias": false,
+                "mainItemFlags": "0x0002",
+                "linkCollectionIndex": 0,
+                "linkUsageId": "0x0001",
+                "linkUsagePage": "0xFF00",
+                "isUsageRange": true,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": null,
+                "usageMin": "0x0001",
+                "usageMax": "0x0002",
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 0,
+                "dataIndexMax": 1,
+                "hasNull": false,
+                "bitSize": 8,
+                "reportCount": 1,
+                "unitsExponentRaw": 0,
+                "unitsRaw": 0,
+                "logicalMin": 0,
+                "logicalMax": 255,
+                "physicalMin": 0,
+                "physicalMax": 0,
+                "nativeCapabilityHex": "00 FF 06 00 02 00 00 00 01 00 00 FF 01 00 00 01 00 00 08 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF 00 00 00 00 00 00 00 00 00 00 00 01 00 02 00 00 00 00 00 00 00 00 00 00 00 01 00"
+              }
+            ],
+            "reportIdsFromCapabilities": [
+              6
+            ],
+            "exactWireBytesPerReportId": null
+          }
+        },
+        "declaredLinkCollectionCount": 1,
+        "linkCollections": [
+          {
+            "usageId": "0x0001",
+            "usagePage": "0xFF00",
+            "parentIndex": 0,
+            "numberOfChildren": 0,
+            "nextSiblingIndex": 0,
+            "firstChildIndex": 0,
+            "collectionType": 1,
+            "isAlias": false,
+            "index": 0
+          }
+        ]
+      },
+      "metadataHandleOpened": true,
+      "matchesReportedVidPidHintOnly": true
+    },
+    {
+      "devicePath": "\\\\?\\hid#vid_258a&pid_010c&mi_01&col07#b&2a1e5588&0&0006#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(13): Win32 13 (The data is invalid.)",
+        "SetupDiGetDeviceRegistryProperty(35): Win32 13 (The data is invalid.)",
+        "HidD_GetSerialNumberString: Win32 87 (The parameter is incorrect.)"
+      ],
+      "pnp": {
+        "instanceId": "HID\\VID_258A&PID_010C&MI_01&COL07\\B&2A1E5588&0&0006",
+        "classGuid": "4d36e96f-e325-11ce-bfc1-08002be10318",
+        "deviceDescription": "HID-compliant mouse",
+        "hardwareIds": [
+          "HID\\VID_258A&PID_010C&REV_0500&MI_01&Col07",
+          "HID\\VID_258A&PID_010C&MI_01&Col07",
+          "HID\\VID_258A&UP:0001_U:0002",
+          "HID_DEVICE_SYSTEM_MOUSE",
+          "HID_DEVICE_UP:0001_U:0002",
+          "HID_DEVICE"
+        ],
+        "compatibleIds": [],
+        "service": "mouhid",
+        "registryManufacturer": "Microsoft",
+        "friendlyName": null,
+        "locationInformation": null,
+        "physicalDeviceObjectName": "\\Device\\000000a1",
+        "busNumber": "HID",
+        "locationPaths": null,
+        "parentChainEndConfigRet": "0xD",
+        "parentInstanceIds": [
+          "USB\\VID_258A&PID_010C&MI_01\\A&37836D3&0&0001",
+          "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+          "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+          "USB\\ROOT_HUB30\\7&124F193F&0&0",
+          "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+          "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+          "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+          "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+          "ACPI\\PNP0A08\\0",
+          "ACPI_HAL\\PNP0C08\\0",
+          "ROOT\\ACPI_HAL\\0000",
+          "HTREE\\ROOT\\0"
+        ],
+        "usbInterfaceNumberHint": 1,
+        "usbInterfaceNumberHintSource": "HID\\VID_258A&PID_010C&MI_01&COL07\\B&2A1E5588&0&0006"
+      },
+      "vid": "0x258A",
+      "pid": "0x010C",
+      "hidDeviceVersionNumber": "0x0500",
+      "manufacturerString": "BY Tech",
+      "productString": "Gaming Keyboard",
+      "serialNumberString": null,
+      "capabilities": {
+        "usageId": "0x0002",
+        "usagePage": "0x0001",
+        "nativeHidpCapsHex": "02 00 01 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 01 00 04 00 09 00 00 00 00 00 00 00 00 00 00 00 00 00",
+        "reports": {
+          "input": {
+            "maxWindowsReportBytesIncludingIdSlot": 8,
+            "declaredButtonCapabilityCount": 1,
+            "declaredValueCapabilityCount": 4,
+            "dataIndexCount": 9,
+            "buttonCapabilities": [
+              {
+                "usagePage": "0x0009",
+                "reportId": 7,
+                "isAlias": false,
+                "mainItemFlags": "0x0002",
+                "linkCollectionIndex": 1,
+                "linkUsageId": "0x0001",
+                "linkUsagePage": "0x0001",
+                "isUsageRange": true,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": true,
+                "usageId": null,
+                "usageMin": "0x0001",
+                "usageMax": "0x0005",
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 0,
+                "dataIndexMax": 4,
+                "nativeCapabilityHex": "09 00 07 00 02 00 01 00 01 00 01 00 01 00 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 05 00 00 00 00 00 00 00 00 00 00 00 04 00"
+              }
+            ],
+            "valueCapabilities": [
+              {
+                "usagePage": "0x0001",
+                "reportId": 7,
+                "isAlias": false,
+                "mainItemFlags": "0x0006",
+                "linkCollectionIndex": 1,
+                "linkUsageId": "0x0001",
+                "linkUsagePage": "0x0001",
+                "isUsageRange": false,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": false,
+                "usageId": "0x0031",
+                "usageMin": null,
+                "usageMax": null,
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 5,
+                "dataIndexMax": null,
+                "hasNull": false,
+                "bitSize": 16,
+                "reportCount": 1,
+                "unitsExponentRaw": 0,
+                "unitsRaw": 0,
+                "logicalMin": -32768,
+                "logicalMax": 32767,
+                "physicalMin": 0,
+                "physicalMax": 0,
+                "nativeCapabilityHex": "01 00 07 00 06 00 01 00 01 00 01 00 00 00 00 00 00 00 10 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 FF FF FF 7F 00 00 00 00 00 00 00 00 00 00 31 00 31 00 00 00 00 00 00 00 00 00 05 00 05 00"
+              },
+              {
+                "usagePage": "0x0001",
+                "reportId": 7,
+                "isAlias": false,
+                "mainItemFlags": "0x0006",
+                "linkCollectionIndex": 1,
+                "linkUsageId": "0x0001",
+                "linkUsagePage": "0x0001",
+                "isUsageRange": false,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": false,
+                "usageId": "0x0030",
+                "usageMin": null,
+                "usageMax": null,
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 6,
+                "dataIndexMax": null,
+                "hasNull": false,
+                "bitSize": 16,
+                "reportCount": 1,
+                "unitsExponentRaw": 0,
+                "unitsRaw": 0,
+                "logicalMin": -32768,
+                "logicalMax": 32767,
+                "physicalMin": 0,
+                "physicalMax": 0,
+                "nativeCapabilityHex": "01 00 07 00 06 00 01 00 01 00 01 00 00 00 00 00 00 00 10 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 FF FF FF 7F 00 00 00 00 00 00 00 00 00 00 30 00 30 00 00 00 00 00 00 00 00 00 06 00 06 00"
+              },
+              {
+                "usagePage": "0x0001",
+                "reportId": 7,
+                "isAlias": false,
+                "mainItemFlags": "0x0006",
+                "linkCollectionIndex": 1,
+                "linkUsageId": "0x0001",
+                "linkUsagePage": "0x0001",
+                "isUsageRange": false,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": false,
+                "usageId": "0x0038",
+                "usageMin": null,
+                "usageMax": null,
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 7,
+                "dataIndexMax": null,
+                "hasNull": false,
+                "bitSize": 8,
+                "reportCount": 1,
+                "unitsExponentRaw": 0,
+                "unitsRaw": 0,
+                "logicalMin": -127,
+                "logicalMax": 127,
+                "physicalMin": 0,
+                "physicalMax": 0,
+                "nativeCapabilityHex": "01 00 07 00 06 00 01 00 01 00 01 00 00 00 00 00 00 00 08 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 81 FF FF FF 7F 00 00 00 00 00 00 00 00 00 00 00 38 00 38 00 00 00 00 00 00 00 00 00 07 00 07 00"
+              },
+              {
+                "usagePage": "0x000C",
+                "reportId": 7,
+                "isAlias": false,
+                "mainItemFlags": "0x0006",
+                "linkCollectionIndex": 1,
+                "linkUsageId": "0x0001",
+                "linkUsagePage": "0x0001",
+                "isUsageRange": false,
+                "isStringRange": false,
+                "isDesignatorRange": false,
+                "isAbsolute": false,
+                "usageId": "0x0238",
+                "usageMin": null,
+                "usageMax": null,
+                "stringIndexOrMin": 0,
+                "stringMax": null,
+                "designatorIndexOrMin": 0,
+                "designatorMax": null,
+                "dataIndexOrMin": 8,
+                "dataIndexMax": null,
+                "hasNull": false,
+                "bitSize": 8,
+                "reportCount": 1,
+                "unitsExponentRaw": 0,
+                "unitsRaw": 0,
+                "logicalMin": -127,
+                "logicalMax": 127,
+                "physicalMin": 0,
+                "physicalMax": 0,
+                "nativeCapabilityHex": "0C 00 07 00 06 00 01 00 01 00 01 00 00 00 00 00 00 00 08 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 81 FF FF FF 7F 00 00 00 00 00 00 00 00 00 00 00 38 02 38 02 00 00 00 00 00 00 00 00 08 00 08 00"
+              }
+            ],
+            "reportIdsFromCapabilities": [
+              7
+            ],
+            "exactWireBytesPerReportId": null
+          },
+          "output": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          },
+          "feature": {
+            "maxWindowsReportBytesIncludingIdSlot": 0,
+            "declaredButtonCapabilityCount": 0,
+            "declaredValueCapabilityCount": 0,
+            "dataIndexCount": 0,
+            "buttonCapabilities": [],
+            "valueCapabilities": [],
+            "reportIdsFromCapabilities": [],
+            "exactWireBytesPerReportId": null
+          }
+        },
+        "declaredLinkCollectionCount": 2,
+        "linkCollections": [
+          {
+            "usageId": "0x0002",
+            "usagePage": "0x0001",
+            "parentIndex": 0,
+            "numberOfChildren": 1,
+            "nextSiblingIndex": 0,
+            "firstChildIndex": 1,
+            "collectionType": 1,
+            "isAlias": false,
+            "index": 0
+          },
+          {
+            "usageId": "0x0001",
+            "usagePage": "0x0001",
+            "parentIndex": 0,
+            "numberOfChildren": 0,
+            "nextSiblingIndex": 0,
+            "firstChildIndex": 0,
+            "collectionType": 0,
+            "isAlias": false,
+            "index": 1
+          }
+        ]
+      },
+      "metadataHandleOpened": true,
+      "matchesReportedVidPidHintOnly": true
+    }
+  ],
+  "usbPnpNodes": [
+    {
+      "instanceId": "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+      "classGuid": "36fc9e60-c465-11cf-8056-444553540000",
+      "deviceDescription": "USB Composite Device",
+      "hardwareIds": [
+        "USB\\VID_258A&PID_010C&REV_0500",
+        "USB\\VID_258A&PID_010C"
+      ],
+      "compatibleIds": [
+        "USB\\COMPAT_VID_258A&DevClass_00&SubClass_00&Prot00",
+        "USB\\COMPAT_VID_258A&DevClass_00&SubClass_00",
+        "USB\\COMPAT_VID_258A&DevClass_00",
+        "USB\\DevClass_00&SubClass_00&Prot_00",
+        "USB\\DevClass_00&SubClass_00",
+        "USB\\DevClass_00",
+        "USB\\COMPOSITE"
+      ],
+      "service": "usbccgp",
+      "registryManufacturer": "(Standard USB Host Controller)",
+      "friendlyName": null,
+      "locationInformation": "Port_#0001.Hub_#0006",
+      "physicalDeviceObjectName": "\\Device\\USBPDO-11",
+      "busNumber": "USB",
+      "locationPaths": [
+        "PCIROOT(0)#PCI(0102)#PCI(0000)#PCI(0800)#PCI(0003)#USBROOT(0)#USB(2)#USB(1)",
+        "ACPI(_SB_)#ACPI(PCI0)#ACPI(BXBR)#ACPI(BYUP)#ACPI(BYD8)#ACPI(XHC0)#ACPI(RHUB)#ACPI(PRT2)#USB(1)"
+      ],
+      "parentChainEndConfigRet": "0xD",
+      "parentInstanceIds": [
+        "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+        "USB\\ROOT_HUB30\\7&124F193F&0&0",
+        "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+        "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+        "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+        "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+        "ACPI\\PNP0A08\\0",
+        "ACPI_HAL\\PNP0C08\\0",
+        "ROOT\\ACPI_HAL\\0000",
+        "HTREE\\ROOT\\0"
+      ],
+      "usbInterfaceNumberHint": null,
+      "usbInterfaceNumberHintSource": null,
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)"
+      ]
+    },
+    {
+      "instanceId": "USB\\VID_258A&PID_010C&MI_01\\A&37836D3&0&0001",
+      "classGuid": "745a17a0-74d3-11d0-b6fe-00a0c90f57da",
+      "deviceDescription": "USB Input Device",
+      "hardwareIds": [
+        "USB\\VID_258A&PID_010C&REV_0500&MI_01",
+        "USB\\VID_258A&PID_010C&MI_01"
+      ],
+      "compatibleIds": [
+        "USB\\COMPAT_VID_258a&Class_03&SubClass_00&Prot_00",
+        "USB\\COMPAT_VID_258a&Class_03&SubClass_00",
+        "USB\\COMPAT_VID_258a&Class_03",
+        "USB\\Class_03&SubClass_00&Prot_00",
+        "USB\\Class_03&SubClass_00",
+        "USB\\Class_03"
+      ],
+      "service": "HidUsb",
+      "registryManufacturer": "(Standard system devices)",
+      "friendlyName": null,
+      "locationInformation": "0007.0000.0003.002.001.000.000.000.000",
+      "physicalDeviceObjectName": "\\Device\\0000008d",
+      "busNumber": "USB",
+      "locationPaths": [
+        "PCIROOT(0)#PCI(0102)#PCI(0000)#PCI(0800)#PCI(0003)#USBROOT(0)#USB(2)#USB(1)#USBMI(1)",
+        "ACPI(_SB_)#ACPI(PCI0)#ACPI(BXBR)#ACPI(BYUP)#ACPI(BYD8)#ACPI(XHC0)#ACPI(RHUB)#ACPI(PRT2)#USB(1)#USBMI(1)"
+      ],
+      "parentChainEndConfigRet": "0xD",
+      "parentInstanceIds": [
+        "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+        "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+        "USB\\ROOT_HUB30\\7&124F193F&0&0",
+        "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+        "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+        "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+        "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+        "ACPI\\PNP0A08\\0",
+        "ACPI_HAL\\PNP0C08\\0",
+        "ROOT\\ACPI_HAL\\0000",
+        "HTREE\\ROOT\\0"
+      ],
+      "usbInterfaceNumberHint": 1,
+      "usbInterfaceNumberHintSource": "USB\\VID_258A&PID_010C&MI_01\\A&37836D3&0&0001",
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)"
+      ]
+    },
+    {
+      "instanceId": "USB\\VID_258A&PID_010C&MI_00\\A&37836D3&0&0000",
+      "classGuid": "745a17a0-74d3-11d0-b6fe-00a0c90f57da",
+      "deviceDescription": "USB Input Device",
+      "hardwareIds": [
+        "USB\\VID_258A&PID_010C&REV_0500&MI_00",
+        "USB\\VID_258A&PID_010C&MI_00"
+      ],
+      "compatibleIds": [
+        "USB\\COMPAT_VID_258a&Class_03&SubClass_01&Prot_01",
+        "USB\\COMPAT_VID_258a&Class_03&SubClass_01",
+        "USB\\COMPAT_VID_258a&Class_03",
+        "USB\\Class_03&SubClass_01&Prot_01",
+        "USB\\Class_03&SubClass_01",
+        "USB\\Class_03"
+      ],
+      "service": "HidUsb",
+      "registryManufacturer": "(Standard system devices)",
+      "friendlyName": null,
+      "locationInformation": "0007.0000.0003.002.001.000.000.000.000",
+      "physicalDeviceObjectName": "\\Device\\0000008c",
+      "busNumber": "USB",
+      "locationPaths": [
+        "PCIROOT(0)#PCI(0102)#PCI(0000)#PCI(0800)#PCI(0003)#USBROOT(0)#USB(2)#USB(1)#USBMI(0)",
+        "PCIROOT(0)#PCI(0102)#PCI(0000)#PCI(0800)#PCI(0003)#USBROOT(0)#USB(2)#USB(1)#USB(1)",
+        "ACPI(_SB_)#ACPI(PCI0)#ACPI(BXBR)#ACPI(BYUP)#ACPI(BYD8)#ACPI(XHC0)#ACPI(RHUB)#ACPI(PRT2)#USB(1)#USBMI(0)",
+        "ACPI(_SB_)#ACPI(PCI0)#ACPI(BXBR)#ACPI(BYUP)#ACPI(BYD8)#ACPI(XHC0)#ACPI(RHUB)#ACPI(PRT2)#USB(1)#USB(1)"
+      ],
+      "parentChainEndConfigRet": "0xD",
+      "parentInstanceIds": [
+        "USB\\VID_258A&PID_010C\\9&2CCAAD51&0&1",
+        "USB\\VID_214B&PID_7000\\8&29C54EA8&0&2",
+        "USB\\ROOT_HUB30\\7&124F193F&0&0",
+        "PCI\\VEN_1022&DEV_149C&SUBSYS_148C1022&REV_00\\6&1EA5F98D&0&0340000A",
+        "PCI\\VEN_1022&DEV_57A4&SUBSYS_14841022&REV_00\\5&2FFEF63F&0&40000A",
+        "PCI\\VEN_1022&DEV_57AD&SUBSYS_00000000&REV_00\\4&5F22ECF&0&000A",
+        "PCI\\VEN_1022&DEV_1483&SUBSYS_14531022&REV_00\\3&11583659&0&0A",
+        "ACPI\\PNP0A08\\0",
+        "ACPI_HAL\\PNP0C08\\0",
+        "ROOT\\ACPI_HAL\\0000",
+        "HTREE\\ROOT\\0"
+      ],
+      "usbInterfaceNumberHint": 0,
+      "usbInterfaceNumberHintSource": "USB\\VID_258A&PID_010C&MI_00\\A&37836D3&0&0000",
+      "errors": [
+        "SetupDiGetDeviceRegistryProperty(12): Win32 13 (The data is invalid.)"
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "toolVersion": "0.1.0",
+  "collectedAtUtc": "2026-09-19T21:38:07.6008438Z",
+  "osVersion": "Microsoft Windows NT 10.0.26200.0",
+  "powershellVersion": "7.6.5",
+  "processBits": 64,
+  "sourceHashes": [
+    {
+      "file": "Inspect-Hid.ps1",
+      "sha256": "5099335E6883424744089B3800FFEB04F5F801A8FD2061B1D78D420A3DEC580D"
+    },
+    {
+      "file": "NativeHid.cs",
+      "sha256": "AC64335C97CE7E67164D05305C9ED732A1782AABBA0604C0F3616B0E184AA1CB"
+    }
+  ],
+  "safety": "Metadata only; zero desired access; no HID report reads/writes, firmware access, resets, or driver changes.",
+  "limitations": [
+    "VID/PID matches are candidates only, not model identification or write authorization.",
+    "Each HID entry is a Windows top-level collection, not necessarily a separate USB interface.",
+    "Report lengths are Windows maximum buffers per type/collection, including the report-ID slot (zero for unnumbered reports).",
+    "Report IDs come from exposed button/value capabilities; padding-only definitions may not be represented.",
+    "Exact per-ID wire lengths and raw HID report descriptors are not obtained by this tool.",
+    "USB PnP nodes/MI hints are not a complete USB interface/endpoint descriptor export; use USBView.",
+    "Null or failed queries mean unavailable, not absent. See per-device errors.",
+    "Strings and paths may contain serial numbers or other identifying information."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "traffic3.pcapng",
+  "controlFrames": 42,
+  "hidReportFrames": 0,
+  "setReportRequestFrames": [],
+  "getReportRequestFrames": [],
+  "setPayloadPrefixes": {},
+  "responseLengths": {},
+  "incompleteRequestFrames": []
+}

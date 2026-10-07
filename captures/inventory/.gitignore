@@ -1,0 +1,3 @@
+# Local hardware inventories may contain serials and unrelated device identities.
+*.json
+*.txt

@@ -1,0 +1,8 @@
+List all connected usb hid devices and info about them.
+
+Usage: sinowisp.exe list [OPTIONS]
+
+Options:
+      --vendor_id <VID>   
+      --product_id <PID>  
+  -h, --help              Print help

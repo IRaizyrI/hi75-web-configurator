@@ -1,0 +1,288 @@
+{
+  "candidateOffset": 46080,
+  "imageBytes": 61440,
+  "profileNormalKeyCount": 80,
+  "matchCount": 73,
+  "mismatches": [
+    {
+      "name": "K58",
+      "category": 2,
+      "virtualKey": 160,
+      "matrixIndex": 4,
+      "flashOffset": 46096,
+      "actual": "00 02 00 00",
+      "expected": "00 00 00 e1",
+      "matches": false
+    },
+    {
+      "name": "K69",
+      "category": 2,
+      "virtualKey": 161,
+      "matrixIndex": 70,
+      "flashOffset": 46360,
+      "actual": "00 20 00 00",
+      "expected": "00 00 00 e5",
+      "matches": false
+    },
+    {
+      "name": "K71",
+      "category": 2,
+      "virtualKey": 162,
+      "matrixIndex": 5,
+      "flashOffset": 46100,
+      "actual": "00 01 00 00",
+      "expected": "00 00 00 e0",
+      "matches": false
+    },
+    {
+      "name": "K72",
+      "category": 2,
+      "virtualKey": 91,
+      "matrixIndex": 11,
+      "flashOffset": 46124,
+      "actual": "00 08 00 00",
+      "expected": "00 00 00 e3",
+      "matches": false
+    },
+    {
+      "name": "K73",
+      "category": 2,
+      "virtualKey": 164,
+      "matrixIndex": 17,
+      "flashOffset": 46148,
+      "actual": "00 04 00 00",
+      "expected": "00 00 00 e2",
+      "matches": false
+    },
+    {
+      "name": "K75",
+      "category": 2,
+      "virtualKey": 165,
+      "matrixIndex": 53,
+      "flashOffset": 46292,
+      "actual": "00 40 00 00",
+      "expected": "00 00 00 e6",
+      "matches": false
+    },
+    {
+      "name": "K77",
+      "category": 2,
+      "virtualKey": 163,
+      "matrixIndex": 65,
+      "flashOffset": 46340,
+      "actual": "00 10 00 00",
+      "expected": "00 00 00 e4",
+      "matches": false
+    }
+  ],
+  "examples": [
+    {
+      "name": "K1",
+      "category": 2,
+      "virtualKey": 27,
+      "matrixIndex": 0,
+      "flashOffset": 46080,
+      "actual": "00 00 00 29",
+      "expected": "00 00 00 29",
+      "matches": true
+    },
+    {
+      "name": "K2",
+      "category": 2,
+      "virtualKey": 112,
+      "matrixIndex": 12,
+      "flashOffset": 46128,
+      "actual": "00 00 00 3a",
+      "expected": "00 00 00 3a",
+      "matches": true
+    },
+    {
+      "name": "K3",
+      "category": 2,
+      "virtualKey": 113,
+      "matrixIndex": 18,
+      "flashOffset": 46152,
+      "actual": "00 00 00 3b",
+      "expected": "00 00 00 3b",
+      "matches": true
+    },
+    {
+      "name": "K4",
+      "category": 2,
+      "virtualKey": 114,
+      "matrixIndex": 24,
+      "flashOffset": 46176,
+      "actual": "00 00 00 3c",
+      "expected": "00 00 00 3c",
+      "matches": true
+    },
+    {
+      "name": "K5",
+      "category": 2,
+      "virtualKey": 115,
+      "matrixIndex": 30,
+      "flashOffset": 46200,
+      "actual": "00 00 00 3d",
+      "expected": "00 00 00 3d",
+      "matches": true
+    }
+  ],
+  "modifierBitmaskHypothesis": [
+    {
+      "name": "K58",
+      "category": 2,
+      "virtualKey": 160,
+      "matrixIndex": 4,
+      "flashOffset": 46096,
+      "actual": "00 02 00 00",
+      "candidateExpected": "00 02 00 00",
+      "matchesCandidate": true
+    },
+    {
+      "name": "K69",
+      "category": 2,
+      "virtualKey": 161,
+      "matrixIndex": 70,
+      "flashOffset": 46360,
+      "actual": "00 20 00 00",
+      "candidateExpected": "00 20 00 00",
+      "matchesCandidate": true
+    },
+    {
+      "name": "K71",
+      "category": 2,
+      "virtualKey": 162,
+      "matrixIndex": 5,
+      "flashOffset": 46100,
+      "actual": "00 01 00 00",
+      "candidateExpected": "00 01 00 00",
+      "matchesCandidate": true
+    },
+    {
+      "name": "K72",
+      "category": 2,
+      "virtualKey": 91,
+      "matrixIndex": 11,
+      "flashOffset": 46124,
+      "actual": "00 08 00 00",
+      "candidateExpected": "00 08 00 00",
+      "matchesCandidate": true
+    },
+    {
+      "name": "K73",
+      "category": 2,
+      "virtualKey": 164,
+      "matrixIndex": 17,
+      "flashOffset": 46148,
+      "actual": "00 04 00 00",
+      "candidateExpected": "00 04 00 00",
+      "matchesCandidate": true
+    },
+    {
+      "name": "K75",
+      "category": 2,
+      "virtualKey": 165,
+      "matrixIndex": 53,
+      "flashOffset": 46292,
+      "actual": "00 40 00 00",
+      "candidateExpected": "00 40 00 00",
+      "matchesCandidate": true
+    },
+    {
+      "name": "K77",
+      "category": 2,
+      "virtualKey": 163,
+      "matrixIndex": 65,
+      "flashOffset": 46340,
+      "actual": "00 10 00 00",
+      "candidateExpected": "00 10 00 00",
+      "matchesCandidate": true
+    }
+  ],
+  "fn1ProfileCount": 30,
+  "fn1MatchCount": 25,
+  "fn1Mismatches": [
+    {
+      "name": "K29",
+      "matrixIndex": 85,
+      "flashOffset": 47444,
+      "actual": "00 00 00 49",
+      "expected": "00 00 00 00",
+      "matches": false
+    },
+    {
+      "name": "K37",
+      "matrixIndex": 44,
+      "flashOffset": 47280,
+      "actual": "00 00 00 46",
+      "expected": "00 00 00 00",
+      "matches": false
+    },
+    {
+      "name": "K38",
+      "matrixIndex": 50,
+      "flashOffset": 47304,
+      "actual": "00 00 00 47",
+      "expected": "00 00 00 00",
+      "matches": false
+    },
+    {
+      "name": "K39",
+      "matrixIndex": 56,
+      "flashOffset": 47328,
+      "actual": "00 00 00 48",
+      "expected": "00 00 00 00",
+      "matches": false
+    },
+    {
+      "name": "K44",
+      "matrixIndex": 86,
+      "flashOffset": 47448,
+      "actual": "00 00 00 4a",
+      "expected": "00 00 00 00",
+      "matches": false
+    }
+  ],
+  "fn1Examples": [
+    {
+      "name": "K1",
+      "matrixIndex": 0,
+      "flashOffset": 47104,
+      "actual": "07 00 00 04",
+      "expected": "07 00 00 04",
+      "matches": true
+    },
+    {
+      "name": "K2",
+      "matrixIndex": 12,
+      "flashOffset": 47152,
+      "actual": "02 00 00 70",
+      "expected": "02 00 00 70",
+      "matches": true
+    },
+    {
+      "name": "K3",
+      "matrixIndex": 18,
+      "flashOffset": 47176,
+      "actual": "02 00 00 6f",
+      "expected": "02 00 00 6f",
+      "matches": true
+    },
+    {
+      "name": "K4",
+      "matrixIndex": 24,
+      "flashOffset": 47200,
+      "actual": "00 04 00 2b",
+      "expected": "00 04 00 2b",
+      "matches": true
+    },
+    {
+      "name": "K5",
+      "matrixIndex": 30,
+      "flashOffset": 47224,
+      "actual": "00 04 00 29",
+      "expected": "00 04 00 29",
+      "matches": true
+    }
+  ]
+}

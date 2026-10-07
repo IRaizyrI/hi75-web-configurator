@@ -1,0 +1,69 @@
+arg {number=0}{call=--snaplen}{display=Snapshot length}{tooltip=Snapshot length}{type=unsigned}{default=65535}
+arg {number=1}{call=--bufferlen}{display=Capture buffer length}{tooltip=USBPcap kernel-mode capture buffer length in bytes}{type=integer}{range=0,134217728}{default=1048576}
+arg {number=2}{call=--capture-from-all-devices}{display=Capture from all devices connected}{tooltip=Capture from all devices connected despite other options}{type=boolflag}{default=true}
+arg {number=3}{call=--capture-from-new-devices}{display=Capture from newly connected devices}{tooltip=Automatically start capture on all newly connected devices}{type=boolflag}{default=true}
+arg {number=4}{call=--inject-descriptors}{display=Inject already connected devices descriptors into capture data}{type=boolflag}{default=true}
+arg {number=99}{call=--devices}{display=Attached USB Devices}{tooltip=Select individual devices to capture from}{type=multicheck}
+value {arg=99}{value=1}{display=[1] USB Composite Device}{enabled=true}
+value {arg=99}{value=1_1}{display=fifine Microphone}{enabled=false}{parent=1}
+value {arg=99}{value=1_2}{display=Speakers (fifine Microphone)}{enabled=false}{parent=1_1}
+value {arg=99}{value=1_3}{display=Microphone (fifine Microphone)}{enabled=false}{parent=1_1}
+value {arg=99}{value=1_4}{display=USB Input Device}{enabled=false}{parent=1}
+value {arg=99}{value=1_5}{display=HID-compliant consumer control device}{enabled=false}{parent=1_4}
+value {arg=99}{value=1_6}{display=HID-compliant headset}{enabled=false}{parent=1_4}
+value {arg=99}{value=2}{display=[2] Generic USB Hub}{enabled=true}
+value {arg=99}{value=5}{display=[5] USB Composite Device}{enabled=true}{parent=2}
+value {arg=99}{value=5_1}{display=USB Input Device}{enabled=false}{parent=5}
+value {arg=99}{value=5_2}{display=HID Keyboard Device}{enabled=false}{parent=5_1}
+value {arg=99}{value=5_3}{display=USB Input Device}{enabled=false}{parent=5}
+value {arg=99}{value=5_4}{display=HID-compliant system controller}{enabled=false}{parent=5_3}
+value {arg=99}{value=5_5}{display=HID-compliant consumer control device}{enabled=false}{parent=5_3}
+value {arg=99}{value=5_6}{display=HID-compliant vendor-defined device}{enabled=false}{parent=5_3}
+value {arg=99}{value=5_7}{display=HID Keyboard Device}{enabled=false}{parent=5_3}
+value {arg=99}{value=5_8}{display=HID-compliant vendor-defined device}{enabled=false}{parent=5_3}
+value {arg=99}{value=5_9}{display=HID-compliant vendor-defined device}{enabled=false}{parent=5_3}
+value {arg=99}{value=5_10}{display=HID-compliant mouse}{enabled=false}{parent=5_3}
+value {arg=99}{value=6}{display=[6] USB Composite Device}{enabled=true}{parent=2}
+value {arg=99}{value=6_1}{display=USB Mass Storage Device}{enabled=false}{parent=6}
+value {arg=99}{value=6_2}{display=BR28 UDISK USB Device}{enabled=false}{parent=6_1}
+value {arg=99}{value=6_3}{display=BR28 UDISK USB Device}{enabled=false}{parent=6_1}
+value {arg=99}{value=6_4}{display=Divoom Audio}{enabled=false}{parent=6}
+value {arg=99}{value=6_5}{display=Speakers (Divoom Audio)}{enabled=false}{parent=6_4}
+value {arg=99}{value=6_6}{display=Microphone (Divoom Audio)}{enabled=false}{parent=6_4}
+value {arg=99}{value=6_7}{display=USB Input Device}{enabled=false}{parent=6}
+value {arg=99}{value=6_8}{display=HID-compliant consumer control device}{enabled=false}{parent=6_7}
+value {arg=99}{value=7}{display=[7] USB Composite Device}{enabled=true}{parent=2}
+value {arg=99}{value=7_1}{display=USB Input Device}{enabled=false}{parent=7}
+value {arg=99}{value=7_2}{display=HID-compliant mouse}{enabled=false}{parent=7_1}
+value {arg=99}{value=7_3}{display=USB Input Device}{enabled=false}{parent=7}
+value {arg=99}{value=7_4}{display=HID Keyboard Device}{enabled=false}{parent=7_3}
+value {arg=99}{value=7_5}{display=HID-compliant vendor-defined device}{enabled=false}{parent=7_3}
+value {arg=99}{value=7_6}{display=HID-compliant consumer control device}{enabled=false}{parent=7_3}
+value {arg=99}{value=7_7}{display=HID-compliant system controller}{enabled=false}{parent=7_3}
+value {arg=99}{value=7_8}{display=HID-compliant vendor-defined device}{enabled=false}{parent=7_3}
+value {arg=99}{value=7_9}{display=HID-compliant vendor-defined device}{enabled=false}{parent=7_3}
+value {arg=99}{value=7_10}{display=HID-compliant vendor-defined device}{enabled=false}{parent=7_3}
+value {arg=99}{value=4}{display=[4] Intel(R) Wireless Bluetooth(R)}{enabled=true}
+value {arg=99}{value=4_1}{display=Bluetooth Device (RFCOMM Protocol TDI)}{enabled=false}{parent=4}
+value {arg=99}{value=4_2}{display=Microsoft Bluetooth Enumerator}{enabled=false}{parent=4}
+value {arg=99}{value=4_3}{display=Bluetooth HID Device}{enabled=false}{parent=4_2}
+value {arg=99}{value=4_4}{display=Device Identification Service}{enabled=false}{parent=4_2}
+value {arg=99}{value=4_5}{display=DualSense Wireless Controller}{enabled=false}{parent=4_2}
+value {arg=99}{value=4_6}{display=Bluetooth Device (Personal Area Network)}{enabled=false}{parent=4}
+value {arg=99}{value=4_7}{display=Microsoft Bluetooth LE Enumerator}{enabled=false}{parent=4}
+value {arg=99}{value=4_8}{display=Xbox Wireless Controller}{enabled=false}{parent=4_7}
+value {arg=99}{value=4_9}{display=Generic Access Profile}{enabled=false}{parent=4_8}
+value {arg=99}{value=4_10}{display=Generic Attribute Profile}{enabled=false}{parent=4_8}
+value {arg=99}{value=4_11}{display=Device Information Service}{enabled=false}{parent=4_8}
+value {arg=99}{value=4_12}{display=Bluetooth LE Generic Attribute Service}{enabled=false}{parent=4_8}
+value {arg=99}{value=4_13}{display=Bluetooth LE XINPUT compatible input device}{enabled=false}{parent=4_8}
+value {arg=99}{value=4_14}{display=Bluetooth LE Generic Attribute Service}{enabled=false}{parent=4_8}
+value {arg=99}{value=4_15}{display=ROG KERIS WIRELESS}{enabled=false}{parent=4_7}
+value {arg=99}{value=4_16}{display=Generic Access Profile}{enabled=false}{parent=4_15}
+value {arg=99}{value=4_17}{display=Generic Attribute Profile}{enabled=false}{parent=4_15}
+value {arg=99}{value=4_18}{display=Device Information Service}{enabled=false}{parent=4_15}
+value {arg=99}{value=4_19}{display=Bluetooth LE Generic Attribute Service}{enabled=false}{parent=4_15}
+value {arg=99}{value=4_20}{display=Scan Parameter Service}{enabled=false}{parent=4_15}
+value {arg=99}{value=4_21}{display=Bluetooth Low Energy GATT compliant HID device}{enabled=false}{parent=4_15}
+value {arg=99}{value=3}{display=[3] Generic USB Hub}{enabled=true}
+value {arg=99}{value=8}{display=[8] Focusrite Audio Hardware device driver}{enabled=true}{parent=3}

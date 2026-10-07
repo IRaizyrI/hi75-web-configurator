@@ -1,0 +1,22 @@
+Read flash into a file.
+
+Usage: sinowisp.exe read [OPTIONS] <OUTPUT_FILE>
+
+Arguments:
+  <OUTPUT_FILE>  file to write flash contents to
+
+Options:
+      --format <FORMAT>         [possible values: ihex, bin]
+  -s, --section <SECTION>       firmware section to read [default: firmware] [possible values: firmware, bootloader, full]
+  -r, --retry <NUM>             number of attempts trying to find device [default: 5]
+  -d, --device <DEVICE>         [possible values: aoko-k101, aula-f75, aula-f87, ciy-x77, deltaco-wk95r, dierya-dk68se, digitalalliance-meca-warrior-x, eweadn-v20, eyooso-z11, eyooso-z82, genesis-thor-300, genesis-thor-300-rgb, glorious-model-o, kzzi-k68pro, leobog-hi75, leobog-hi75c-pro, machenike-k500-b61, magegee-mkstar61, nuphy-air60, nuphy-air75, nuphy-air96, nuphy-halo65, portronics-hydra10, re-k70-byk800, redragon-k530-draconic-pro, redragon-k614-anivia, redragon-k617-fizz, redragon-k618, redragon-k630-norgb, redragon-k633-ryze, redragon-k641-shaco-pro, redragon-k647wg-soraka, redragon-k652-pro, redragon-k658-pro-se, royalkludge-rk100, royalkludge-rk61, royalkludge-rk68-bt-dual, royalkludge-rk68-iso-return, royalkludge-rk71, royalkludge-rk84-iso-return, royalkludge-rkg68, superframe-phantom, terport-tr95, trust-gxt-960, weikav-sugar65, xinmeng-k916, xinmeng-m66, xinmeng-m71, xinmeng-xm-rf68, yinren-r108, yunzii-al66, yunzii-al71, zifriend-za981]
+  -p, --platform <PLATFORM>     [possible values: sh68f881, sh68f89, sh68f90, sh68f902]
+      --vendor_id <VID>         
+      --product_id <PID>        
+      --firmware_size <SIZE>    
+      --bootloader_size <SIZE>  
+      --page_size <SIZE>        
+      --isp_iface_num <NUM>     
+      --isp_report_id <USAGE>   
+      --reboot <BOOL>           [possible values: true, false]
+  -h, --help                    Print help

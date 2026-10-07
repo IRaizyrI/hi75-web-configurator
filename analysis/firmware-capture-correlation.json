@@ -1,0 +1,47 @@
+{
+  "sourceCaptureJsonSha256": "e10da5eb039c504826b49eb8d1381c74a1b3b5f906fbb2eef02a99612914ea89",
+  "sourceFirmwareDumpSha256": "31ee5b474b06b5bd26f32e15e379ce8c3251913b57dfebc3194a7c4dbdcc7ad0",
+  "analysisOnly": true,
+  "reportDataOffset": 8,
+  "startupIdentity": {
+    "sourceCaptureJsonSha256": "3bdc8e11c7e66b238a639c7326da5fb5c2385701e95f733dc1de17973d3e66a6",
+    "frame": 10,
+    "dataHex": "03 00 00 00 00 9b",
+    "exactFlashOffsets": [
+      46051
+    ]
+  },
+  "results": {
+    "54": {
+      "dataBytes": 128,
+      "dataSha256": "aeec4a42be88458b7aeb1d0ddcf1d75e04e0f6a4dd37db9992465c645f8a1abd",
+      "exactFlashOffsets": [
+        50688
+      ]
+    },
+    "55": {
+      "dataBytes": 128,
+      "dataSha256": "2a99691a6e0c8ac9a2a0c21ba2bea5403f2b7176381a607fc4de0d1774a6c956",
+      "exactFlashOffsets": [],
+      "differencesFromC600": [
+        {
+          "dataOffset": 10,
+          "backupByte": "03",
+          "reportByte": "0b"
+        },
+        {
+          "dataOffset": 63,
+          "backupByte": "27",
+          "reportByte": "47"
+        }
+      ]
+    },
+    "57": {
+      "dataBytes": 512,
+      "dataSha256": "63952e214dd24a6be9d40fa74c01849a12d2d7b701a34780ac8b792446ab32a4",
+      "exactFlashOffsets": [
+        51200
+      ]
+    }
+  }
+}
