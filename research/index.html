@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hi75 WebHID inspector</title>
+    <link rel="stylesheet" href="../src/ui/styles.css">
+    <script type="module" src="../src/ui/app.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Stock firmware research · phase 1</p>
+        <h1>Hi75 WebHID inspector</h1>
+        <p>Inspect browser-visible HID metadata for the original wired LEOBOG × EPOMAKER Hi75.</p>
+      </header>
+      <section class="notice">
+        <strong>Controlled identity probe.</strong> The device chooser and snapshot are metadata-only. The separate identity-probe button sends exactly one observed feature SET request and receives one feature response. Official-app captures show this query also produces a vendor input report. No configuration write command is sent. A matching result is not proof of the exact revision.
+      </section>
+      <section class="controls" aria-label="Device controls">
+        <button id="choose" type="button">Choose 258A:010C device</button>
+        <button id="refresh" type="button">Show previously allowed devices</button>
+        <button id="probe" type="button" disabled>Probe identity once</button>
+        <button id="download" type="button" disabled>Download snapshot JSON</button>
+      </section>
+      <p class="hint">The identity probe is available only after this browser sees the captured report layout. Close LEOBOG ONE before probing if it holds the HID interface.</p>
+      <p id="status" role="status">Checking WebHID availability…</p>
+      <section aria-labelledby="config-heading">
+        <h2 id="config-heading">Keyboard configuration (read-only)</h2>
+        <p>Reads identity, lighting, the four keymap layers, the RGB table and the macro block. Only read commands are sent; nothing is written to the keyboard.</p>
+        <div class="controls">
+          <button id="read-config" type="button" disabled>Read configuration</button>
+          <button id="download-backup" type="button" disabled>Download backup JSON</button>
+          <label class="file">Backup file <input id="backup-file" type="file" accept="application/json,.json"></label>
+          <button id="restore-backup" type="button" disabled>Restore from backup</button>
+        </div>
+        <p class="hint">Restore checks the backup's identity against the keyboard, then writes back only the blocks that differ (keymap layers, lighting, RGB table, macros) and verifies each by read-back.</p>
+        <p id="config-status" role="status">Choose the keyboard above first.</p>
+        <div id="config" hidden>
+          <p id="config-summary"></p>
+          <h3>Lighting</h3>
+          <div class="controls" aria-label="Lighting">
+            <label>Effect <select id="effect"></select></label>
+            <label>Brightness <select id="brightness"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+            <label>Speed <select id="speed"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+            <label>Colour <select id="color-index"></select></label>
+            <label>Slot colour <input id="slot-color" type="color"></label>
+            <button id="apply-lighting" type="button">Apply lighting</button>
+          </div>
+          <p class="hint">Each effect keeps its own brightness, speed and colour choice. Colours 1–7 come from that effect's palette; changing "Slot colour" recolours the chosen slot. Effects are numbered because the app's names could not be matched reliably.</p>
+          <div class="controls" aria-label="Self-define key colours">
+            <label>Key colour <input id="paint-color" type="color" value="#ff0000"></label>
+            <button id="paint-toggle" type="button">Paint keys</button>
+            <button id="paint-save" type="button" disabled>Save key colours</button>
+          </div>
+          <p class="hint">Self-define colours: turn on "Paint keys", click keys on the drawing to colour them, then save. Select the Self-define effect to see them.</p>
+          <div class="controls" aria-label="Knob press">
+            <label for="knob-press">Knob press (experimental)</label>
+            <select id="knob-press"></select>
+            <button id="apply-knob" type="button">Apply knob press</button>
+          </div>
+          <p class="hint">Knob turning is fixed to volume in the stock firmware. Knob press can be remapped: this writes the knob's keymap entry and the lighting-block flag the official app sets for a custom knob.</p>
+          <p class="hint">Every Apply saves to the keyboard's flash immediately: the page reads the block, changes only what you edited, writes it, and reads it back to verify.</p>
+          <h3>Macros</h3>
+          <div class="controls" aria-label="Macros">
+            <label>Macro <select id="macro-slot"></select></label>
+            <label>Name <input id="macro-name" maxlength="30" size="12"></label>
+            <button id="macro-record" type="button">Record</button>
+            <button id="macro-save" type="button">Save macros</button>
+            <label>Repeat <input id="macro-repeat" type="number" min="1" max="255" value="1" style="width:4em"></label>
+            <button id="macro-assign" type="button" disabled>Assign to selected key</button>
+          </div>
+          <pre id="macro-actions">No macro selected.</pre>
+          <p class="hint">Record captures your key presses and timing on this page until you click Stop. Save writes all macros (up to 512 bytes total). Then select a key on the keyboard drawing and assign the macro to it.</p>
+          <div class="tabs" id="layer-tabs" role="tablist"></div>
+          <div id="keyboard" class="keyboard"></div>
+          <div class="controls" aria-label="Key editor">
+            <span id="selected-key">Click a key to edit it.</span>
+            <select id="assignment" disabled></select>
+            <button id="apply-key" type="button" disabled>Apply key</button>
+          </div>
+          <p class="hint">Applying rewrites that layer in the keyboard's flash (read, change one key, write, read back). Your downloaded backup holds the original layers.</p>
+        </div>
+      </section>
+      <section aria-labelledby="devices-heading">
+        <h2 id="devices-heading">Browser-visible devices</h2>
+        <div id="devices"></div>
+      </section>
+      <section aria-labelledby="snapshot-heading">
+        <h2 id="snapshot-heading">Pasteable snapshot</h2>
+        <p>Copy this JSON back to the project. It contains metadata and, only if you run the probe, the identity response and vendor input event. It contains no serial number or keyboard configuration.</p>
+        <pre id="snapshot">No device selected yet.</pre>
+      </section>
+    </main>
+  </body>
+</html>

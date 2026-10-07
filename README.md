@@ -1,11 +1,23 @@
 # Hi75 WebHID configurator
 
-An open-source, browser-based configuration utility for the **original wired
-LEOBOG × EPOMAKER Hi75**, using its existing stock firmware. This repository
-currently contains recovery dumps, USB captures, a Windows HID inventory tool,
-initial disassembly of the official app, and a browser inspector with one
-strictly gated identity query. Configuration reading and writing are not yet
-implemented.
+A browser-based configurator for the **original wired LEOBOG × EPOMAKER Hi75**
+on its stock firmware: key remapping (base and Fn layers), lighting effects and
+colours, Self-define per-key colours, macros, knob press, and backup/restore.
+An optional firmware patch makes knob rotation mappable too
+([`docs/knob-patch.md`](docs/knob-patch.md)).
+
+## Use it
+
+- Hosted: GitHub Pages (Chrome or Edge, which support WebHID). Close LEOBOG ONE,
+  click **Connect keyboard**, choose the Hi75. **Try demo mode** works without one.
+- Local: `npm start`, then open `http://localhost:8787`. The stock-firmware
+  research inspector is at `http://localhost:8787/research/`.
+- `npm test` runs the offline tests (no dependencies beyond Node.js).
+
+Every change is written to the keyboard's flash immediately and verified by
+reading it back. Download a backup first (Backup & Restore page).
+
+The rest of this README describes the original research process.
 
 ## Goal and approach
 
