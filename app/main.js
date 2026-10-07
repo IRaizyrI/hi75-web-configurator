@@ -4,7 +4,7 @@ import {
   setKey, setKeyColorBlock, setKnobPress, setLighting, setMacros,
 } from "../src/hid/transport.js";
 import { decodeKey, hidName } from "../src/protocol/keycodes.js";
-import { EFFECTS, SELF_DEFINE_HW, decodeLighting, keyColor, setKeyColors } from "../src/protocol/lighting.js";
+import { EFFECTS, HIDDEN_EFFECTS, SELF_DEFINE_HW, decodeLighting, keyColor, setKeyColors } from "../src/protocol/lighting.js";
 import { MACRO_BUFFER_BYTES, encodeMacros, hidForCode, keyAction, macroKeyWord, parseMacros } from "../src/protocol/macros.js";
 import { CATEGORIES, sameWord } from "./catalog.js";
 import { KEYS, KNOB, KNOB_TURNS, renderKeyboard } from "./keyboard.js";
@@ -252,7 +252,7 @@ function keyPicker(key, layer) {
 function lightingPanel() {
   const l = decodeLighting(state.config.led, state.config.rgbTable);
   const e = l.effects.find((x) => x.hw === l.hw);
-  const visible = l.effects.filter((x) => x.hw !== 15 && x.hw !== 16);
+  const visible = l.effects.filter((x) => !HIDDEN_EFFECTS.includes(x.hw) || x.hw === l.hw);
   const set = (label, params) => run(label, async () => {
     const r = await setLighting(state.session, { hw: l.hw, ...params });
     state.config.led = r.led; state.config.rgbTable = r.rgb;

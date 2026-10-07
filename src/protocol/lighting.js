@@ -9,7 +9,8 @@ export const PALETTE_GROUP = 21; // 7 RGB slots per effect, group 0 unused
 
 // [hw code, speed adjustable, brightness adjustable, random colour, colour]
 // from KB.ini LedOpt1..19, in entry order. Names follow the official app's
-// menu (confirmed by the user): it lists hw 1-14, 17, 18, 21 and hides 15/16.
+// menu, checked live by the user: hw 1-8, 10-15, 17 are the listed effects;
+// hw 9 shows nothing and hw 16 is not offered.
 // Choosing Self-define in the app wrote hw 21 and set LED byte 9 to 1.
 const LED_OPT = [
   [1, 0, 1, 1, 1], [2, 1, 1, 1, 1], [3, 1, 1, 0, 0], [4, 1, 1, 1, 1], [5, 1, 1, 1, 1],
@@ -19,10 +20,11 @@ const LED_OPT = [
 ];
 const NAMES = {
   1: "Fixed on", 2: "Respire", 3: "Rainbow", 4: "Flash away", 5: "Raindrops", 6: "Rainbow wheel",
-  7: "Ripples shining", 8: "Stars twinkle", 9: "Retro snake", 10: "Neon stream", 11: "Reaction",
-  12: "Sine wave", 13: "Rotating windmill", 14: "Colorful waterfall", 15: "Hidden effect 15",
+  7: "Ripples shining", 8: "Stars twinkle", 9: "Hidden effect 9", 10: "Retro snake", 11: "Neon stream",
+  12: "Reaction", 13: "Sine wave", 14: "Rotating windmill", 15: "Colorful waterfall",
   16: "Hidden effect 16", 17: "Blossoming", 18: "Off", 21: "Self-define",
 };
+export const HIDDEN_EFFECTS = [9, 16];
 export const EFFECTS = LED_OPT.map(([hw, speed, light, random, color], index) => ({
   index, hw, name: NAMES[hw],
   speed: !!speed, brightness: !!light, random: !!random, color: !!color,

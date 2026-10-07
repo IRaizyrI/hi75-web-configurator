@@ -48,3 +48,13 @@ already white) and diffing a read-only dump (`tools/hid-inspect/Read-Hi75Config.
 - Bytes 378–511 are kept from flash by the firmware's `0x06` handler.
 - Selecting Self-define wrote LED byte 10 = **21** and LED byte 9 = 1. So
   hardware 21 is Self-define, not Off; hardware 18 is Off (confirmed live by the user, as is the Self-define painter round trip).
+
+## Effect names corrected — 2026-10-07
+
+Live testing showed hardware 9 displays nothing and the names after it were
+shifted by one. Corrected mapping: 1 Fixed on, 2 Respire, 3 Rainbow, 4 Flash
+away, 5 Raindrops, 6 Rainbow wheel, 7 Ripples shining, 8 Stars twinkle,
+10 Retro snake, 11 Neon stream, 12 Reaction, 13 Sine wave, 14 Rotating
+windmill, 15 Colorful waterfall, 17 Blossoming, 18 Off, 21 Self-define.
+Hardware 9 and 16 are hidden in the configurator. 15 Colorful waterfall is
+inferred from the shift (it has no colour option, like the app's waterfall).
