@@ -1,165 +1,124 @@
-# Hi75 WebHID configurator
+# Hi75 Web Configurator
 
-A browser-based configurator for the **original wired LEOBOG × EPOMAKER Hi75**
-on its stock firmware: key remapping (base and Fn layers), lighting effects and
-colours, Self-define per-key colours, macros, knob press, and backup/restore.
-An optional firmware patch makes knob rotation mappable too
-([`docs/knob-patch.md`](docs/knob-patch.md)).
+An open-source, browser-based configurator for the **LEOBOG × EPOMAKER Hi75**
+(original wired model) running its **stock firmware**. It replaces the
+Windows-only LEOBOG ONE app: no install, no account, nothing leaves your
+computer. It talks to the keyboard directly from Chrome or Edge using WebHID.
 
-## Use it
+**Open it:** <https://iraizyri.github.io/hi75-web-configurator/>
 
-- Hosted: GitHub Pages (Chrome or Edge, which support WebHID). Close LEOBOG ONE,
-  click **Connect keyboard**, choose the Hi75. **Try demo mode** works without one.
-- Local: `npm start`, then open `http://localhost:8787`. The stock-firmware
-  research inspector is at `http://localhost:8787/research/`.
-- `npm test` runs the offline tests (no dependencies beyond Node.js).
+> Unofficial project, not affiliated with LEOBOG or EPOMAKER. Settings are
+> written to the keyboard's flash; use at your own risk and download a backup
+> before big changes.
 
-Every change is written to the keyboard's flash immediately and verified by
-reading it back. Download a backup first (Backup & Restore page).
+## What it can do
 
-The rest of this README describes the original research process.
+| Page | Features |
+| --- | --- |
+| **Remap** | Change any key on the base layer and the Fn layer: letters, modifiers, shortcuts, media keys, lighting controls, Fn, Win lock, macros. Empty Fn-layer keys fall through to the base key. |
+| **Lighting** | All stock effects with brightness, speed and colour; edit each effect's 7-colour palette; paint individual keys for the **Self-define** effect. |
+| **Macros** | Record key sequences in the browser, edit per-step delays, name and save up to 2 KB of macros, assign them to keys. |
+| **Knob** | Remap the knob press. With the optional [knob patch](#optional-knob-rotation-patch), remap clockwise and counter-clockwise rotation too. |
+| **Backup & Restore** | Download the whole configuration as JSON and restore it later. Restore only rewrites what differs and verifies each block. |
 
-## Goal and approach
+Every change is saved to the keyboard immediately and checked by reading it
+back. Settings persist across unplugging. A **demo mode** lets you explore the
+interface without a keyboard.
 
-The latest [checkpoint summary](docs/checkpoint-identity-probe.md) records
-completed work, the successful physical identity test, and remaining gates.
+## Requirements
 
-Build a VIA-like graphical editor for lighting, key assignments, Fn/layers,
-knob behavior, macros, and configuration backup/restore. WebHID is the intended
-transport for a Chromium browser to access the stock firmware's proprietary HID
-configuration interface. A browser metadata snapshot confirms visibility of
-the candidate vendor collection and report lengths on the attached unit. The
-single identity query has returned the exact captured reply and vendor input
-event from the physical device through WebHID; configuration read behavior
-remains unverified.
+- A **LEOBOG Hi75 (wired, USB `258A:010C`)** on stock firmware. Other SinoWealth
+  boards that share this VID/PID are rejected unless their HID layout matches.
+- **Chrome, Edge or another Chromium browser** on desktop (WebHID support).
+  Firefox and Safari don't support WebHID.
+- **LEOBOG ONE closed**, because it holds the keyboard's configuration interface.
+- Linux only: a udev rule giving your user access to the hidraw device, e.g.
+  `KERNEL=="hidraw*", ATTRS{idVendor}=="258a", ATTRS{idProduct}=="010c", MODE="0660", TAG+="uaccess"`.
 
-Keeping the stock firmware avoids requiring a replacement firmware port or
-firmware flashing. QMK/VIA firmware development is outside this project's scope;
-the VIA-like goal describes the editor experience, not a claimed VIA protocol.
+## Getting started
 
-## Reported hardware information
+1. Open the [configurator](https://iraizyri.github.io/hi75-web-configurator/).
+2. Click **Connect keyboard** and pick the Hi75 in the browser prompt.
+3. Go to **Backup & Restore → Download backup** and keep the file.
+4. Change things. Each click is applied and verified straight away.
 
-The original user-provided hardware leads are tracked against Windows, USB
-capture, saved-image, and WebHID evidence in [`docs/usb.md`](docs/usb.md).
-Official-app startup and lighting-page traffic has also been captured. A
-revision-safe browser fingerprint remains under investigation.
+The browser remembers permission, so next time the keyboard connects
+automatically when the page opens.
 
-| Item | Reported lead | Verification needed |
-| --- | --- | --- |
-| Model | Original wired LEOBOG × EPOMAKER Hi75 | Physical model/revision evidence |
-| MCU family | SinoWealth SH68F90A / BYK916 family | Exact unit/revision confirmation |
-| USB VID:PID | `258A:010C` | Observed in USB capture and WebHID snapshot; not sufficient identity |
-| HID interface | Vendor-defined interface | Vendor feature report layout corroborated; raw live report-descriptor bytes still needed |
-| Vendor usage page | `0xFF00` | Observed in Windows and browser metadata |
-| Firmware tooling | `sinowisp` reportedly supports Hi75 firmware read/write | Reference and revision compatibility; not a bootstrap action |
-| Community communication | SignalRGB reportedly communicates with Hi75 | Implementation/reference and exact supported revision |
-| Related boards | Some SinoWealth boards use feature reports around 520 bytes | Attached candidate exposes feature ID 6 with 519 payload bytes plus report ID |
+### Run it locally
 
-**VID/PID is reused across keyboards and is not sufficient identification.**
-Neither a vendor usage page nor a product string alone establishes compatibility.
-Do not turn related-board report sizes or commands into Hi75 defaults.
+No build step and no dependencies beyond [Node.js](https://nodejs.org/) 18+:
 
-## Safety rules
+```bash
+git clone https://github.com/IRaizyrI/hi75-web-configurator.git
+cd hi75-web-configurator
+npm start          # http://localhost:8787
+npm test           # offline tests
+```
 
-- Never send guessed write packets. No configuration writes are implemented.
-- Do not flash experimental firmware or port QMK/VIA. Firmware flashing requires
-  an explicit later request.
-- Start with USB traffic generated by the official LEOBOG application. Make one
-  intentional setting change per capture whenever possible.
-- Keep raw evidence intact. Treat interpretations as hypotheses until experiments
-  support them; record contradictory results too.
-- Before enabling future writes, require a verified device fingerprint using
-  multiple independent attributes. Unknown revisions default to read-only.
-  Read-only status does not authorize guessed read requests or initialization
-  sequences: their side effects must also be established.
-- For future configuration edits, read the current state, preserve unknown bytes,
-  and modify the smallest proven field. Backup/restore is not available yet.
-- Do not type passwords or other sensitive text during USB capture. Review
-  captures for personal data before publishing them.
+`localhost` counts as a secure context, so WebHID works there too. The page is
+plain HTML and ES modules, so any static file server works as well.
 
-## Reverse-engineering workflow
+## Known limitations
 
-1. Record the exact physical unit, firmware/app versions, and USB descriptors.
-2. Capture official-app startup and idle behavior before changing settings.
-3. Capture one controlled change at a time, with exact before/after values.
-4. Compare packets using reproducible tooling rather than visual hex inspection.
-5. Document transport, layouts, unknown bytes, evidence, and confidence in
-   [`docs/protocol.md`](docs/protocol.md), the protocol source of truth.
-6. Validate hypotheses with repeated experiments and reversal captures before
-   implementing commands. Firmware disassembly is Plan B only when USB traffic
-   analysis becomes insufficient.
+- **PgDn can't play macros.** The firmware ignores macros on that key (also in LEOBOG ONE).
+- **Knob rotation is fixed to volume** on stock firmware; see the patch below.
+- Hardware effects 9 and 14 do nothing and are hidden.
+- The Mac-mode keymap and the "game" lighting table aren't editable.
+- Saving from LEOBOG ONE afterwards may overwrite or clear settings made here
+  (notably the knob-rotation slots). Re-apply them in the configurator.
 
-See [`docs/reversing.md`](docs/reversing.md) for capture naming and metadata, and
-[`docs/usb.md`](docs/usb.md) for the descriptor collection checklist.
+## Optional: knob rotation patch
 
-## Run the WebHID metadata inspector
+Stock firmware sends Volume Up/Down directly from the encoder. A small firmware
+patch (103 bytes, bootloader untouched) turns each knob step into a key press
+of two spare keymap slots, so rotation becomes remappable on the **Knob** page.
+The configurator detects whether the patch is installed.
 
-From `hi75-web`, run `npm start`, then open `http://localhost:8787` in current
-Chrome or Edge. Click **Choose 258A:010C device**, select the keyboard candidate
-in the browser prompt, and download or copy the displayed JSON. The browser
-may expose multiple HID interfaces for one physical keyboard; return all of
-them. The chooser and snapshot read WebHID metadata only. Once exactly one
-interface matches the observed report layout, a separate **Probe identity
-once** button is available. It opens that interface, sends the exact captured
-`0x82` feature-query body once, receives feature report ID 6 once, records a
-possible vendor input event, and closes. No retry or configuration read follows.
-The official app's identical query produces a vendor input report; its meaning
-remains unknown. The firmware's high-bit command path bypasses a separate
-state-changing branch. The single browser exchange succeeded on 2026-10-07;
-its saved result matches the captured identity reply and input event.
-The local server serves only its explicit UI/source assets; recovery dumps,
-USB captures, and analysis files are not served.
+This requires flashing firmware with [sinowisp](https://github.com/carlossless/sinowisp)
+and is **not** needed for anything else. Firmware images are not distributed in
+this repo: you build the patch from your own dump. Full procedure, recovery steps
+and emulator verification: [`docs/knob-patch.md`](docs/knob-patch.md).
 
-A matching vendor collection and report layout remains a **candidate**, since
-VID/PID and report structure cannot prove the exact model or revision. WebHID
-does not provide the captured USB `bcdDevice` value or a raw report-descriptor
-byte stream through this page. A browser-visible descriptor mismatch is useful
-diagnostic evidence, not permission to try a different report command. See
-[`docs/protocol.md`](docs/protocol.md) for the configuration-read gate.
+## How it works
 
-Run `npm test` for the inspector's safety classification tests. No package
-installation or external runtime dependency is needed beyond Node.js.
+The Hi75 exposes a vendor HID collection (usage page `0xFF00`) with a 520-byte
+feature report (ID 6). Commands `0x8x` read and `0x0x` write 512-byte flash
+sectors for keymap layers, lighting, palette, per-key colours and macros. The
+protocol was reverse-engineered from the official app, the firmware image and
+USB captures, then verified on hardware.
 
-## Project phases
+| Document | Contents |
+| --- | --- |
+| [`docs/protocol.md`](docs/protocol.md) | Transport, commands and the evidence log |
+| [`docs/keycode-encoding.md`](docs/keycode-encoding.md) | Key word and macro formats |
+| [`docs/lighting.md`](docs/lighting.md) | Lighting block, palette, Self-define colours, effect list |
+| [`docs/firmware-analysis.md`](docs/firmware-analysis.md) | Firmware read/write handlers, flash layout, knob |
+| [`docs/knob-patch.md`](docs/knob-patch.md) | Knob rotation patch |
 
-1. **Bootstrap complete** — folders, safety constraints, documentation templates.
-2. **Current: identify and reverse engineer** — Windows inventory, official-app
-   captures, static analysis, browser metadata, and a gated identity probe.
-   Physical WebHID identity exchange is validated; exact revision identification
-   and configuration read validation remain.
-3. **Read configuration** — experimentally verified requests and state decoding.
-4. **Simple RGB** — verified parameters and gated minimal writes.
-5. **Key assignments** — read first, then verified remapping.
-6. **Fn/layers and knob** — establish stock-firmware behavior from evidence.
-7. **Macros** — verify encoding, limits, and storage behavior.
-8. **Backup/restore** — verified coverage and revision compatibility checks.
-9. **Graphical editor** — a VIA-like UI over the verified protocol.
+## Repository layout
 
-Progress is evidence-driven; these phases do not assert stock-firmware support
-for every desired feature.
+```
+index.html        configurator (served at /)
+app/              configurator UI, demo mode
+src/hid/          WebHID transport: guarded reads, verified writes, backup/restore
+src/protocol/     report framing, key/lighting/macro encoders, patch detection
+research/         original stock-firmware research inspector (/research/)
+docs/             protocol and firmware documentation
+tools/            8051 disassembler/emulator, patch builder, HID and capture tools
+analysis/, captures/, backup/   research evidence (firmware dumps and raw captures are not committed)
+```
 
-## Layout
+Pushes to `main` run the tests and publish `index.html`, `app/`, `src/` and
+`research/` to GitHub Pages ([workflow](.github/workflows/pages.yml)).
 
-- `src/hid/`: browser enumeration, conservative candidate classification, and
-  one observed identity-query exchange; no configuration transport yet.
-- `src/protocol/`: exact observed identity request and response validation;
-  no configuration writes.
-- `src/ui/`: current metadata inspector UI; future configurator interface.
-- `tools/hid-inspect/`: metadata-only Windows inventory; see its
-  [run instructions](tools/hid-inspect/README.md).
-- `tools/packet-diff/`: extraction and automated comparison/audit of captured
-  USB control transfers; see its [usage](tools/packet-diff/README.md).
-- `tools/software-inspect/`: file-only PE inspection and Ghidra scripts for the
-  supplied official application; findings in
-  [`docs/app-disassembly.md`](docs/app-disassembly.md). Offline comparison of
-  the preserved flash image against captured reports and the RGB profile is
-  documented in [`docs/firmware-analysis.md`](docs/firmware-analysis.md).
-- `captures/`: raw USB evidence and experiment metadata.
-- `backup/`: local recovery audit evidence and space for future verified backups.
-  Its [README](backup/README.md) records three validated ISP recovery dumps taken
-  after explicit authorization of the upstream read-side effect. No restore was
-  tested, and separate configuration-storage coverage remains unknown.
-- `docs/`: USB observations, protocol source of truth, and experiment procedure.
+## Safety notes
 
-The browser inspector is a dependency-free ES-module app served by
-`tools/serve.mjs`. Empty future implementation directories retain `.gitkeep`.
+- Only reads and writes whose behaviour was traced in the firmware are enabled;
+  anything else is refused in code.
+- Writes rewrite whole 512-byte flash sectors, so the configurator always
+  reads first and writes back everything it didn't change.
+- Avoid hammering sliders: each applied change is a flash write.
+- If something goes wrong, restore your backup. If the keyboard ever fails to
+  start, the bootloader is never touched and the firmware can be re-flashed
+  with sinowisp (see `docs/knob-patch.md`).
